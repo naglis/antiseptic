@@ -46,7 +46,7 @@
 		{
 			"comment": "[Eng] or (Eng)",
 			"id": "CS011",
-			"rule": "(?:\\[Eng\\]|\\(Eng\\)|\\[ENG\\]|\\(ENG\\))"
+			"rule": "[\\[\\(\\{][Ee][Nn][Gg][\\}\\)\\]]"
 		},
 		{
 			"comment": "torrentday.com",
@@ -551,6 +551,11 @@
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
+			"id": "GR092",
+			"rule": "(?P<pre>[-])Noir$",
+			"sub": "\\g<pre>"
+		},
+		{
 			"id": "QU001",
 			"rule": "(?P<pre>\\W)480p(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
@@ -603,7 +608,7 @@
 		},
 		{
 			"id": "QU011",
-			"rule": "(?P<pre>\\W)AC3(?P<post>\\W|$)",
+			"rule": "(?P<pre>\\W)FLAC(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
@@ -757,7 +762,6 @@
 		{
 			"id": "CS020",
 			"rule": "[\\[\\(\\{]\\s*[@\\-\\#]\\s*[\\}\\)\\]]",
-			"sub": "",
 			"weight": 1
 		},
 		{
@@ -765,7 +769,8 @@
 			"id": "G008",
 			"rule": "(?P<pre>\\w)\\.(?P<post>\\w)",
 			"sub": "\\g<pre> \\g<post>",
-			"weight": 1
+			"weight": 1,
+            "repeat": true
 		},
 		{
 			"comment": "Underscores between words",
@@ -788,20 +793,17 @@
 		},
 		{
 			"id": "G004",
-			"rule": "(?P<pre>\\W)\\[\\s*\\](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "\\[\\s*\\]",
 			"weight": 99
 		},
 		{
 			"id": "G005",
-			"rule": "(?P<pre>\\W)\\(\\s*\\)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "\\(\\s*\\)",
 			"weight": 99
 		},
 		{
 			"id": "G009",
-			"rule": "(?P<pre>\\W)\\{\\s*\\}(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "\\{\\s*\\}",
 			"weight": 99
 		},
 		{
@@ -828,5 +830,5 @@
 			"weight": 100
 		}
 	],
-	"version": 201412290
+	"version": 201412300
 }
