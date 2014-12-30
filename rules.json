@@ -832,8 +832,18 @@
 			"comment": "Strip leading whitespace, dashes, dots and underscores",
 			"id": "R0160",
 			"rule": "^[\\s\\-\\._]+",
+			"tests": [
+				[
+					" Some title",
+					"Some title"
+				],
+				[
+					"-Some title",
+					"Some title"
+				]
+			],
 			"weight": 100
 		}
 	],
-	"version": "201412301"
+	"version": "201412302"
 }
