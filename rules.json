@@ -2,833 +2,838 @@
 	"rules": [
 		{
 			"comment": "LiMiTED",
-			"id": "CS002",
+			"id": "R0001",
 			"rule": "(?P<pre>\\W)L[Ii]M[Ii]TED(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS003",
+			"id": "R0002",
 			"rule": "(?P<pre>\\W)RETAIL(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS004",
+			"id": "R0003",
 			"rule": "(?P<pre>\\W)PROPER(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "WEBRip",
-			"id": "CS006",
+			"id": "R0004",
 			"rule": "(?P<pre>\\W)WEB(?:\\-|\\s)?[Rr][Ii][Pp](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS007",
+			"id": "R0005",
 			"rule": "(?P<pre>\\W)W[Ee][Bb]\\-?D[Ll](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "NO-RAR",
-			"id": "CS008",
+			"id": "R0006",
 			"rule": "(?P<pre>\\W)NO\\-RAR(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS009",
+			"id": "R0007",
 			"rule": "(?P<pre>\\W)FRENCH(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS010",
+			"id": "R0008",
 			"rule": "(?P<pre>\\W)READNFO(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"comment": "[Eng] or (Eng)",
-			"id": "CS011",
+			"comment": "[Eng] or (Eng) or {Eng}",
+			"id": "R0009",
 			"rule": "[\\[\\(\\{][Ee][Nn][Gg][\\}\\)\\]]"
 		},
 		{
 			"comment": "torrentday.com",
-			"id": "CS012",
+			"id": "R0010",
 			"rule": "(?P<pre>\\W)\\[\\s*www[\\s\\.]torrentday[\\s\\.]com\\s*\\](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS013",
+			"id": "R0011",
 			"rule": "(?P<pre>\\W)SweSub(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS014",
+			"id": "R0012",
 			"rule": "(?P<pre>\\W)2CD(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "[Unrated edition]",
-			"id": "CS015",
+			"id": "R0013",
 			"rule": "[\\[\\(]Unrated.[Ee]dition[\\]\\)]"
 		},
 		{
-			"id": "CS016",
+			"id": "R0014",
 			"rule": "(?P<pre>\\W)EXTENDED.[Aa][Nn][Dd].UNRATED(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Cpasbien.me",
-			"id": "CS017",
+			"id": "R0015",
 			"rule": "(?P<pre>\\W|^)\\[\\s*www[\\s\\.]Cpasbien[\\s\\.]me\\s*\\](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "(The) Complete Season (No.)",
-			"id": "CS018",
+			"id": "R0016",
 			"rule": "(?P<pre>\\s?)(?:[Tt]he.)?[Cc]omplete.(?P<season>[Ss]eason.\\d+)",
 			"sub": "\\g<pre>\\g<season>"
 		},
 		{
 			"comment": "(The) Complete Season (No.)",
-			"id": "CS019",
+			"id": "R0017",
 			"rule": "(?P<pre>\\s?)(?P<season>[Ss]eason).(?P<season_no>\\d+).[Cc]omplete",
 			"sub": "\\g<pre>\\g<season> \\g<season_no>"
 		},
 		{
-			"id": "GR001",
+			"id": "R0018",
 			"rule": "(?P<pre>\\W)BS5(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR002",
+			"id": "R0019",
 			"rule": "(?P<pre>\\W)HAGGiS(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR003",
+			"id": "R0020",
 			"rule": "(?P<pre>\\W)ETRG(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR004",
+			"id": "R0021",
 			"rule": "(?P<pre>\\W)SaM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR005",
+			"id": "R0022",
 			"rule": "(?P<pre>\\W)DoNE(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR006",
+			"id": "R0023",
 			"rule": "(?P<pre>\\W)CoWRY(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR007",
+			"id": "R0024",
 			"rule": "(?P<pre>\\W)ExtraTorrentRG(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR008",
+			"id": "R0025",
 			"rule": "(?P<pre>\\W)ExtraTorrentRG(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR009",
+			"id": "R0026",
 			"rule": "(?P<pre>\\W)FXG(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR010",
+			"id": "R0027",
 			"rule": "(?P<pre>\\W)EVO(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR011",
+			"id": "R0028",
 			"rule": "(?P<pre>\\W)EPiSODE(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR012",
+			"id": "R0029",
 			"rule": "(?P<pre>\\W)MAXSPEED(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR013",
+			"id": "R0030",
 			"rule": "(?P<pre>\\W)HORiZON(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR014",
+			"id": "R0031",
 			"rule": "(?P<pre>\\W)PLAYNOW(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR015",
+			"id": "R0032",
 			"rule": "(?P<pre>\\W)MiLLENiUM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR016",
+			"id": "R0033",
 			"rule": "(?P<pre>\\W)(?:RARBG|rarbg)(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR017",
+			"id": "R0034",
 			"rule": "(?P<pre>\\W)FiCO(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR018",
+			"id": "R0035",
 			"rule": "(?P<pre>\\W)YIFY(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR019",
+			"id": "R0036",
 			"rule": "(?P<pre>\\W)aXXo(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR020",
+			"id": "R0037",
 			"rule": "(?P<pre>\\W)[Ss]c[oO]rp(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR021",
+			"id": "R0038",
 			"rule": "(?P<pre>\\W)ShAaNiG\\.com(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR022",
+			"id": "R0039",
 			"rule": "(?P<pre>\\W)SiRiUs.sHaRe(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR023",
+			"id": "R0040",
 			"rule": "(?P<pre>\\W)WunSeeDee(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR024",
+			"id": "R0041",
 			"rule": "(?P<pre>\\W)[J|j]uggs(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR025",
+			"id": "R0042",
 			"rule": "(?P<pre>\\W)S4A(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR026",
+			"id": "R0043",
 			"rule": "(?P<pre>\\W)Herakler(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR027",
+			"id": "R0044",
 			"rule": "(?P<pre>\\W)anoXmous(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR028",
+			"id": "R0045",
 			"rule": "(?P<pre>\\W)McTav(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR029",
+			"id": "R0046",
 			"rule": "(?P<pre>\\W)StyLishSaLH(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR030",
+			"id": "R0047",
 			"rule": "(?P<pre>\\W)greenbud1969(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR031",
+			"id": "R0048",
 			"rule": "(?P<pre>\\W)BOKUTOX(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR032",
+			"id": "R0049",
 			"rule": "(?P<pre>\\W)pimprg(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR033",
+			"id": "R0050",
 			"rule": "(?P<pre>\\W)sujaidr(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR034",
+			"id": "R0051",
 			"rule": "(?P<pre>\\W)WAF(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR035",
+			"id": "R0052",
 			"rule": "(?P<pre>\\W)BTSFilms(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR036",
+			"id": "R0053",
 			"rule": "(?P<pre>\\W)[Ff]apcave(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR037",
+			"id": "R0054",
 			"rule": "(?P<pre>\\W)Gopo(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR038",
+			"id": "R0055",
 			"rule": "(?P<pre>\\W)Ozlem(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR039",
+			"id": "R0056",
 			"rule": "(?P<pre>\\W)mucker(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR040",
+			"id": "R0057",
 			"rule": "(?P<pre>\\W)iNTERNAL\\-REV(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR041",
+			"id": "R0058",
 			"rule": "(?P<pre>\\W)\\-?HELLRAZ0R(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR042",
+			"id": "R0059",
 			"rule": "(?P<pre>\\W)StyLish.Release(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "MMKV",
-			"id": "GR043",
+			"id": "R0060",
 			"rule": "(?P<pre>\\W)MMKV(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR044",
+			"id": "R0061",
 			"rule": "(?P<pre>\\W)CARPEDIEM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR045",
+			"id": "R0062",
 			"rule": "(?P<pre>\\W)PRiDEHD(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR046",
+			"id": "R0063",
 			"rule": "(?P<pre>\\W)DesTroY(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR047",
+			"id": "R0064",
 			"rule": "(?P<pre>\\W)FoV(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR048",
+			"id": "R0065",
 			"rule": "(?P<pre>\\W)ettv(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR049",
+			"id": "R0066",
 			"rule": "(?P<pre>\\W)eztv(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR050",
+			"id": "R0067",
 			"rule": "(?P<pre>\\W)KILLERS(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR051",
+			"id": "R0068",
 			"rule": "(?P<pre>\\W)LOL(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR052",
+			"id": "R0069",
 			"rule": "(?P<pre>\\W)JYK(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR053",
+			"id": "R0070",
 			"rule": "(?P<pre>\\W)Pimp4003(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR054",
+			"id": "R0071",
 			"rule": "(?P<pre>\\W)MovietaM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR055",
+			"id": "R0072",
 			"rule": "(?P<pre>\\W)FUM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR056",
+			"id": "R0073",
 			"rule": "(?P<pre>\\W)IMMERSE(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR057",
+			"id": "R0074",
 			"rule": "(?P<pre>\\W)HLS(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Silver RG",
-			"id": "GR058",
+			"id": "R0075",
 			"rule": "(?P<pre>\\W)Silver\\s?RG(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Common with Silver RG releases",
-			"id": "GR059",
+			"id": "R0076",
 			"rule": "(?P<pre>\\W)MRShanku(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR060",
+			"id": "R0077",
 			"rule": "(?P<pre>\\W)Morsan(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR061",
+			"id": "R0078",
 			"rule": "(?P<pre>\\W)Zeberzee(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR062",
+			"id": "R0079",
 			"rule": "(?P<pre>\\W)SecretMyth(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR063",
+			"id": "R0080",
 			"rule": "(?P<pre>\\W)Kingdom[\\s\\-]Release(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR064",
+			"id": "R0081",
 			"rule": "(?P<pre>\\W)HC(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR065",
+			"id": "R0082",
 			"rule": "(?P<pre>\\W)FQM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR066",
+			"id": "R0083",
 			"rule": "(?P<pre>\\W)McTav(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR067",
+			"id": "R0084",
 			"rule": "(?P<pre>\\W)BoRiS(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR068",
+			"id": "R0085",
 			"rule": "(?P<pre>\\W)iMBT(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR069",
+			"id": "R0086",
 			"rule": "(?P<pre>\\W)FxM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR070",
+			"id": "R0087",
 			"rule": "(?P<pre>\\W)LiNE(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR071",
+			"id": "R0088",
 			"rule": "(?P<pre>\\W)DEViSE(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR072",
+			"id": "R0089",
 			"rule": "(?P<pre>\\W)KAMERA(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR073",
+			"id": "R0090",
 			"rule": "(?P<pre>\\W)LW(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR074",
+			"id": "R0091",
 			"rule": "(?P<pre>\\W)iAPULA(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR075",
+			"id": "R0092",
 			"rule": "(?P<pre>\\W)NeDiVx(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR076",
+			"id": "R0093",
 			"rule": "(?P<pre>\\W)BeStDivX(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR077",
+			"id": "R0094",
 			"rule": "(?P<pre>\\W)NOiR(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR078",
+			"id": "R0095",
 			"rule": "(?P<pre>\\W)JUMANJi(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR079",
+			"id": "R0096",
 			"rule": "(?P<pre>\\W)ViSiON(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR080",
+			"id": "R0097",
 			"rule": "(?P<pre>\\W)KLAXXON(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR081",
+			"id": "R0098",
 			"rule": "(?P<pre>\\W)1337x(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR082",
+			"id": "R0099",
 			"rule": "(?P<pre>\\W)TiNO(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR083",
+			"id": "R0100",
 			"rule": "(?P<pre>\\W)SHiFT(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR084",
+			"id": "R0101",
 			"rule": "(?P<pre>\\W)AYMO(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR085",
+			"id": "R0102",
 			"rule": "(?P<pre>\\W)JMT(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR086",
+			"id": "R0103",
 			"rule": "(?P<pre>\\W)Hon3y(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR087",
+			"id": "R0104",
 			"rule": "(?P<pre>\\W)iNViNCiBLE(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR088",
+			"id": "R0105",
 			"rule": "(?P<pre>\\W)PREM(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR089",
+			"id": "R0106",
 			"rule": "(?P<pre>\\W)AT0MiC(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR090",
+			"id": "R0107",
 			"rule": "(?P<pre>\\W)VLiS(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR091",
+			"id": "R0108",
 			"rule": "(?P<pre>\\W)PSYPHER(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "GR092",
+			"id": "R0109",
 			"rule": "(?P<pre>[-])Noir$",
 			"sub": "\\g<pre>"
 		},
 		{
-			"id": "QU001",
+			"id": "R0110",
 			"rule": "(?P<pre>\\W)480p(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU002",
+			"id": "R0111",
 			"rule": "(?P<pre>\\W)720p(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU003",
+			"id": "R0112",
 			"rule": "(?P<pre>\\W)1080p(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU004",
+			"id": "R0113",
 			"rule": "(?P<pre>\\W)Blu[Rr]ay(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU005",
+			"id": "R0114",
 			"rule": "(?P<pre>\\W)[Bb][DdRr][Rr]i[Pp](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU006",
+			"id": "R0115",
 			"rule": "(?P<pre>\\W)[Hh][Dd][Rr]i[Pp](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU007",
+			"id": "R0116",
 			"rule": "(?P<pre>\\W)CAM(?:[Rr]i[Pp])?(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU008",
+			"id": "R0117",
 			"rule": "(?P<pre>\\W)D[Vv]D\\-?[Rr]i[Pp](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "TELESYNC",
-			"id": "QU009",
+			"id": "R0118",
 			"rule": "(?P<pre>\\W)(?:TS|TELESYNC|PDVD)(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU010",
+			"id": "R0119",
 			"rule": "(?P<pre>\\W)AAC(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU011",
+			"id": "R0120",
 			"rule": "(?P<pre>\\W)FLAC(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU012",
+			"id": "R0121",
 			"rule": "(?P<pre>\\W)AC3(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "H264, x264",
-			"id": "QU013",
+			"id": "R0122",
 			"rule": "(?P<pre>\\W|_)[HhXx]264(?P<post>\\W|_|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU014",
+			"id": "R0123",
 			"rule": "(?P<pre>\\W)DivX(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU015",
+			"id": "R0124",
 			"rule": "(?P<pre>\\W)MKV(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU016",
+			"id": "R0125",
 			"rule": "(?P<pre>\\W)MP3(?P<post>\\W)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU017",
+			"id": "R0126",
 			"rule": "(?P<pre>\\W)MP4(?P<post>\\W)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "XviD",
-			"id": "QU018",
+			"id": "R0127",
 			"rule": "(?P<pre>\\W)[Xx][Vv]i[Dd](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU019",
+			"id": "R0128",
 			"rule": "(?P<pre>\\W)\\d{2,4}\\s*(?:kbps|KBPS)(?P<post>\\W)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Frames per second",
-			"id": "QU020",
+			"id": "R0129",
 			"rule": "(?P<pre>\\W)\\d{2}(?:\\.\\d{1,4})?\\s*[Ff][Pp][Ss](?P<post>\\W)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU021",
+			"id": "R0130",
 			"rule": "(?P<pre>\\W)\\d{3,4}[Mm][Bb](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "TELECINE",
-			"id": "QU022",
+			"id": "R0131",
 			"rule": "(?P<pre>\\W)(?:TC|TELECINE)(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Workprint",
-			"id": "QU023",
+			"id": "R0132",
 			"rule": "(?P<pre>\\W)(?:WP|WORKPR[Ii]NT|WorkPrint)(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU024",
+			"id": "R0133",
 			"rule": "(?P<pre>\\W)SUBBED(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Common with HORiZON releases",
-			"id": "QU025",
+			"id": "R0134",
 			"rule": "(?P<pre>\\W)ArtSubs(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "Dimensions, eg. 640x480",
-			"id": "QU026",
+			"id": "R0135",
 			"rule": "(?P<pre>\\W)\\d{3,4}[Xx]\\d{3,4}(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "HDTV",
-			"id": "QU027",
+			"id": "R0136",
 			"rule": "(?P<pre>[\\W_])HDTV(?:[Rr][Ii][Pp])?(?P<post>\\W|$|_)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "MultiSub",
-			"id": "QU028",
+			"id": "R0137",
 			"rule": "(?i)(?P<pre>\\W)multisubs?(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU029",
+			"id": "R0138",
 			"rule": "(?P<pre>\\W)(?:RePack|Repack|RePacK|REPACK|repack)(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU030",
+			"id": "R0139",
 			"rule": "(?P<pre>\\W)R5(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU031",
+			"id": "R0140",
 			"rule": "(?P<pre>\\W)DVDSCR(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "DVDRip",
-			"id": "QU032",
+			"id": "R0141",
 			"rule": "(?P<pre>\\W)[Dd][Vv][Dd]\\-?[Rr]i[Pp](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU033",
+			"id": "R0142",
 			"rule": "(?P<pre>\\W)AAC5\\.1(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
 			"comment": "CD Rip",
-			"id": "QU034",
+			"id": "R0143",
 			"rule": "(?P<pre>\\W)CD.[Rr][Ii][Pp](?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU035",
+			"id": "R0144",
 			"rule": "(?P<pre>\\W)V0(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "QU036",
+			"id": "R0145",
 			"rule": "(?P<pre>\\W)WEB(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>"
 		},
 		{
-			"id": "CS001",
+			"id": "R0146",
+			"rule": "(?P<pre>\\W)NTSC(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0147",
 			"rule": "(?P<pre>\\W)EXTENDED(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>",
 			"weight": 1
 		},
 		{
-			"id": "CS005",
+			"id": "R0148",
 			"rule": "(?P<pre>\\W)UNRATED(?P<post>\\W|$)",
 			"sub": "\\g<pre>\\g<post>",
 			"weight": 1
 		},
 		{
-			"id": "CS020",
+			"id": "R0149",
 			"rule": "[\\[\\(\\{]\\s*[@\\-\\#]\\s*[\\}\\)\\]]",
 			"weight": 1
 		},
 		{
 			"comment": "Dots between words",
-			"id": "G008",
+			"id": "R0150",
+			"repeat": true,
 			"rule": "(?P<pre>\\w)\\.(?P<post>\\w)",
 			"sub": "\\g<pre> \\g<post>",
-			"weight": 1,
-            "repeat": true
+			"weight": 1
 		},
 		{
 			"comment": "Underscores between words",
-			"id": "G011",
+			"id": "R0151",
 			"rule": "(?P<pre>\\w)_(?P<post>\\w)",
 			"sub": "\\g<pre> \\g<post>",
 			"weight": 1
 		},
 		{
-			"id": "G002",
+			"id": "R0152",
 			"rule": "\\.{2,}",
 			"sub": ".",
 			"weight": 98
 		},
 		{
-			"id": "G001",
+			"id": "R0153",
 			"rule": "(?P<pre>\\W)(?P<year>(?:19|20)\\d{2})(?P<post>\\W|$)",
 			"sub": " (\\g<year>)",
 			"weight": 99
 		},
 		{
-			"id": "G004",
+			"id": "R0154",
 			"rule": "\\[\\s*\\]",
 			"weight": 99
 		},
 		{
-			"id": "G005",
+			"id": "R0155",
 			"rule": "\\(\\s*\\)",
 			"weight": 99
 		},
 		{
-			"id": "G009",
+			"id": "R0156",
 			"rule": "\\{\\s*\\}",
 			"weight": 99
 		},
 		{
 			"comment": "Strip trailing whitespace, dashes, dots and underscores",
-			"id": "G003",
+			"id": "R0157",
 			"rule": "[\\s\\-\\._]+$",
 			"weight": 100
 		},
 		{
-			"id": "G006",
+			"id": "R0158",
 			"rule": "\\s{2,}",
 			"sub": " ",
 			"weight": 100
 		},
 		{
-			"id": "G007",
+			"id": "R0159",
 			"rule": "\\s*$",
 			"weight": 100
 		},
 		{
 			"comment": "Strip leading whitespace, dashes, dots and underscores",
-			"id": "G010",
+			"id": "R0160",
 			"rule": "^[\\s\\-\\._]+",
 			"weight": 100
 		}
 	],
-	"version": 201412300
+	"version": "201412301"
 }
