@@ -4,7 +4,6 @@ from setuptools import setup
 
 
 readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 requirements = [
 ]
@@ -16,7 +15,7 @@ setup(
     name='antiseptic',
     version='0.1.0',
     description='A simple movie directory name cleaner',
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author='Naglis Jonaitis',
     author_email='njonaitis@gmail.com',
     url='https://github.com/naglis/antiseptic',
