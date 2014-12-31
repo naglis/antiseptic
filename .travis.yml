@@ -1,0 +1,21 @@
+language: python
+
+matrix:
+    include:
+        - python: 3.3
+          env: {TOX_ENV: py33}
+        - python: 3.4
+          env: {TOX_ENV: py34, COVERAGE: 1}
+        - python: 3.4
+          env: {TOX_ENV: flake8}
+
+install: 
+    - travis_retry pip install tox 
+    - "[ ! -z $COVERAGE ] && pip install coveralls || true"
+
+# command to run the tests
+script: 
+    - tox -e $TOX_ENV
+
+after_success:
+    - "[ ! -z $COVERAGE ] && coveralls || true"
