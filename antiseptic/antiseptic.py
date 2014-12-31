@@ -9,11 +9,9 @@ import sys
 from .utils import (
     check_latest,
     diff,
-    get_config_dir,
-    get_data_dir,
+    get_config,
     get_new_rules,
     list_dirs,
-    make_dirs,
     prompt,
 )
 
@@ -23,12 +21,8 @@ __author__ = 'Naglis Jonaitis'
 __email__ = 'njonaitis@gmail.com'
 __description__ = 'A simple movie directory name cleaner'
 
-logging.basicConfig(level=logging.INFO, encoding='utf-8')
+logging.basicConfig(level=logging.INFO)
 LOG = logging.getLogger(__name__)
-DEFAULT_CONFIG = {
-    'disabled_rules': [],
-    'update_server': 'https://naglis.github.io/antiseptic/',
-}
 TEST_ERROR_TEMPLATE = '''
 ERROR: Rule: %s, test case #%d
 -----------------------------
@@ -295,26 +289,7 @@ def main():
     else:
         LOG.setLevel(logging.INFO)
 
-    config_dir = os.path.join(get_config_dir(), 'antiseptic')
-    if not os.path.isdir(config_dir):
-        LOG.debug('Creating config dir: %s' % config_dir)
-        make_dirs(config_dir)
-
-    config = DEFAULT_CONFIG
-    config_filename = os.path.join(config_dir, 'config.json')
-    if os.path.isfile(config_filename):
-        with open(config_filename) as f:
-            LOG.debug('Loading configuration from file: %s' % config_filename)
-            custom_config = json.load(f)
-            config.update(custom_config)
-
-    if not config.get('rules_filename'):
-        data_dir = os.path.join(get_data_dir(), 'antiseptic')
-        if not os.path.isdir(data_dir):
-            LOG.debug('Creating data dir: %s' % data_dir)
-            make_dirs(data_dir)
-
-        config['rules_filename'] = os.path.join(data_dir, 'rules.json')
+    config = get_config()
 
     if hasattr(args, 'func'):
         getattr(args, 'func')(args, config)
