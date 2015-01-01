@@ -103,6 +103,7 @@ class Cleaner(object):
 
 
 def rename_dir(path, cleaner, preview=False, default_choice='n'):
+    path = os.path.normpath(path)
     base, before = os.path.split(path)
     after, rules = cleaner.clean_title(before)
 
