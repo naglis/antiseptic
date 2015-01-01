@@ -851,7 +851,12 @@
 				]
 			],
 			"weight": 100
+		},
+		{
+			"id": "R0161",
+			"rule": "(?P<pre>\\W)Ehhhh(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
 		}
 	],
-	"version": "201412304"
+	"version": "201501010"
 }

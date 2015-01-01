@@ -522,4 +522,7 @@ rules:
   - - _- Some title
     - Some title
   weight: 100
-version: '201412304'
+- id: R0161
+  rule: (?P<pre>\W)Ehhhh(?P<post>\W|$)
+  sub: \g<pre>\g<post>
+version: '201501010'
