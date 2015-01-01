@@ -2,5 +2,9 @@
 omit =
     setup.py
     tests/*
+    */test/*
+    */site-packages/nose/*
+    */pyshared/*
+    */python?.?/* 
 source =
     antiseptic/
