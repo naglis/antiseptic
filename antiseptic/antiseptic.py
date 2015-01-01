@@ -16,7 +16,7 @@ from .utils import (
 )
 
 __progname__ = 'antiseptic'
-__version__ = '0.1'
+__version__ = '0.1.1'
 __author__ = 'Naglis Jonaitis'
 __email__ = 'njonaitis@gmail.com'
 __description__ = 'A simple movie directory name cleaner'
