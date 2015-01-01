@@ -14,7 +14,7 @@ test_requirements = [
 setup(
     name='antiseptic',
     version='0.1.1',
-    description='A simple movie directory name cleaner',
+    description='A simple command-line movie directory name cleaner',
     long_description=readme,
     author='Naglis Jonaitis',
     author_email='njonaitis@gmail.com',
@@ -36,7 +36,11 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
     ],
-    entry_points = { 'console_scripts': [ 'antiseptic = antiseptic.antiseptic:main', ] },
+    entry_points={
+        'console_scripts': [
+            'antiseptic = antiseptic.antiseptic:main'
+        ]
+    },
     test_suite='tests',
     tests_require=test_requirements
 )
