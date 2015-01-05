@@ -21,8 +21,10 @@ __author__ = 'Naglis Jonaitis'
 __email__ = 'njonaitis@gmail.com'
 __description__ = 'A simple movie directory name cleaner'
 
-logging.basicConfig(level=logging.INFO)
 LOG = logging.getLogger(__name__)
+CONSOLE_MESSAGE_FORMAT = '%(message)s'
+LOG_FILE_MESSAGE_FORMAT = '[%(asctime)s] %(levelname)-8s %(name)s %(message)s'
+DEFAULT_VERBOSE_LEVEL = 1
 TEST_ERROR_TEMPLATE = '''
 ERROR: Rule: %s, test case #%d
 -----------------------------
@@ -257,6 +259,16 @@ def main():
     p.add_argument(
         '-d', '--debug', action='store_true',
         help='output debug information')
+    p.add_argument(
+        '-v', '--verbose', action='count', dest='verbose_level',
+        default=DEFAULT_VERBOSE_LEVEL,
+        help='increase verbosity of output. Can be repeated.',)
+    p.add_argument(
+        '--log-file', action='store', default=None,
+        help='specify a file to log output. Disabled by default.',)
+    p.add_argument(
+        '--quiet', action='store_const', dest='verbose_level',
+        const=0, help='suppress output except warnings and errors',)
     subparsers = p.add_subparsers()
 
     rename_parser = subparsers.add_parser('rename', help='rename directories')
@@ -285,12 +297,38 @@ def main():
 
     args = p.parse_args()
 
-    if args.debug:
-        LOG.setLevel(logging.DEBUG)
-    else:
-        LOG.setLevel(logging.INFO)
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.DEBUG)
 
-    config = get_config()
+    # Set up logging to a file.
+    if args.log_file:
+        file_handler = logging.FileHandler(
+            filename=args.log_file,
+        )
+        formatter = logging.Formatter(LOG_FILE_MESSAGE_FORMAT)
+        file_handler.setFormatter(formatter)
+        root_logger.addHandler(file_handler)
 
-    if hasattr(args, 'func'):
-        getattr(args, 'func')(args, config)
+    # Always send higher-level messages to the console via stderr
+    console = logging.StreamHandler(sys.stderr)
+    console_level = {
+        0: logging.WARNING,
+        1: logging.INFO,
+        2: logging.DEBUG,
+    }.get(args.verbose_level, logging.DEBUG)
+    console.setLevel(console_level)
+    formatter = logging.Formatter(CONSOLE_MESSAGE_FORMAT)
+    console.setFormatter(formatter)
+    root_logger.addHandler(console)
+
+    try:
+        config = get_config()
+        if hasattr(args, 'func'):
+            getattr(args, 'func')(args, config)
+    except Exception as err:
+        if args.debug:
+            LOG.exception(err)
+            raise
+        else:
+            LOG.error(err)
+            return 1
