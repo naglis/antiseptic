@@ -376,7 +376,13 @@
 		{
 			"id": "R0074",
 			"rule": "(?P<pre>\\W)HLS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"The.Brown.Bunny.UNRATED.LiMiTED.DVDRiP.XViD-HLS",
+					"The.Brown.Bunny.UNRATED.LiMiTED.DVDRiP.XViD-"
+				]
+			]
 		},
 		{
 			"comment": "Silver RG",
@@ -438,7 +444,13 @@
 		{
 			"id": "R0086",
 			"rule": "(?P<pre>\\W)FxM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Harry.Potter.And.The.Half.Blood.Prince.2009.DvDRip-FxM",
+					"Harry.Potter.And.The.Half.Blood.Prince.2009.DvDRip-"
+				]
+			]
 		},
 		{
 			"id": "R0087",
@@ -468,12 +480,28 @@
 		{
 			"id": "R0092",
 			"rule": "(?P<pre>\\W)NeDiVx(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"We.Bought.a.Zoo.2011.DVDRip.XviD-NeDiVx",
+					"We.Bought.a.Zoo.2011.DVDRip.XviD-"
+				]
+			]
 		},
 		{
 			"id": "R0093",
-			"rule": "(?P<pre>\\W)BeStDivX(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?P<pre>\\W)(?:BeStDivX|Bestdivx)(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Klimt (2006)DVDRip Bestdivx",
+					"Klimt (2006)DVDRip "
+				],
+				[
+					"Get.the.Gringo.2012.DVDRip.XviD-BeStDivX",
+					"Get.the.Gringo.2012.DVDRip.XviD-"
+				]
+			]
 		},
 		{
 			"id": "R0094",
@@ -878,7 +906,411 @@
 					"Rocky II"
 				]
 			]
+		},
+		{
+			"id": "R0164",
+			"rule": "(?P<pre>\\W)VoMiT(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0165",
+			"rule": "(?P<pre>\\W)SUBMERGE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0166",
+			"rule": "(?P<pre>\\W)AMIABLE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0167",
+			"rule": "(?P<pre>\\W)PublicHD(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0168",
+			"rule": "(?P<pre>\\W)WEBiOS(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0169",
+			"rule": "(?P<pre>\\W)FZERO(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"comment": "BrG",
+			"id": "R0170",
+			"rule": "(?P<pre>\\W)B[Rr]G(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"comment": "VH-PROD",
+			"id": "R0171",
+			"rule": "(?P<pre>\\W)VH[\\-\\s]PROD(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0172",
+			"rule": "(?P<pre>\\W)PreVail(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0173",
+			"rule": "(?P<pre>\\W)FLAiTE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"comment": "XanaX",
+			"id": "R0174",
+			"rule": "(?P<pre>\\W)(?:XanaX|XANAX|xaNax)(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0175",
+			"rule": "(?P<pre>\\W)ALLiANCE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0176",
+			"rule": "(?P<pre>\\W)ViTE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0177",
+			"rule": "(?P<pre>\\W)PUKKA(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0178",
+			"rule": "(?P<pre>\\W)SAPHiRE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0179",
+			"rule": "(?P<pre>\\W)NEPTUNE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0180",
+			"rule": "(?P<pre>\\W)D0PE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0181",
+			"rule": "(?P<pre>\\W)DiAMOND(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0182",
+			"rule": "(?P<pre>\\W)LMG(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>"
+		},
+		{
+			"id": "R0183",
+			"rule": "(?P<pre>\\W)DvF(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Jack.Strong.2014.DVDRiP.x264-DvF[rarbg]",
+					"Jack.Strong.2014.DVDRiP.x264-[rarbg]"
+				],
+				[
+					"House of DVF S01E08 Show Day Showdown WEB-DL x264",
+					"House of DVF S01E08 Show Day Showdown WEB-DL x264"
+				]
+			]
+		},
+		{
+			"id": "R0184",
+			"rule": "(?P<pre>\\W)DMT(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"22 Jump Street (2014) BRRip (xvid) NL Subs. DMT",
+					"22 Jump Street (2014) BRRip (xvid) NL Subs. "
+				]
+			]
+		},
+		{
+			"id": "R0185",
+			"rule": "(?P<pre>\\W)LPD(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Ida.2013.LiMiTED.BDRip.x264-LPD[rarbg]",
+					"Ida.2013.LiMiTED.BDRip.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0186",
+			"rule": "(?P<pre>\\W)iKA(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Rec.2007.READNFO.DVDRiP.XViD-iKA.[Hardcoded.English.Subtitles]",
+					"Rec.2007.READNFO.DVDRiP.XViD-.[Hardcoded.English.Subtitles]"
+				]
+			]
+		},
+		{
+			"id": "R0187",
+			"rule": "(?P<pre>\\W)HNR(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Comedy.Central.Roast.Of.William.Shatner.2006.DVDRip.XviD-HNR",
+					"Comedy.Central.Roast.Of.William.Shatner.2006.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0188",
+			"rule": "(?P<pre>\\W)SiNK(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"God.Grew.Tired.Of.Us.2006.LiMiTED.DVDRip.XviD-SiNK",
+					"God.Grew.Tired.Of.Us.2006.LiMiTED.DVDRip.XviD-"
+				],
+				[
+					"[ www.Speed.cd ]-Lab.Rats.2012.S03E01.Sink.or.Swim.720p.HDTV.x264-W4F",
+					"[ www.Speed.cd ]-Lab.Rats.2012.S03E01.Sink.or.Swim.720p.HDTV.x264-W4F"
+				]
+			]
+		},
+		{
+			"id": "R0189",
+			"rule": "(?P<pre>\\W)NTi(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"[NTi]_Basic.Instinct.2.TS.XviD-OBSESSiON",
+					"[]_Basic.Instinct.2.TS.XviD-OBSESSiON"
+				]
+			]
+		},
+		{
+			"id": "R0190",
+			"rule": "(?P<pre>\\W)WPi(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"The.Departed.2006.1080p.BluRay.x264-WPi",
+					"The.Departed.2006.1080p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0191",
+			"rule": "(?P<pre>\\W)OBSESSiON(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Cloverfield.TS.XViD-OBSESSiON",
+					"Cloverfield.TS.XViD-"
+				],
+				[
+					"Red.Obsession.2013.BDRip.x264-PFa[rarbg]",
+					"Red.Obsession.2013.BDRip.x264-PFa[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0192",
+			"rule": "(?P<pre>\\W)LRC(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Rumor.Has.It.2005.DVDRip.xVID-LRC",
+					"Rumor.Has.It.2005.DVDRip.xVID-"
+				]
+			]
+		},
+		{
+			"id": "R0193",
+			"rule": "(?P<pre>\\W)JBW(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"07 - Fargo (1996)-JBW",
+					"07 - Fargo (1996)-"
+				]
+			]
+		},
+		{
+			"comment": "DOMiNO",
+			"id": "R0194",
+			"rule": "(?P<pre>\\W)(?:DOMiNO|=DoMiNo=|-=DoMiNo=-)(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Blood.And.Bone.2009.DVDRip.XviD-DOMiNO",
+					"Blood.And.Bone.2009.DVDRip.XviD-"
+				],
+				[
+					"Tor.2.2013.WEB-DL-AVC[-=DoMiNo=-].mkv",
+					"Tor.2.2013.WEB-DL-AVC[].mkv"
+				],
+				[
+					"Domino-720p MP4 AAC x264 BRRip 2005-CC",
+					"Domino-720p MP4 AAC x264 BRRip 2005-CC"
+				]
+			]
+		},
+		{
+			"id": "R0195",
+			"rule": "(?P<pre>\\W)COCAIN(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"The.Campaign.EXTENDED.DVDRip.XviD-COCAIN",
+					"The.Campaign.EXTENDED.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0196",
+			"rule": "(?P<pre>\\W)QuidaM(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Conversations.With.God.2006.DVDRiP.XViD.QuidaM",
+					"Conversations.With.God.2006.DVDRiP.XViD."
+				]
+			]
+		},
+		{
+			"id": "R0197",
+			"rule": "(?P<pre>\\W)QiM(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Takedown.2000.iNTERNAL.DVDRip.XviD-QiM",
+					"Takedown.2000.iNTERNAL.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0198",
+			"rule": "(?P<pre>\\W)iMMORTALs(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Murderball.2005.LiMiTED.DVDRip.XviD-iMMORTALs",
+					"Murderball.2005.LiMiTED.DVDRip.XviD-"
+				],
+				[
+					"Immortals (2011) DVDRip XviD-MAXSPEED",
+					"Immortals (2011) DVDRip XviD-MAXSPEED"
+				]
+			]
+		},
+		{
+			"id": "R0199",
+			"rule": "(?P<pre>\\W)ESPiSE(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"500.Days.of.Summer.PROPER.BDRip.XviD-ESPiSE",
+					"500.Days.of.Summer.PROPER.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0200",
+			"rule": "(?P<pre>\\W)Rets(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"The Terminal dvd rip[eng]XviD.Rets",
+					"The Terminal dvd rip[eng]XviD."
+				]
+			]
+		},
+		{
+			"id": "R0201",
+			"rule": "(?P<pre>\\W)PFa(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Canopy.2013.720p.BluRay.x264-PFa[rarbg]",
+					"Canopy.2013.720p.BluRay.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0202",
+			"rule": "(?P<pre>\\W)UNiVERSAL(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Honeymoon.with.Mom.REPACK.R5.xVID-UNiVERSAL",
+					"Honeymoon.with.Mom.REPACK.R5.xVID-"
+				],
+				[
+					"Universal.Soldier-The.Return.1999.720p.BDRip.XviD-RARBG",
+					"Universal.Soldier-The.Return.1999.720p.BDRip.XviD-RARBG"
+				]
+			]
+		},
+		{
+			"id": "R0203",
+			"rule": "(?P<pre>\\W)AXIAL(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Soylent.Green.1973.WS.DVDRip.XviD-AXIAL",
+					"Soylent.Green.1973.WS.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0204",
+			"rule": "(?P<pre>\\W)AFO(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Becoming.Jane.2007.REPACK.DVDRip.XviD-AFO",
+					"Becoming.Jane.2007.REPACK.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0205",
+			"rule": "(?P<pre>\\W)aAF(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"The.Daily.Show.2014.11.18.Benedict.Cumberbatch.HDTV.x264-aAF",
+					"The.Daily.Show.2014.11.18.Benedict.Cumberbatch.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"comment": "USABIT",
+			"id": "R0206",
+			"rule": "(?i)(?P<pre>\\W)(?:www\\.)?USABIT(?:\\.com)?(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"The.Prestige.2006.DvDrip.Eng-aXXo.(www.USABIT.com)",
+					"The.Prestige.2006.DvDrip.Eng-aXXo.()"
+				],
+				[
+					"8MM 2 (2005).DVDRip.[UsaBit.com]",
+					"8MM 2 (2005).DVDRip.[]"
+				],
+				[
+					"[ www.UsaBit.com ] - 3 Days To Kill (2014) HDCAM 500MB Ganool",
+					"[  ] - 3 Days To Kill (2014) HDCAM 500MB Ganool"
+				],
+				[
+					"The.Seeker.The.Dark.Is.Rising.TS.XViD-20th.USABiT",
+					"The.Seeker.The.Dark.Is.Rising.TS.XViD-20th."
+				]
+			]
 		}
 	],
-	"version": "201501050"
+	"version": "201501060"
 }
