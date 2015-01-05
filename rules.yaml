@@ -525,4 +525,16 @@ rules:
 - id: R0161
   rule: (?P<pre>\W)Ehhhh(?P<post>\W|$)
   sub: \g<pre>\g<post>
-version: '201501010'
+- id: R0162
+  rule: (?P<pre>\W)Iii(?P<post>\W|$)
+  sub: \g<pre>III\g<post>
+  tests:
+  - - Rocky Iii
+    - Rocky III
+- id: R0163
+  rule: (?P<pre>\W)Ii(?P<post>\W|$)
+  sub: \g<pre>II\g<post>
+  tests:
+  - - Rocky Ii
+    - Rocky II
+version: '201501050'
