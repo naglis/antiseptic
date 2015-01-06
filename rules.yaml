@@ -557,6 +557,9 @@ rules:
 - id: R0165
   rule: (?P<pre>\W)SUBMERGE(?P<post>\W|$)
   sub: \g<pre>\g<post>
+  tests:
+  - - Collapse.LIMITED.DVDRip.XviD-SUBMERGE
+    - Collapse.LIMITED.DVDRip.XviD-
 - id: R0166
   rule: (?P<pre>\W)AMIABLE(?P<post>\W|$)
   sub: \g<pre>\g<post>
@@ -777,4 +780,16 @@ rules:
     - '[  ] - 3 Days To Kill (2014) HDCAM 500MB Ganool'
   - - The.Seeker.The.Dark.Is.Rising.TS.XViD-20th.USABiT
     - The.Seeker.The.Dark.Is.Rising.TS.XViD-20th.
-version: '201501060'
+- id: R0207
+  rule: (?P<pre>\W)RLYEH(?P<post>\W|$)
+  sub: \g<pre>\g<post>
+  tests:
+  - - Hoop.Dreams.1994.Criterion.Xvid.DVDRip-RLYEH
+    - Hoop.Dreams.1994.Criterion.Xvid.DVDRip-
+- id: R0208
+  rule: (?P<pre>\W)WBZ(?P<post>\W|$)
+  sub: \g<pre>\g<post>
+  tests:
+  - - American Pie Reunion 2012 TS XVID V3 - WBZ
+    - 'American Pie Reunion 2012 TS XVID V3 - '
+version: '201501061'
