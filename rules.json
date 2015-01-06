@@ -1338,7 +1338,40 @@
 					"American Pie Reunion 2012 TS XVID V3 - "
 				]
 			]
+		},
+		{
+			"id": "R0209",
+			"rule": "(?P<pre>\\W)NYDIC(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"[ www.Torrenting.com ] - The.Avengers.2012.DVDRip.XviD-NYDIC",
+					"[ www.Torrenting.com ] - The.Avengers.2012.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0210",
+			"rule": "(?P<pre>\\W)DutchReleaseTeam(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Lord Of The Rings - The Return of the King (2003) 720p BRRip NL-ENG subs DutchReleaseTeam",
+					"Lord Of The Rings - The Return of the King (2003) 720p BRRip NL-ENG subs "
+				]
+			]
+		},
+		{
+			"id": "R0211",
+			"rule": "(?P<pre>\\W)H34LTH(?P<post>\\W|$)",
+			"sub": "\\g<pre>\\g<post>",
+			"tests": [
+				[
+					"Whiplash.2014.HDRiP.XViD.AC3-H34LTH",
+					"Whiplash.2014.HDRiP.XViD.AC3-"
+				]
+			]
 		}
 	],
-	"version": "201501061"
+	"version": "201501062"
 }
