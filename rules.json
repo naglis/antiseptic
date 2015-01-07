@@ -3,45 +3,37 @@
 		{
 			"comment": "LiMiTED",
 			"id": "R0001",
-			"rule": "(?P<pre>\\W)L[Ii]M[Ii]TED(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)L[Ii]M[Ii]TED(?=\\W|$)"
 		},
 		{
 			"id": "R0002",
-			"rule": "(?P<pre>\\W)RETAIL(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)RETAIL(?=\\W|$)"
 		},
 		{
 			"id": "R0003",
-			"rule": "(?P<pre>\\W)PROPER(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PROPER(?=\\W|$)"
 		},
 		{
 			"comment": "WEBRip",
 			"id": "R0004",
-			"rule": "(?P<pre>\\W)WEB(?:\\-|\\s)?[Rr][Ii][Pp](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)WEB(?:\\-|\\s)?[Rr][Ii][Pp](?=\\W|$)"
 		},
 		{
 			"id": "R0005",
-			"rule": "(?P<pre>\\W)W[Ee][Bb]\\-?D[Ll](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)W[Ee][Bb]\\-?D[Ll](?=\\W|$)"
 		},
 		{
 			"comment": "NO-RAR",
 			"id": "R0006",
-			"rule": "(?P<pre>\\W)NO\\-RAR(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)NO\\-RAR(?=\\W|$)"
 		},
 		{
 			"id": "R0007",
-			"rule": "(?P<pre>\\W)FRENCH(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FRENCH(?=\\W|$)"
 		},
 		{
 			"id": "R0008",
-			"rule": "(?P<pre>\\W)READNFO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)READNFO(?=\\W|$)",
 			"tests": [
 				[
 					"Interstellar 2014 HDCAM NEW SOURCE READNFO XVID AC3 ACAB",
@@ -57,18 +49,15 @@
 		{
 			"comment": "torrentday.com",
 			"id": "R0010",
-			"rule": "(?P<pre>\\W)\\[\\s*www[\\s\\.]torrentday[\\s\\.]com\\s*\\](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)\\[\\s*www[\\s\\.]torrentday[\\s\\.]com\\s*\\](?=\\W|$)"
 		},
 		{
 			"id": "R0011",
-			"rule": "(?P<pre>\\W)SweSub(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)SweSub(?=\\W|$)"
 		},
 		{
 			"id": "R0012",
-			"rule": "(?P<pre>\\W)2CD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)2CD(?=\\W|$)"
 		},
 		{
 			"comment": "[Unrated edition]",
@@ -77,14 +66,12 @@
 		},
 		{
 			"id": "R0014",
-			"rule": "(?P<pre>\\W)EXTENDED.[Aa][Nn][Dd].UNRATED(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)EXTENDED.[Aa][Nn][Dd].UNRATED(?=\\W|$)"
 		},
 		{
 			"comment": "Cpasbien.me",
 			"id": "R0015",
-			"rule": "(?P<pre>\\W|^)www[\\s\\.]Cpasbien[\\s\\.](?:me|pe|com)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=[\\W\\A])www[\\s\\.]Cpasbien[\\s\\.](?:me|pe|com)(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
@@ -95,34 +82,30 @@
 		{
 			"comment": "(The) Complete Season (No.)",
 			"id": "R0016",
-			"rule": "(?P<pre>\\s?)(?:[Tt]he.)?[Cc]omplete.(?P<season>[Ss]eason.\\d+)",
-			"sub": "\\g<pre>\\g<season>"
+			"rule": "(?:[Tt]he.)?[Cc]omplete.(?P<season>[Ss]eason.\\d+)",
+			"sub": "\\g<season>"
 		},
 		{
 			"comment": "(The) Complete Season (No.)",
 			"id": "R0017",
-			"rule": "(?P<pre>\\s?)(?P<season>[Ss]eason).(?P<season_no>\\d+).[Cc]omplete",
-			"sub": "\\g<pre>\\g<season> \\g<season_no>"
+			"rule": "(?P<season>[Ss]eason).(?P<season_no>\\d+).[Cc]omplete",
+			"sub": "\\g<season> \\g<season_no>"
 		},
 		{
 			"id": "R0018",
-			"rule": "(?P<pre>\\W)BS5(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)BS5(?=\\W|$)"
 		},
 		{
 			"id": "R0019",
-			"rule": "(?P<pre>\\W)HAGGiS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)HAGGiS(?=\\W|$)"
 		},
 		{
 			"id": "R0020",
-			"rule": "(?P<pre>\\W)ETRG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ETRG(?=\\W|$)"
 		},
 		{
 			"id": "R0021",
-			"rule": "(?P<pre>\\W)SaM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SaM(?=\\W|$)",
 			"tests": [
 				[
 					"The.Judge.2014.HDRip.XviD-SaM[ETRG]",
@@ -132,33 +115,27 @@
 		},
 		{
 			"id": "R0022",
-			"rule": "(?P<pre>\\W)DoNE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)DoNE(?=\\W|$)"
 		},
 		{
 			"id": "R0023",
-			"rule": "(?P<pre>\\W)CoWRY(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)CoWRY(?=\\W|$)"
 		},
 		{
 			"id": "R0024",
-			"rule": "(?P<pre>\\W)ExtraTorrentRG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ExtraTorrentRG(?=\\W|$)"
 		},
 		{
 			"id": "R0025",
-			"rule": "(?P<pre>\\W)ExtraTorrentRG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ExtraTorrentRG(?=\\W|$)"
 		},
 		{
 			"id": "R0026",
-			"rule": "(?P<pre>\\W)FXG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FXG(?=\\W|$)"
 		},
 		{
 			"id": "R0027",
-			"rule": "(?P<pre>\\W)EVO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)EVO(?=\\W|$)",
 			"tests": [
 				[
 					"Age.of.Ice.2014.HDRip.XviD.AC3-EVO",
@@ -168,13 +145,11 @@
 		},
 		{
 			"id": "R0028",
-			"rule": "(?P<pre>\\W)EPiSODE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)EPiSODE(?=\\W|$)"
 		},
 		{
 			"id": "R0029",
-			"rule": "(?P<pre>\\W)MAXSPEED(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)MAXSPEED(?=\\W|$)",
 			"tests": [
 				[
 					"The Maze Runner (2014) DVDRip XviD-MAXSPEED",
@@ -184,8 +159,7 @@
 		},
 		{
 			"id": "R0030",
-			"rule": "(?P<pre>\\W)HORiZON(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)HORiZON(?=\\W|$)",
 			"tests": [
 				[
 					"Goodbye.to.Language.[Adieu.au.Langage].2014.BRRip.x264.HORiZON-ArtSubs",
@@ -195,204 +169,164 @@
 		},
 		{
 			"id": "R0031",
-			"rule": "(?P<pre>\\W)PLAYNOW(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PLAYNOW(?=\\W|$)"
 		},
 		{
 			"id": "R0032",
-			"rule": "(?P<pre>\\W)MiLLENiUM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MiLLENiUM(?=\\W|$)"
 		},
 		{
 			"id": "R0033",
-			"rule": "(?P<pre>\\W)(?:RARBG|rarbg)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)(?:RARBG|rarbg)(?=\\W|$)"
 		},
 		{
 			"id": "R0034",
-			"rule": "(?P<pre>\\W)FiCO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FiCO(?=\\W|$)"
 		},
 		{
 			"id": "R0035",
-			"rule": "(?P<pre>\\W)YIFY(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)YIFY(?=\\W|$)"
 		},
 		{
 			"id": "R0036",
-			"rule": "(?P<pre>\\W)aXXo(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)aXXo(?=\\W|$)"
 		},
 		{
 			"id": "R0037",
-			"rule": "(?P<pre>\\W)[Ss]c[oO]rp(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[Ss]c[oO]rp(?=\\W|$)"
 		},
 		{
 			"id": "R0038",
-			"rule": "(?P<pre>\\W)ShAaNiG\\.com(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ShAaNiG\\.com(?=\\W|$)"
 		},
 		{
 			"id": "R0039",
-			"rule": "(?P<pre>\\W)SiRiUs.sHaRe(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)SiRiUs.sHaRe(?=\\W|$)"
 		},
 		{
 			"id": "R0040",
-			"rule": "(?P<pre>\\W)WunSeeDee(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)WunSeeDee(?=\\W|$)"
 		},
 		{
 			"id": "R0041",
-			"rule": "(?P<pre>\\W)[J|j]uggs(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[J|j]uggs(?=\\W|$)"
 		},
 		{
 			"id": "R0042",
-			"rule": "(?P<pre>\\W)S4A(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)S4A(?=\\W|$)"
 		},
 		{
 			"id": "R0043",
-			"rule": "(?P<pre>\\W)Herakler(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Herakler(?=\\W|$)"
 		},
 		{
 			"id": "R0044",
-			"rule": "(?P<pre>\\W)anoXmous(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)anoXmous(?=\\W|$)"
 		},
 		{
 			"id": "R0045",
-			"rule": "(?P<pre>\\W)McTav(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)McTav(?=\\W|$)"
 		},
 		{
 			"id": "R0046",
-			"rule": "(?P<pre>\\W)StyLishSaLH(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)StyLishSaLH(?=\\W|$)"
 		},
 		{
 			"id": "R0047",
-			"rule": "(?P<pre>\\W)greenbud1969(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)greenbud1969(?=\\W|$)"
 		},
 		{
 			"id": "R0048",
-			"rule": "(?P<pre>\\W)BOKUTOX(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)BOKUTOX(?=\\W|$)"
 		},
 		{
 			"id": "R0049",
-			"rule": "(?P<pre>\\W)pimprg(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)pimprg(?=\\W|$)"
 		},
 		{
 			"id": "R0050",
-			"rule": "(?P<pre>\\W)sujaidr(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)sujaidr(?=\\W|$)"
 		},
 		{
 			"id": "R0051",
-			"rule": "(?P<pre>\\W)WAF(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)WAF(?=\\W|$)"
 		},
 		{
 			"id": "R0052",
-			"rule": "(?P<pre>\\W)BTSFilms(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)BTSFilms(?=\\W|$)"
 		},
 		{
 			"id": "R0053",
-			"rule": "(?P<pre>\\W)[Ff]apcave(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[Ff]apcave(?=\\W|$)"
 		},
 		{
 			"id": "R0054",
-			"rule": "(?P<pre>\\W)Gopo(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Gopo(?=\\W|$)"
 		},
 		{
 			"id": "R0055",
-			"rule": "(?P<pre>\\W)Ozlem(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Ozlem(?=\\W|$)"
 		},
 		{
 			"id": "R0056",
-			"rule": "(?P<pre>\\W)mucker(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)mucker(?=\\W|$)"
 		},
 		{
 			"id": "R0057",
-			"rule": "(?P<pre>\\W)iNTERNAL\\-REV(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)iNTERNAL\\-REV(?=\\W|$)"
 		},
 		{
 			"id": "R0058",
-			"rule": "(?P<pre>\\W)\\-?HELLRAZ0R(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)\\-?HELLRAZ0R(?=\\W|$)"
 		},
 		{
 			"id": "R0059",
-			"rule": "(?P<pre>\\W)StyLish.Release(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)StyLish.Release(?=\\W|$)"
 		},
 		{
 			"comment": "MMKV",
 			"id": "R0060",
-			"rule": "(?P<pre>\\W)MMKV(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MMKV(?=\\W|$)"
 		},
 		{
 			"id": "R0061",
-			"rule": "(?P<pre>\\W)CARPEDIEM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)CARPEDIEM(?=\\W|$)"
 		},
 		{
 			"id": "R0062",
-			"rule": "(?P<pre>\\W)PRiDEHD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PRiDEHD(?=\\W|$)"
 		},
 		{
 			"id": "R0063",
-			"rule": "(?P<pre>\\W)DesTroY(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)DesTroY(?=\\W|$)"
 		},
 		{
 			"id": "R0064",
-			"rule": "(?P<pre>\\W)FoV(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FoV(?=\\W|$)"
 		},
 		{
 			"id": "R0065",
-			"rule": "(?P<pre>\\W)ettv(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ettv(?=\\W|$)"
 		},
 		{
 			"id": "R0066",
-			"rule": "(?P<pre>\\W)eztv(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)eztv(?=\\W|$)"
 		},
 		{
 			"id": "R0067",
-			"rule": "(?P<pre>\\W)KILLERS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)KILLERS(?=\\W|$)"
 		},
 		{
 			"id": "R0068",
-			"rule": "(?P<pre>\\W)LOL(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)LOL(?=\\W|$)"
 		},
 		{
 			"id": "R0069",
-			"rule": "(?P<pre>\\W)JYK(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)JYK(?=\\W|$)"
 		},
 		{
 			"id": "R0070",
-			"rule": "(?P<pre>\\W)Pimp4003(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)Pimp4003(?=\\W|$)",
 			"tests": [
 				[
 					"The Hobbit The Battle Of The Five Armies 2014 1080p HDTS x264 Pimp4003",
@@ -402,23 +336,19 @@
 		},
 		{
 			"id": "R0071",
-			"rule": "(?P<pre>\\W)MovietaM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MovietaM(?=\\W|$)"
 		},
 		{
 			"id": "R0072",
-			"rule": "(?P<pre>\\W)FUM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FUM(?=\\W|$)"
 		},
 		{
 			"id": "R0073",
-			"rule": "(?P<pre>\\W)IMMERSE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)IMMERSE(?=\\W|$)"
 		},
 		{
 			"id": "R0074",
-			"rule": "(?P<pre>\\W)HLS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)HLS(?=\\W|$)",
 			"tests": [
 				[
 					"The.Brown.Bunny.UNRATED.LiMiTED.DVDRiP.XViD-HLS",
@@ -429,64 +359,52 @@
 		{
 			"comment": "Silver RG",
 			"id": "R0075",
-			"rule": "(?P<pre>\\W)Silver\\s?RG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Silver\\s?RG(?=\\W|$)"
 		},
 		{
 			"comment": "Common with Silver RG releases",
 			"id": "R0076",
-			"rule": "(?P<pre>\\W)MRShanku(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MRShanku(?=\\W|$)"
 		},
 		{
 			"id": "R0077",
-			"rule": "(?P<pre>\\W)Morsan(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Morsan(?=\\W|$)"
 		},
 		{
 			"id": "R0078",
-			"rule": "(?P<pre>\\W)Zeberzee(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Zeberzee(?=\\W|$)"
 		},
 		{
 			"id": "R0079",
-			"rule": "(?P<pre>\\W)SecretMyth(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)SecretMyth(?=\\W|$)"
 		},
 		{
 			"id": "R0080",
-			"rule": "(?P<pre>\\W)Kingdom[\\s\\-]Release(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Kingdom[\\s\\-]Release(?=\\W|$)"
 		},
 		{
 			"id": "R0081",
-			"rule": "(?P<pre>\\W)HC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)HC(?=\\W|$)"
 		},
 		{
 			"id": "R0082",
-			"rule": "(?P<pre>\\W)FQM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FQM(?=\\W|$)"
 		},
 		{
 			"id": "R0083",
-			"rule": "(?P<pre>\\W)McTav(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)McTav(?=\\W|$)"
 		},
 		{
 			"id": "R0084",
-			"rule": "(?P<pre>\\W)BoRiS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)BoRiS(?=\\W|$)"
 		},
 		{
 			"id": "R0085",
-			"rule": "(?P<pre>\\W)iMBT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)iMBT(?=\\W|$)"
 		},
 		{
 			"id": "R0086",
-			"rule": "(?P<pre>\\W)FxM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)FxM(?=\\W|$)",
 			"tests": [
 				[
 					"Harry.Potter.And.The.Half.Blood.Prince.2009.DvDRip-FxM",
@@ -496,33 +414,27 @@
 		},
 		{
 			"id": "R0087",
-			"rule": "(?P<pre>\\W)LiNE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)LiNE(?=\\W|$)"
 		},
 		{
 			"id": "R0088",
-			"rule": "(?P<pre>\\W)DEViSE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)DEViSE(?=\\W|$)"
 		},
 		{
 			"id": "R0089",
-			"rule": "(?P<pre>\\W)KAMERA(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)KAMERA(?=\\W|$)"
 		},
 		{
 			"id": "R0090",
-			"rule": "(?P<pre>\\W)LW(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)LW(?=\\W|$)"
 		},
 		{
 			"id": "R0091",
-			"rule": "(?P<pre>\\W)iAPULA(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)iAPULA(?=\\W|$)"
 		},
 		{
 			"id": "R0092",
-			"rule": "(?P<pre>\\W)NeDiVx(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)NeDiVx(?=\\W|$)",
 			"tests": [
 				[
 					"We.Bought.a.Zoo.2011.DVDRip.XviD-NeDiVx",
@@ -532,8 +444,7 @@
 		},
 		{
 			"id": "R0093",
-			"rule": "(?P<pre>\\W)(?:BeStDivX|Bestdivx)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)(?:BeStDivX|Bestdivx)(?=\\W|$)",
 			"tests": [
 				[
 					"Klimt (2006)DVDRip Bestdivx",
@@ -547,63 +458,51 @@
 		},
 		{
 			"id": "R0094",
-			"rule": "(?P<pre>\\W)NOiR(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)NOiR(?=\\W|$)"
 		},
 		{
 			"id": "R0095",
-			"rule": "(?P<pre>\\W)JUMANJi(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)JUMANJi(?=\\W|$)"
 		},
 		{
 			"id": "R0096",
-			"rule": "(?P<pre>\\W)ViSiON(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ViSiON(?=\\W|$)"
 		},
 		{
 			"id": "R0097",
-			"rule": "(?P<pre>\\W)KLAXXON(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)KLAXXON(?=\\W|$)"
 		},
 		{
 			"id": "R0098",
-			"rule": "(?P<pre>\\W)1337x(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)1337x(?=\\W|$)"
 		},
 		{
 			"id": "R0099",
-			"rule": "(?P<pre>\\W)TiNO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)TiNO(?=\\W|$)"
 		},
 		{
 			"id": "R0100",
-			"rule": "(?P<pre>\\W)SHiFT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)SHiFT(?=\\W|$)"
 		},
 		{
 			"id": "R0101",
-			"rule": "(?P<pre>\\W)AYMO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)AYMO(?=\\W|$)"
 		},
 		{
 			"id": "R0102",
-			"rule": "(?P<pre>\\W)JMT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)JMT(?=\\W|$)"
 		},
 		{
 			"id": "R0103",
-			"rule": "(?P<pre>\\W)Hon3y(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Hon3y(?=\\W|$)"
 		},
 		{
 			"id": "R0104",
-			"rule": "(?P<pre>\\W)iNViNCiBLE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)iNViNCiBLE(?=\\W|$)"
 		},
 		{
 			"id": "R0105",
-			"rule": "(?P<pre>\\W)PREM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)PREM(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
@@ -613,69 +512,56 @@
 		},
 		{
 			"id": "R0106",
-			"rule": "(?P<pre>\\W)AT0MiC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)AT0MiC(?=\\W|$)"
 		},
 		{
 			"id": "R0107",
-			"rule": "(?P<pre>\\W)VLiS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)VLiS(?=\\W|$)"
 		},
 		{
 			"id": "R0108",
-			"rule": "(?P<pre>\\W)PSYPHER(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PSYPHER(?=\\W|$)"
 		},
 		{
 			"id": "R0109",
-			"rule": "(?P<pre>[-])Noir$",
-			"sub": "\\g<pre>"
+			"rule": "(?<=\\-)Noir$"
 		},
 		{
 			"id": "R0110",
-			"rule": "(?P<pre>\\W)480p(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)480p(?=\\W|$)"
 		},
 		{
 			"id": "R0111",
-			"rule": "(?P<pre>\\W)720p(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)720p(?=\\W|$)"
 		},
 		{
 			"id": "R0112",
-			"rule": "(?P<pre>\\W)1080p(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)1080p(?=\\W|$)"
 		},
 		{
 			"id": "R0113",
-			"rule": "(?P<pre>\\W)Blu[Rr]ay(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Blu[Rr]ay(?=\\W|$)"
 		},
 		{
 			"id": "R0114",
-			"rule": "(?P<pre>\\W)[Bb][DdRr][Rr]i[Pp](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[Bb][DdRr][Rr]i[Pp](?=\\W|$)"
 		},
 		{
 			"id": "R0115",
-			"rule": "(?P<pre>\\W)[Hh][Dd][Rr]i[Pp](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[Hh][Dd][Rr]i[Pp](?=\\W|$)"
 		},
 		{
 			"id": "R0116",
-			"rule": "(?P<pre>\\W)CAM(?:[Rr]i[Pp])?(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)CAM(?:[Rr]i[Pp])?(?=\\W|$)"
 		},
 		{
 			"id": "R0117",
-			"rule": "(?P<pre>\\W)D[Vv]D\\-?[Rr]i[Pp](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)D[Vv]D\\-?[Rr]i[Pp](?=\\W|$)"
 		},
 		{
 			"comment": "TELESYNC",
 			"id": "R0118",
-			"rule": "(?P<pre>\\W)(?:TS|TELESYNC|PDVD|HDTS)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)(?:TS|TELESYNC|PDVD|HDTS)(?=\\W|$)",
 			"tests": [
 				[
 					"Interstellar 2014 1080p HDTS x264 Pimp4003",
@@ -689,165 +575,135 @@
 		},
 		{
 			"id": "R0119",
-			"rule": "(?P<pre>\\W)AAC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)AAC(?=\\W|$)"
 		},
 		{
 			"id": "R0120",
-			"rule": "(?P<pre>\\W)FLAC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FLAC(?=\\W|$)"
 		},
 		{
 			"id": "R0121",
-			"rule": "(?P<pre>\\W)AC3(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)AC3(?=\\W|$)"
 		},
 		{
 			"comment": "H264, x264",
 			"id": "R0122",
-			"rule": "(?P<pre>\\W|_)[HhXx]264(?P<post>\\W|_|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W|_)[HhXx]264(?=\\W|_|$)"
 		},
 		{
 			"id": "R0123",
-			"rule": "(?P<pre>\\W)DivX(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)DivX(?=\\W|$)"
 		},
 		{
 			"id": "R0124",
-			"rule": "(?P<pre>\\W)MKV(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MKV(?=\\W|$)"
 		},
 		{
 			"id": "R0125",
-			"rule": "(?P<pre>\\W)MP3(?P<post>\\W)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MP3(?=\\W)"
 		},
 		{
 			"id": "R0126",
-			"rule": "(?P<pre>\\W)MP4(?P<post>\\W)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)MP4(?=\\W)"
 		},
 		{
 			"comment": "XviD",
 			"id": "R0127",
-			"rule": "(?P<pre>\\W)[Xx][Vv]i[Dd](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[Xx][Vv]i[Dd](?=\\W|$)"
 		},
 		{
 			"id": "R0128",
-			"rule": "(?P<pre>\\W)\\d{2,4}\\s*(?:kbps|KBPS)(?P<post>\\W)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)\\d{2,4}\\s*(?:kbps|KBPS)(?=\\W)"
 		},
 		{
 			"comment": "Frames per second",
 			"id": "R0129",
-			"rule": "(?P<pre>\\W)\\d{2}(?:\\.\\d{1,4})?\\s*[Ff][Pp][Ss](?P<post>\\W)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)\\d{2}(?:\\.\\d{1,4})?\\s*[Ff][Pp][Ss](?=\\W)"
 		},
 		{
 			"id": "R0130",
-			"rule": "(?P<pre>\\W)\\d{3,4}[Mm][Bb](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)\\d{3,4}[Mm][Bb](?=\\W|$)"
 		},
 		{
 			"comment": "TELECINE",
 			"id": "R0131",
-			"rule": "(?P<pre>\\W)(?:TC|TELECINE)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)(?:TC|TELECINE)(?=\\W|$)"
 		},
 		{
 			"comment": "Workprint",
 			"id": "R0132",
-			"rule": "(?P<pre>\\W)(?:WP|WORKPR[Ii]NT|WorkPrint)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)(?:WP|WORKPR[Ii]NT|WorkPrint)(?=\\W|$)"
 		},
 		{
 			"id": "R0133",
-			"rule": "(?P<pre>\\W)SUBBED(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)SUBBED(?=\\W|$)"
 		},
 		{
 			"comment": "Common with HORiZON releases",
 			"id": "R0134",
-			"rule": "(?P<pre>\\W)ArtSubs(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ArtSubs(?=\\W|$)"
 		},
 		{
 			"comment": "Dimensions, eg. 640x480",
 			"id": "R0135",
-			"rule": "(?P<pre>\\W)\\d{3,4}[Xx]\\d{3,4}(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)\\d{3,4}[Xx]\\d{3,4}(?=\\W|$)"
 		},
 		{
 			"comment": "HDTV",
 			"id": "R0136",
-			"rule": "(?P<pre>[\\W_])HDTV(?:[Rr][Ii][Pp])?(?P<post>\\W|$|_)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=[\\W_])HDTV(?:[Rr][Ii][Pp])?(?=\\W|$|_)"
 		},
 		{
 			"comment": "MultiSub",
 			"id": "R0137",
-			"rule": "(?i)(?P<pre>\\W)multisubs?(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?i)(?<=\\W)multisubs?(?=\\W|$)"
 		},
 		{
 			"id": "R0138",
-			"rule": "(?P<pre>\\W)(?:RePack|Repack|RePacK|REPACK|repack)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)(?:RePack|Repack|RePacK|REPACK|repack)(?=\\W|$)"
 		},
 		{
 			"id": "R0139",
-			"rule": "(?P<pre>\\W)R5(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)R5(?=\\W|$)"
 		},
 		{
 			"id": "R0140",
-			"rule": "(?P<pre>\\W)DVDSCR(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)DVDSCR(?=\\W|$)"
 		},
 		{
 			"comment": "DVDRip",
 			"id": "R0141",
-			"rule": "(?P<pre>\\W)[Dd][Vv][Dd]\\-?[Rr]i[Pp](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)[Dd][Vv][Dd]\\-?[Rr]i[Pp](?=\\W|$)"
 		},
 		{
 			"id": "R0142",
-			"rule": "(?P<pre>\\W)AAC5\\.1(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)AAC5\\.1(?=\\W|$)"
 		},
 		{
 			"comment": "CD Rip",
 			"id": "R0143",
-			"rule": "(?P<pre>\\W)CD.[Rr][Ii][Pp](?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)CD.[Rr][Ii][Pp](?=\\W|$)"
 		},
 		{
 			"id": "R0144",
-			"rule": "(?P<pre>\\W)V0(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)V0(?=\\W|$)"
 		},
 		{
 			"id": "R0145",
-			"rule": "(?P<pre>\\W)WEB(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)WEB(?=\\W|$)"
 		},
 		{
 			"id": "R0146",
-			"rule": "(?P<pre>\\W)NTSC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)NTSC(?=\\W|$)"
 		},
 		{
 			"id": "R0147",
-			"rule": "(?P<pre>\\W)EXTENDED(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)EXTENDED(?=\\W|$)",
 			"weight": 1
 		},
 		{
 			"id": "R0148",
-			"rule": "(?P<pre>\\W)UNRATED(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)UNRATED(?=\\W|$)",
 			"weight": 1
 		},
 		{
@@ -858,16 +714,21 @@
 		{
 			"comment": "Dots between words",
 			"id": "R0150",
-			"repeat": true,
-			"rule": "(?P<pre>\\w)\\.(?P<post>\\w)",
-			"sub": "\\g<pre> \\g<post>",
+			"rule": "(?<=[\\w\\}\\]\\)])\\.(?=[\\w\\{\\[\\(])",
+			"sub": " ",
+			"tests": [
+				[
+					"The.Hangover.[2009].DVDSCR.[ENG]-MAXSPEED",
+					"The Hangover [2009] DVDSCR [ENG]-MAXSPEED"
+				]
+			],
 			"weight": 1
 		},
 		{
 			"comment": "Underscores between words",
 			"id": "R0151",
-			"rule": "(?P<pre>\\w)_(?P<post>\\w)",
-			"sub": "\\g<pre> \\g<post>",
+			"rule": "(?<=\\w)_(?=\\w)",
+			"sub": " ",
 			"weight": 1
 		},
 		{
@@ -940,13 +801,12 @@
 		},
 		{
 			"id": "R0161",
-			"rule": "(?P<pre>\\W)Ehhhh(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)Ehhhh(?=\\W|$)"
 		},
 		{
 			"id": "R0162",
-			"rule": "(?P<pre>\\W)Iii(?P<post>\\W|$)",
-			"sub": "\\g<pre>III\\g<post>",
+			"rule": "(?<=\\W)Iii(?=\\W|$)",
+			"sub": "III",
 			"tests": [
 				[
 					"Rocky Iii",
@@ -956,8 +816,8 @@
 		},
 		{
 			"id": "R0163",
-			"rule": "(?P<pre>\\W)Ii(?P<post>\\W|$)",
-			"sub": "\\g<pre>II\\g<post>",
+			"rule": "(?<=\\W)Ii(?=\\W|$)",
+			"sub": "II",
 			"tests": [
 				[
 					"Rocky Ii",
@@ -967,13 +827,11 @@
 		},
 		{
 			"id": "R0164",
-			"rule": "(?P<pre>\\W)VoMiT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)VoMiT(?=\\W|$)"
 		},
 		{
 			"id": "R0165",
-			"rule": "(?P<pre>\\W)SUBMERGE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SUBMERGE(?=\\W|$)",
 			"tests": [
 				[
 					"Collapse.LIMITED.DVDRip.XviD-SUBMERGE",
@@ -983,96 +841,78 @@
 		},
 		{
 			"id": "R0166",
-			"rule": "(?P<pre>\\W)AMIABLE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)AMIABLE(?=\\W|$)"
 		},
 		{
 			"id": "R0167",
-			"rule": "(?P<pre>\\W)PublicHD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PublicHD(?=\\W|$)"
 		},
 		{
 			"id": "R0168",
-			"rule": "(?P<pre>\\W)WEBiOS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)WEBiOS(?=\\W|$)"
 		},
 		{
 			"id": "R0169",
-			"rule": "(?P<pre>\\W)FZERO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FZERO(?=\\W|$)"
 		},
 		{
 			"comment": "BrG",
 			"id": "R0170",
-			"rule": "(?P<pre>\\W)B[Rr]G(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)B[Rr]G(?=\\W|$)"
 		},
 		{
 			"comment": "VH-PROD",
 			"id": "R0171",
-			"rule": "(?P<pre>\\W)VH[\\-\\s]PROD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)VH[\\-\\s]PROD(?=\\W|$)"
 		},
 		{
 			"id": "R0172",
-			"rule": "(?P<pre>\\W)PreVail(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PreVail(?=\\W|$)"
 		},
 		{
 			"id": "R0173",
-			"rule": "(?P<pre>\\W)FLAiTE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)FLAiTE(?=\\W|$)"
 		},
 		{
 			"comment": "XanaX",
 			"id": "R0174",
-			"rule": "(?P<pre>\\W)(?:XanaX|XANAX|xaNax)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)(?:XanaX|XANAX|xaNax)(?=\\W|$)"
 		},
 		{
 			"id": "R0175",
-			"rule": "(?P<pre>\\W)ALLiANCE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ALLiANCE(?=\\W|$)"
 		},
 		{
 			"id": "R0176",
-			"rule": "(?P<pre>\\W)ViTE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)ViTE(?=\\W|$)"
 		},
 		{
 			"id": "R0177",
-			"rule": "(?P<pre>\\W)PUKKA(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)PUKKA(?=\\W|$)"
 		},
 		{
 			"id": "R0178",
-			"rule": "(?P<pre>\\W)SAPHiRE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)SAPHiRE(?=\\W|$)"
 		},
 		{
 			"id": "R0179",
-			"rule": "(?P<pre>\\W)NEPTUNE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)NEPTUNE(?=\\W|$)"
 		},
 		{
 			"id": "R0180",
-			"rule": "(?P<pre>\\W)D0PE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)D0PE(?=\\W|$)"
 		},
 		{
 			"id": "R0181",
-			"rule": "(?P<pre>\\W)DiAMOND(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)DiAMOND(?=\\W|$)"
 		},
 		{
 			"id": "R0182",
-			"rule": "(?P<pre>\\W)LMG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>"
+			"rule": "(?<=\\W)LMG(?=\\W|$)"
 		},
 		{
 			"id": "R0183",
-			"rule": "(?P<pre>\\W)DvF(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)DvF(?=\\W|$)",
 			"tests": [
 				[
 					"Jack.Strong.2014.DVDRiP.x264-DvF[rarbg]",
@@ -1086,8 +926,7 @@
 		},
 		{
 			"id": "R0184",
-			"rule": "(?P<pre>\\W)DMT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)DMT(?=\\W|$)",
 			"tests": [
 				[
 					"22 Jump Street (2014) BRRip (xvid) NL Subs. DMT",
@@ -1097,8 +936,7 @@
 		},
 		{
 			"id": "R0185",
-			"rule": "(?P<pre>\\W)LPD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)LPD(?=\\W|$)",
 			"tests": [
 				[
 					"Ida.2013.LiMiTED.BDRip.x264-LPD[rarbg]",
@@ -1108,8 +946,7 @@
 		},
 		{
 			"id": "R0186",
-			"rule": "(?P<pre>\\W)iKA(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)iKA(?=\\W|$)",
 			"tests": [
 				[
 					"Rec.2007.READNFO.DVDRiP.XViD-iKA.[Hardcoded.English.Subtitles]",
@@ -1119,8 +956,7 @@
 		},
 		{
 			"id": "R0187",
-			"rule": "(?P<pre>\\W)HNR(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)HNR(?=\\W|$)",
 			"tests": [
 				[
 					"Comedy.Central.Roast.Of.William.Shatner.2006.DVDRip.XviD-HNR",
@@ -1130,8 +966,7 @@
 		},
 		{
 			"id": "R0188",
-			"rule": "(?P<pre>\\W)SiNK(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SiNK(?=\\W|$)",
 			"tests": [
 				[
 					"God.Grew.Tired.Of.Us.2006.LiMiTED.DVDRip.XviD-SiNK",
@@ -1145,8 +980,7 @@
 		},
 		{
 			"id": "R0189",
-			"rule": "(?P<pre>\\W)NTi(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)NTi(?=\\W|$)",
 			"tests": [
 				[
 					"[NTi]_Basic.Instinct.2.TS.XviD-OBSESSiON",
@@ -1156,8 +990,7 @@
 		},
 		{
 			"id": "R0190",
-			"rule": "(?P<pre>\\W)WPi(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)WPi(?=\\W|$)",
 			"tests": [
 				[
 					"The.Departed.2006.1080p.BluRay.x264-WPi",
@@ -1167,8 +1000,7 @@
 		},
 		{
 			"id": "R0191",
-			"rule": "(?P<pre>\\W)OBSESSiON(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)OBSESSiON(?=\\W|$)",
 			"tests": [
 				[
 					"Cloverfield.TS.XViD-OBSESSiON",
@@ -1182,8 +1014,7 @@
 		},
 		{
 			"id": "R0192",
-			"rule": "(?P<pre>\\W)LRC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)LRC(?=\\W|$)",
 			"tests": [
 				[
 					"Rumor.Has.It.2005.DVDRip.xVID-LRC",
@@ -1193,8 +1024,7 @@
 		},
 		{
 			"id": "R0193",
-			"rule": "(?P<pre>\\W)JBW(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)JBW(?=\\W|$)",
 			"tests": [
 				[
 					"07 - Fargo (1996)-JBW",
@@ -1205,8 +1035,7 @@
 		{
 			"comment": "DOMiNO",
 			"id": "R0194",
-			"rule": "(?P<pre>\\W)(?:DOMiNO|=DoMiNo=|-=DoMiNo=-)(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)(?:DOMiNO|=DoMiNo=|-=DoMiNo=-)(?=\\W|$)",
 			"tests": [
 				[
 					"Blood.And.Bone.2009.DVDRip.XviD-DOMiNO",
@@ -1224,8 +1053,7 @@
 		},
 		{
 			"id": "R0195",
-			"rule": "(?P<pre>\\W)COCAIN(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)COCAIN(?=\\W|$)",
 			"tests": [
 				[
 					"The.Campaign.EXTENDED.DVDRip.XviD-COCAIN",
@@ -1235,8 +1063,7 @@
 		},
 		{
 			"id": "R0196",
-			"rule": "(?P<pre>\\W)QuidaM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)QuidaM(?=\\W|$)",
 			"tests": [
 				[
 					"Conversations.With.God.2006.DVDRiP.XViD.QuidaM",
@@ -1246,8 +1073,7 @@
 		},
 		{
 			"id": "R0197",
-			"rule": "(?P<pre>\\W)QiM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)QiM(?=\\W|$)",
 			"tests": [
 				[
 					"Takedown.2000.iNTERNAL.DVDRip.XviD-QiM",
@@ -1257,8 +1083,7 @@
 		},
 		{
 			"id": "R0198",
-			"rule": "(?P<pre>\\W)iMMORTALs(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)iMMORTALs(?=\\W|$)",
 			"tests": [
 				[
 					"Murderball.2005.LiMiTED.DVDRip.XviD-iMMORTALs",
@@ -1272,8 +1097,7 @@
 		},
 		{
 			"id": "R0199",
-			"rule": "(?P<pre>\\W)ESPiSE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)ESPiSE(?=\\W|$)",
 			"tests": [
 				[
 					"500.Days.of.Summer.PROPER.BDRip.XviD-ESPiSE",
@@ -1283,8 +1107,7 @@
 		},
 		{
 			"id": "R0200",
-			"rule": "(?P<pre>\\W)Rets(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)Rets(?=\\W|$)",
 			"tests": [
 				[
 					"The Terminal dvd rip[eng]XviD.Rets",
@@ -1294,8 +1117,7 @@
 		},
 		{
 			"id": "R0201",
-			"rule": "(?P<pre>\\W)PFa(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)PFa(?=\\W|$)",
 			"tests": [
 				[
 					"Canopy.2013.720p.BluRay.x264-PFa[rarbg]",
@@ -1305,8 +1127,7 @@
 		},
 		{
 			"id": "R0202",
-			"rule": "(?P<pre>\\W)UNiVERSAL(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)UNiVERSAL(?=\\W|$)",
 			"tests": [
 				[
 					"Honeymoon.with.Mom.REPACK.R5.xVID-UNiVERSAL",
@@ -1320,8 +1141,7 @@
 		},
 		{
 			"id": "R0203",
-			"rule": "(?P<pre>\\W)AXIAL(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)AXIAL(?=\\W|$)",
 			"tests": [
 				[
 					"Soylent.Green.1973.WS.DVDRip.XviD-AXIAL",
@@ -1331,8 +1151,7 @@
 		},
 		{
 			"id": "R0204",
-			"rule": "(?P<pre>\\W)AFO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)AFO(?=\\W|$)",
 			"tests": [
 				[
 					"Becoming.Jane.2007.REPACK.DVDRip.XviD-AFO",
@@ -1342,8 +1161,7 @@
 		},
 		{
 			"id": "R0205",
-			"rule": "(?P<pre>\\W)aAF(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)aAF(?=\\W|$)",
 			"tests": [
 				[
 					"The.Daily.Show.2014.11.18.Benedict.Cumberbatch.HDTV.x264-aAF",
@@ -1354,8 +1172,7 @@
 		{
 			"comment": "USABIT",
 			"id": "R0206",
-			"rule": "(?i)(?P<pre>\\W)(?:www\\.)?USABIT(?:\\.com)?(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?i)(?<=\\W)(?:www\\.)?USABIT(?:\\.com)?(?=\\W|$)",
 			"tests": [
 				[
 					"The.Prestige.2006.DvDrip.Eng-aXXo.(www.USABIT.com)",
@@ -1377,8 +1194,7 @@
 		},
 		{
 			"id": "R0207",
-			"rule": "(?P<pre>\\W)RLYEH(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)RLYEH(?=\\W|$)",
 			"tests": [
 				[
 					"Hoop.Dreams.1994.Criterion.Xvid.DVDRip-RLYEH",
@@ -1388,8 +1204,7 @@
 		},
 		{
 			"id": "R0208",
-			"rule": "(?P<pre>\\W)WBZ(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)WBZ(?=\\W|$)",
 			"tests": [
 				[
 					"American Pie Reunion 2012 TS XVID V3 - WBZ",
@@ -1399,8 +1214,7 @@
 		},
 		{
 			"id": "R0209",
-			"rule": "(?P<pre>\\W)NYDIC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)NYDIC(?=\\W|$)",
 			"tests": [
 				[
 					"[ www.Torrenting.com ] - The.Avengers.2012.DVDRip.XviD-NYDIC",
@@ -1410,8 +1224,7 @@
 		},
 		{
 			"id": "R0210",
-			"rule": "(?P<pre>\\W)DutchReleaseTeam(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)DutchReleaseTeam(?=\\W|$)",
 			"tests": [
 				[
 					"Lord Of The Rings - The Return of the King (2003) 720p BRRip NL-ENG subs DutchReleaseTeam",
@@ -1421,8 +1234,7 @@
 		},
 		{
 			"id": "R0211",
-			"rule": "(?P<pre>\\W)H34LTH(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)H34LTH(?=\\W|$)",
 			"tests": [
 				[
 					"Whiplash.2014.HDRiP.XViD.AC3-H34LTH",
@@ -1432,8 +1244,7 @@
 		},
 		{
 			"id": "R0212",
-			"rule": "(?P<pre>\\W)BAWLS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)BAWLS(?=\\W|$)",
 			"tests": [
 				[
 					"Desperate.Housewives.S08.FRENCH.HDTV.XViD.BAWLS-EPZ",
@@ -1443,8 +1254,7 @@
 		},
 		{
 			"id": "R0213",
-			"rule": "(?P<pre>\\W)BATV(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)BATV(?=\\W|$)",
 			"tests": [
 				[
 					"Family.Guy.S13E07.INTERNAL.HDTV.x264-BATV[ettv]",
@@ -1454,8 +1264,7 @@
 		},
 		{
 			"id": "R0214",
-			"rule": "(?P<pre>\\W)DeeJayAhmed(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)DeeJayAhmed(?=\\W|$)",
 			"tests": [
 				[
 					"Modern.Family.S01.Season.1.720p.5.1Ch.BluRay.ReEnc-DeeJayAhmed",
@@ -1465,8 +1274,7 @@
 		},
 		{
 			"id": "R0215",
-			"rule": "(?P<pre>\\W)iFT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)iFT(?=\\W|$)",
 			"tests": [
 				[
 					"What.We.Do.in.the.Shadows.2014.LIMITED.720p.BRRip.x264.AC3-iFT",
@@ -1476,8 +1284,7 @@
 		},
 		{
 			"id": "R0216",
-			"rule": "(?P<pre>\\W)HighCode(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)HighCode(?=\\W|$)",
 			"tests": [
 				[
 					"Kelly's Heroes 1970 x264 BDRip 720p DTS multisub-HighCode",
@@ -1487,8 +1294,7 @@
 		},
 		{
 			"id": "R0217",
-			"rule": "(?P<pre>\\W)TiTAN(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)TiTAN(?=\\W|$)",
 			"tests": [
 				[
 					"Time Lapse 2014 HDRIP x264 AC3 TiTAN",
@@ -1498,8 +1304,7 @@
 		},
 		{
 			"id": "R0218",
-			"rule": "(?P<pre>\\W)LEGi0N(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)LEGi0N(?=\\W|$)",
 			"tests": [
 				[
 					"Time.Lapse.2014.720p.WEBRip.AC3.x264-LEGi0N",
@@ -1509,8 +1314,7 @@
 		},
 		{
 			"id": "R0219",
-			"rule": "(?P<pre>\\W)MIRCrew(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)MIRCrew(?=\\W|$)",
 			"tests": [
 				[
 					"Paura - Fear (1996).ita.eng.sub.ita.eng.MIRCrew",
@@ -1520,8 +1324,7 @@
 		},
 		{
 			"id": "R0220",
-			"rule": "(?P<pre>\\W)MAJESTiC(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)MAJESTiC(?=\\W|$)",
 			"tests": [
 				[
 					"The.Drop.2014.720p.BRRIP.H264.AAC-MAJESTiC",
@@ -1531,8 +1334,7 @@
 		},
 		{
 			"id": "R0221",
-			"rule": "(?P<pre>\\W)SPARKS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SPARKS(?=\\W|$)",
 			"tests": [
 				[
 					"The.Drop.2014.BDRip.x264-SPARKS",
@@ -1542,8 +1344,7 @@
 		},
 		{
 			"id": "R0222",
-			"rule": "(?P<pre>\\W)LiBERTY(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)LiBERTY(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Soda.Un.Trop.Long.Week-end.2014.FRENCH.HDTV.x264-LiBERTY",
@@ -1554,8 +1355,7 @@
 		{
 			"comment": "Team M2TV",
 			"id": "R0223",
-			"rule": "(?P<pre>\\W)Team.M2TV(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)Team.M2TV(?=\\W|$)",
 			"tests": [
 				[
 					"Ugly (2014) - 1CD - DVDSCR-Rip - Hindi - x264 - AAC - Mafiaking - Team M2TV",
@@ -1566,8 +1366,7 @@
 		{
 			"comment": "Team TellyTNT",
 			"id": "R0224",
-			"rule": "(?P<pre>\\W)Team.TellyTNT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)Team.TellyTNT(?=\\W|$)",
 			"tests": [
 				[
 					"PK(2014) 1 CD xvid PDVD RIP-MP3-Team TellyTNT Exclusive",
@@ -1577,8 +1376,7 @@
 		},
 		{
 			"id": "R0225",
-			"rule": "(?P<pre>\\W)Harshad(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)Harshad(?=\\W|$)",
 			"tests": [
 				[
 					"Avatar 3D BRRip Anaglyph 720p.Dual Audio [Eng-Hindi]~Harshad",
@@ -1588,8 +1386,7 @@
 		},
 		{
 			"id": "R0226",
-			"rule": "(?P<pre>\\W)MrSeeN(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)MrSeeN(?=\\W|$)",
 			"tests": [
 				[
 					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.MrSeeN-SiMPLE",
@@ -1599,8 +1396,7 @@
 		},
 		{
 			"id": "R0227",
-			"rule": "(?P<pre>\\W)SiMPLE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SiMPLE(?=\\W|$)",
 			"tests": [
 				[
 					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.MrSeeN-SiMPLE",
@@ -1610,8 +1406,7 @@
 		},
 		{
 			"id": "R0228",
-			"rule": "(?P<pre>\\W)BLiTZCRiEG(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)BLiTZCRiEG(?=\\W|$)",
 			"tests": [
 				[
 					"Transformers.Age.of.Extinction.2014.V2.HDTS.H264.AAC.2.CH-BLiTZCRiEG",
@@ -1621,8 +1416,7 @@
 		},
 		{
 			"id": "R0229",
-			"rule": "(?P<pre>\\W)ACAB(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)ACAB(?=\\W|$)",
 			"tests": [
 				[
 					"Interstellar 2014 HDCAM NEW SOURCE READNFO XVID AC3 ACAB",
@@ -1632,8 +1426,7 @@
 		},
 		{
 			"id": "R0230",
-			"rule": "(?P<pre>\\W)BL4CKP34RL(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)BL4CKP34RL(?=\\W|$)",
 			"tests": [
 				[
 					"The Fault In Our Stars 2014 CAM READNFO XViD-BL4CKP34RL",
@@ -1643,8 +1436,7 @@
 		},
 		{
 			"id": "R0231",
-			"rule": "(?P<pre>\\W)SSDD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SSDD(?=\\W|$)",
 			"tests": [
 				[
 					"Thor The Dark World V2 2013 CAM AAC x264-SSDD",
@@ -1654,8 +1446,7 @@
 		},
 		{
 			"id": "R0232",
-			"rule": "(?P<pre>\\W)UNiTY(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)UNiTY(?=\\W|$)",
 			"tests": [
 				[
 					"Back.In.The.Day.2014.WEBRip.XviD-UNiTY",
@@ -1665,8 +1456,7 @@
 		},
 		{
 			"id": "R0233",
-			"rule": "(?P<pre>\\W)FiRE(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)FiRE(?=\\W|$)",
 			"tests": [
 				[
 					"Back.In.The.Day.2014.HDRiP.XViD-FiRE",
@@ -1676,8 +1466,7 @@
 		},
 		{
 			"id": "R0234",
-			"rule": "(?P<pre>\\W)INFERNO(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)INFERNO(?=\\W|$)",
 			"tests": [
 				[
 					"Back In The Day 2014 HDRip XviD-INFERNO",
@@ -1687,8 +1476,7 @@
 		},
 		{
 			"id": "R0235",
-			"rule": "(?P<pre>\\W)IGUANA(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)IGUANA(?=\\W|$)",
 			"tests": [
 				[
 					"[ www.UsaBit.com ] - Into.The.Woods.2012.DVDRip.XviD-IGUANA",
@@ -1698,8 +1486,7 @@
 		},
 		{
 			"id": "R0236",
-			"rule": "(?P<pre>\\W)GLUPS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)GLUPS(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Into.The.Storm.2014.FRENCH.BDRip.XviD-GLUPS",
@@ -1709,8 +1496,7 @@
 		},
 		{
 			"id": "R0237",
-			"rule": "(?P<pre>\\W)T4P3(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)T4P3(?=\\W|$)",
 			"tests": [
 				[
 					"Lucy.2014.iTALiAN.AC3.BRRip.XviD-T4P3",
@@ -1720,8 +1506,7 @@
 		},
 		{
 			"id": "R0238",
-			"rule": "(?P<pre>\\W)BLUWORLD(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)BLUWORLD(?=\\W|$)",
 			"tests": [
 				[
 					"Lo.Hobbit.Un.Viaggio.Inaspettato.2012.iTALiAN.BRRip.XviD.BLUWORLD",
@@ -1731,8 +1516,7 @@
 		},
 		{
 			"id": "R0239",
-			"rule": "(?P<pre>\\W)BmA(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)BmA(?=\\W|$)",
 			"tests": [
 				[
 					"12.Anni.Schiavo.2013.iTALiAN.MD.BDRip.XviD-BmA",
@@ -1743,8 +1527,7 @@
 		{
 			"comment": "TrTd Team",
 			"id": "R0240",
-			"rule": "(?P<pre>\\W)TrTd.TeaM(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)TrTd.TeaM(?=\\W|$)",
 			"tests": [
 				[
 					"L.Amore.Bugiardo-Gone.Girl.2014.1080p.FullHD.iTALiAN.AC3.Dual.x264-TrTd_TeaM",
@@ -1754,8 +1537,7 @@
 		},
 		{
 			"id": "R0241",
-			"rule": "(?P<pre>\\W)UTT(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)UTT(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] The.Fault.in.Our.Stars.2014.FRENCH.BDRip.XviD-UTT",
@@ -1765,8 +1547,7 @@
 		},
 		{
 			"id": "R0242",
-			"rule": "(?P<pre>\\W)EARPi(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)EARPi(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] The.Fault.in.Our.Stars.2014.FRENCH.1080p.BluRay.x264-EARPi",
@@ -1776,8 +1557,7 @@
 		},
 		{
 			"id": "R0243",
-			"rule": "(?P<pre>\\W)FLiCKSiCK(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)FLiCKSiCK(?=\\W|$)",
 			"tests": [
 				[
 					"The Fault in Our Stars 2014 EXTENDED BluRay 1080p x264 DD5.1 FLiCKSiCK",
@@ -1787,8 +1567,7 @@
 		},
 		{
 			"id": "R0244",
-			"rule": "(?P<pre>\\W)tomcat12(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)tomcat12(?=\\W|$)",
 			"tests": [
 				[
 					"The.Equalizer.2014.720p.BRRip.AC3.x264-tomcat12[ETRG]",
@@ -1798,8 +1577,7 @@
 		},
 		{
 			"id": "R0245",
-			"rule": "(?P<pre>\\W)Fastbet99(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)Fastbet99(?=\\W|$)",
 			"tests": [
 				[
 					"The.Equalizer.2014.720p.BRRip.x264-Fastbet99",
@@ -1809,8 +1587,7 @@
 		},
 		{
 			"id": "R0246",
-			"rule": "(?P<pre>\\W)314r(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)314r(?=\\W|$)",
 			"tests": [
 				[
 					"Edge.of.Tomorrow.2014.SWESUB.720p.webdl.ac3.x264-314r",
@@ -1820,8 +1597,7 @@
 		},
 		{
 			"id": "R0247",
-			"rule": "(?P<pre>\\W)ZIKAS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)ZIKAS(?=\\W|$)",
 			"tests": [
 				[
 					"X-Men.Days.of.Future.Past.2014.1080p.WEB-DL.x264.AC3-ZIKAS",
@@ -1831,8 +1607,7 @@
 		},
 		{
 			"id": "R0248",
-			"rule": "(?P<pre>\\W)CALLIXTUS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)CALLIXTUS(?=\\W|$)",
 			"tests": [
 				[
 					"Elf 2003 BRRip 720p x264 AAC [English_Latino] CALLIXTUS",
@@ -1842,8 +1617,7 @@
 		},
 		{
 			"id": "R0249",
-			"rule": "(?P<pre>\\W)SiNNERS(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)SiNNERS(?=\\W|$)",
 			"tests": [
 				[
 					"Lolita 1962 720p BluRay x264-SiNNERS",
@@ -1853,8 +1627,7 @@
 		},
 		{
 			"id": "R0250",
-			"rule": "(?P<pre>\\W)EbP(?P<post>\\W|$)",
-			"sub": "\\g<pre>\\g<post>",
+			"rule": "(?<=\\W)EbP(?=\\W|$)",
 			"tests": [
 				[
 					"Imaginaerum.2012.1080p.BluRay.DTS.x264-EbP",
@@ -1863,5 +1636,5 @@
 			]
 		}
 	],
-	"version": "201501070"
+	"version": "201501071"
 }
