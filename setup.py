@@ -13,7 +13,7 @@ test_requirements = [
 
 setup(
     name='antiseptic',
-    version='0.1.1',
+    version='0.1.2',
     description='A simple command-line movie directory name cleaner',
     long_description=readme,
     author='Naglis Jonaitis',
