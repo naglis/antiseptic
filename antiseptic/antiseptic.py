@@ -258,6 +258,8 @@ def main():
         config = get_config()
         if hasattr(args, 'func'):
             getattr(args, 'func')(args, config)
+        else:
+            p.print_help()
     except Exception as err:
         if args.debug:
             LOG.exception(err)
