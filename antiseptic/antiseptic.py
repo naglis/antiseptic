@@ -88,20 +88,10 @@ class Cleaner(object):
 
     @staticmethod
     def apply_rule(rule, text):
-        if rule.get('repeat', False):
-            changed = False
-            while True:
-                m = re.search(rule['rule'], text)
-                if not m:
-                    break
-                text = re.sub(rule['rule'], rule.get('sub', ''), text)
-                changed = True
-            return changed, text
-        else:
-            m = re.search(rule['rule'], text)
-            if m:
-                return True, re.sub(rule['rule'], rule.get('sub', ''), text)
-            return False, text
+        m = re.search(rule['rule'], text)
+        if m:
+            return True, re.sub(rule['rule'], rule.get('sub', ''), text)
+        return False, text
 
 
 def rename_dir(path, cleaner, preview=False, default_choice='n'):
