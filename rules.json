@@ -1634,7 +1634,47 @@
 					"Imaginaerum.2012.1080p.BluRay.DTS.x264-"
 				]
 			]
+		},
+		{
+			"id": "R0251",
+			"rule": "(?<=\\W)CrEwSaDe(?=\\W|$)",
+			"tests": [
+				[
+					"The.Equalizer.2014.DvDRIp.Xvid.Ac3.CrEwSaDe",
+					"The.Equalizer.2014.DvDRIp.Xvid.Ac3."
+				]
+			]
+		},
+		{
+			"id": "R0252",
+			"rule": "(?<=\\W)FWOLF(?=\\W|$)",
+			"tests": [
+				[
+					"The Equalizer 2014 BDRip XviD AC3-FWOLF",
+					"The Equalizer 2014 BDRip XviD AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0253",
+			"rule": "(?<=\\W)PsiX(?=\\W|$)",
+			"tests": [
+				[
+					"Revenge.of.the.Green.Dragons.2014.BRRip.XviD-PsiX",
+					"Revenge.of.the.Green.Dragons.2014.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0254",
+			"rule": "(?<=\\W)AQOS(?=\\W|$)",
+			"tests": [
+				[
+					"Revenge of the Green Dragons 2014 DVDRiP XViD-AQOS",
+					"Revenge of the Green Dragons 2014 DVDRiP XViD-"
+				]
+			]
 		}
 	],
-	"version": "201501071"
+	"version": "201501072"
 }
