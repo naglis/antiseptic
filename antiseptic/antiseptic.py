@@ -125,7 +125,7 @@ def do_check(args, config):
         LOG.info('You have the latest version of the rules.')
     else:
         LOG.warning('A newer version (%s) is available. '
-                    'Type `%s update` to update' % (latest_version, __file__))
+                    'Type `antiseptic update` to update' % latest_version)
 
 
 def do_update(args, config):
@@ -175,8 +175,8 @@ def do_rename(args, config):
     except OSError as e:
         if e.errno == errno.ENOENT:
             raise SystemExit('The rules file: %s does not exist. '
-                             'Run `%s update` to update the rules.' %
-                             (rules_filename, __file__))
+                             'Run `antiseptic update` to update the rules.' %
+                             rules_filename)
         else:
             raise
 
