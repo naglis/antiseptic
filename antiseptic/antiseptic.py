@@ -25,15 +25,6 @@ LOG = logging.getLogger(__name__)
 CONSOLE_MESSAGE_FORMAT = '%(message)s'
 LOG_FILE_MESSAGE_FORMAT = '[%(asctime)s] %(levelname)-8s %(name)s %(message)s'
 DEFAULT_VERBOSE_LEVEL = 1
-TEST_ERROR_TEMPLATE = '''
-ERROR: Rule: %s, test case #%d
------------------------------
-%s'''
-TEST_FAIL_TEMPLATE = '''
-FAIL: Rule: %s, test case #%d
------------------------------
-Input: %s
-Expected: %s, got: %s'''
 
 
 class Cleaner(object):
@@ -197,51 +188,6 @@ def do_rename(args, config):
             args.path, c, preview=args.preview, default_choice=args.choice)
 
 
-def do_test(args, config):
-    c = Cleaner()
-    rules_filename = config['rules_filename']
-    try:
-        c.load_rules(rules_filename)
-    except OSError as e:
-        if e.errno == errno.ENOENT:
-            raise SystemExit('The rules file: %s does not exist. '
-                             'Run `%s update` to update the rules.' %
-                             (rules_filename, __file__))
-        else:
-            raise
-
-    count, fails, errors = 0, 0, 0
-    output = []
-    for rule in c.rules:
-        for i, (in_, out_) in enumerate(rule.get('tests', []), start=1):
-            count += 1
-            try:
-                _, result = Cleaner.apply_rule(rule, in_)
-            except Exception as e:
-                output.append(TEST_ERROR_TEMPLATE % (rule['id'], i, e))
-                sys.stderr.write('E')
-                errors += 1
-            else:
-                if result == out_:
-                    sys.stderr.write('.')
-                else:
-                    output.append(TEST_FAIL_TEMPLATE %
-                                  (rule['id'], i, in_, out_, result))
-                    sys.stderr.write('F')
-                    fails += 1
-            finally:
-                if count % 80 == 0:
-                    sys.stderr.write('\n')
-    for line in output:
-        print(line, file=sys.stderr)
-
-    print('\n\nTotal: %d (Failed: %d, Errors: %d)' % (count, fails, errors),
-          file=sys.stderr)
-
-    if fails + errors > 0:
-        sys.exit(1)
-
-
 def main():
     p = argparse.ArgumentParser(prog=__progname__, description=__description__)
     p.add_argument('--version', action='version',
@@ -281,9 +227,6 @@ def main():
         '-f', '--force', action='store_true',
         help='force update even if already on the latest version')
     update_parser.set_defaults(func=do_update)
-
-    test_parser = subparsers.add_parser('test', help='test rules')
-    test_parser.set_defaults(func=do_test)
 
     args = p.parse_args()
 
