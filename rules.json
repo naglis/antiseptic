@@ -71,7 +71,7 @@
 		{
 			"comment": "Cpasbien.me",
 			"id": "R0015",
-			"rule": "(?<=[\\W\\A])www[\\s\\.]Cpasbien[\\s\\.](?:me|pe|com)(?=\\W|$)",
+			"rule": "(?<=[\\W\\A])www.Cpasbien.(?:me|pe|com)(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
@@ -1674,7 +1674,67 @@
 					"Revenge of the Green Dragons 2014 DVDRiP XViD-"
 				]
 			]
+		},
+		{
+			"id": "R0255",
+			"rule": "(?<=\\W)RiVER(?=\\W|$)",
+			"tests": [
+				[
+					"Downton.Abbey.S05.Christmas.Special.HDTV.x264-RiVER[ettv]",
+					"Downton.Abbey.S05.Christmas.Special.HDTV.x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0256",
+			"rule": "(?<=\\W)TLA(?=\\W|$)",
+			"tests": [
+				[
+					"Downton.Abbey.S05.Christmas.Special.720p.HDTV.x264-TLA",
+					"Downton.Abbey.S05.Christmas.Special.720p.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0257",
+			"rule": "(?<=\\W)AUTHORiTY(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Shameless.US.S04E02.FRENCH.LD.HDTV.x264-AUTHORiTY",
+					"[www.Cpasbien.pe] Shameless.US.S04E02.FRENCH.LD.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0258",
+			"rule": "(?<=\\W)CaCoLaC(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] Shameless.US.S04E05.FRENCH.HDTV.x264-CaCoLaC",
+					"[www.OMGTORRENT.com] Shameless.US.S04E05.FRENCH.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0259",
+			"rule": "(?<=\\W)www.OMGTORRENT.com(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] Shameless.US.S04E05.FRENCH.HDTV.x264-CaCoLaC",
+					"[] Shameless.US.S04E05.FRENCH.HDTV.x264-CaCoLaC"
+				]
+			]
+		},
+		{
+			"id": "R0260",
+			"rule": "(?<=\\W)RNT(?=\\W|$)",
+			"tests": [
+				[
+					"The.Last.Ship.S01E08.FRENCH.HDTV.XviD-RNT",
+					"The.Last.Ship.S01E08.FRENCH.HDTV.XviD-"
+				]
+			]
 		}
 	],
-	"version": "201501072"
+	"version": "201501080"
 }
