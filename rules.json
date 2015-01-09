@@ -1734,7 +1734,17 @@
 					"The.Last.Ship.S01E08.FRENCH.HDTV.XviD-"
 				]
 			]
+		},
+		{
+			"id": "R0261",
+			"rule": "(?<=\\W)MkvCage(?:\\.com)?(?=\\W|$)",
+			"tests": [
+				[
+					"Teenage.Mutant.Ninja.Turtles.2014.720p.BRRip.850MB.MkvCage.com",
+					"Teenage.Mutant.Ninja.Turtles.2014.720p.BRRip.850MB."
+				]
+			]
 		}
 	],
-	"version": "201501080"
+	"version": "201501090"
 }
