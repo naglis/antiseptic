@@ -1744,7 +1744,107 @@
 					"Teenage.Mutant.Ninja.Turtles.2014.720p.BRRip.850MB."
 				]
 			]
+		},
+		{
+			"id": "R0262",
+			"rule": "(?<=\\W)FooKaS(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.CAM.V2.x264-FooKaS",
+					"Frozen.2013.CAM.V2.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0263",
+			"rule": "(?<=\\W)AVeNGeRZ(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen 2013 Cam x.264 - AVeNGeRZ",
+					"Frozen 2013 Cam x.264 - "
+				]
+			]
+		},
+		{
+			"id": "R0264",
+			"rule": "(?<=\\W)PRiSTiNE(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.BRRip.720p.x264.AAC-PRiSTiNE",
+					"Frozen.2013.BRRip.720p.x264.AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0265",
+			"rule": "(?<=\\W)SWAXXON(?=\\W|$)",
+			"tests": [
+				[
+					"Bad.Country.2014.SweSub.DVDRip.x264-SWAXXON",
+					"Bad.Country.2014.SweSub.DVDRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0266",
+			"rule": "(?<=\\W)VYTO(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.WEBRip.480p.x264.AAC-VYTO",
+					"Frozen.2013.WEBRip.480p.x264.AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0267",
+			"rule": "(?<=\\W)ViZNU(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.DVDSCR.x264.AAC.-.ViZNU.[P2PDL]",
+					"Frozen.2013.DVDSCR.x264.AAC.-..[P2PDL]"
+				]
+			]
+		},
+		{
+			"id": "R0268",
+			"rule": "(?<=\\W)P2PDL(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.DVDSCR.x264.AAC.-.ViZNU.[P2PDL]",
+					"Frozen.2013.DVDSCR.x264.AAC.-.ViZNU.[]"
+				]
+			]
+		},
+		{
+			"id": "R0269",
+			"rule": "(?<=\\W)LiBERTAZ(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.SweSub.DVDSCR.x264-LiBERTAZ",
+					"Frozen.2013.SweSub.DVDSCR.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0270",
+			"rule": "(?<=\\W)SiNDK8(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen 2013 DVDSCR x264 AAC - SiNDK8",
+					"Frozen 2013 DVDSCR x264 AAC - "
+				]
+			]
+		},
+		{
+			"id": "R0271",
+			"rule": "(?<=\\W)Ganool(?=\\W|$)",
+			"tests": [
+				[
+					"Inception (2010) BluRay 720p 950MB Ganool",
+					"Inception (2010) BluRay 720p 950MB "
+				]
+			]
 		}
 	],
-	"version": "201501090"
+	"version": "201501100"
 }
