@@ -101,11 +101,11 @@ Getting started
     $ antiseptic rename <movie_directory>
 
 If you have many movies inside one directory and want to rename all of them at
-once, use the ``-r`` flag:
+once, use the ``-d``, ``--dir`` flag:
 
 ::
 
-    $ antiseptic rename -r <movie_directory>
+    $ antiseptic rename -d <movie_directory>
 
 How to update the rules?
 ========================

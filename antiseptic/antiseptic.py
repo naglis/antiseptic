@@ -189,7 +189,7 @@ def do_rename(args, config):
         else:
             raise
 
-    if args.recursive:
+    if args.directory:
         for dn in list_dirs(args.path):
             rename_dir(dn, c, dry_run=args.dry_run,
                        default_choice=args.choice, auto=args.auto)
@@ -219,7 +219,9 @@ def main():
 
     rename_parser = subparsers.add_parser('rename', help='rename directories')
     rename_parser.add_argument('path', metavar='PATH')
-    rename_parser.add_argument('-r', '--recursive', action='store_true')
+    rename_parser.add_argument(
+        '-d', '--dir', action='store_true', dest='directory',
+        help='rename all directories inside PATH')
     rename_parser.add_argument(
         '-y', '--yes', action='store_const', const='y', default='n',
         dest='choice', help='make \'yes\' the default choice when renaming')
