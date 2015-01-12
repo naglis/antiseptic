@@ -85,37 +85,46 @@ class Cleaner(object):
         return False, text
 
 
-def rename_dir(path, cleaner, preview=False, default_choice='n'):
+def rename_dir(path, cleaner, dry_run=False, default_choice='n', auto=False):
+
+    def rename(path, new_name):
+        base, _ = os.path.split(path)
+        try:
+            new_path = os.path.join(base, new_name)
+            LOG.debug('Renaming: {path:s} to {new_path:s}'.format(
+                path=path, new_path=new_path))
+            os.rename(path, new_path)
+        except OSError as e:
+            LOG.exception(e)
+            return
+        else:
+            LOG.info('Renamed successfully.')
+
     path = os.path.normpath(path)
     base, before = os.path.split(path)
     after, rules = cleaner.clean_title(before)
 
     if after == before:
         LOG.debug('Nothing to be done.')
+        return
+
+    LOG.info('Applied rules: %s' % ', '.join(rules))
+    print(''.join(diff(before, after)))
+
+    if dry_run:
+        print()
+        return
+    elif auto:
+        rename(path, after)
+        return
+
+    choice = prompt('Apply', ['y', 'n', 'q'], default_choice)
+    if choice == 'q':
+        sys.exit(0)
+    elif choice == 'y':
+        rename(path, after)
     else:
-        LOG.info('Applied rules: %s' % ', '.join(rules))
-        print(''.join(diff(before, after)))
-
-        if preview:
-            print()
-            return
-
-        choice = prompt('Apply', ['y', 'n', 'q'], default_choice)
-        if choice == 'y':
-            try:
-                new_path = os.path.join(base, after)
-                LOG.debug('Renaming: {path:s} to {new_path:s}'.format(
-                    path=path, new_path=new_path))
-                os.rename(path, new_path)
-            except OSError as e:
-                LOG.exception(e)
-                return
-            else:
-                LOG.info('Renamed successfully.')
-        elif choice == 'q':
-            sys.exit(0)
-        else:
-            return
+        return
 
 
 def do_check(args, config):
@@ -182,10 +191,11 @@ def do_rename(args, config):
 
     if args.recursive:
         for dn in list_dirs(args.path):
-            rename_dir(dn, c, preview=args.preview, default_choice=args.choice)
+            rename_dir(dn, c, dry_run=args.dry_run,
+                       default_choice=args.choice, auto=args.auto)
     else:
-        rename_dir(
-            args.path, c, preview=args.preview, default_choice=args.choice)
+        rename_dir(args.path, c, dry_run=args.dry_run,
+                   default_choice=args.choice, auto=args.auto)
 
 
 def main():
@@ -213,9 +223,15 @@ def main():
     rename_parser.add_argument(
         '-y', '--yes', action='store_const', const='y', default='n',
         dest='choice', help='make \'yes\' the default choice when renaming')
-    rename_parser.add_argument(
-        '-n', dest='preview', action='store_true',
+
+    # -n and -a can't be used together
+    mutex_group = rename_parser.add_mutually_exclusive_group()
+    mutex_group.add_argument(
+        '-n', '--dry-run', action='store_true',
         help='don\'t rename anything, just preview the results')
+    mutex_group.add_argument(
+        '-a', '--auto', action='store_true',
+        help='don\'t ask questions, rename everything automatically')
     rename_parser.set_defaults(func=do_rename)
 
     check_parser = subparsers.add_parser(
