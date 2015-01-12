@@ -72,7 +72,7 @@ After:
     ├── Knowing (2009)
     ├── Star Trek (2009)
     ├── State of Play (2009)
-    ├── The Hangover. (2009)
+    ├── The Hangover (2009)
     ├── The Hurt Locker (2008)
     ├── Transformers Revenge of the Fallen
     └── UP (2009)
@@ -106,6 +106,13 @@ once, use the ``-d``, ``--dir`` flag:
 ::
 
     $ antiseptic rename -d <movie_directory>
+
+To rename directories automatically, use the ``-a``, ``--auto`` flag (be
+carefull):
+
+::
+
+    $ antiseptic rename -da <movie_directory>
 
 How to update the rules?
 ========================
