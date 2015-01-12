@@ -71,11 +71,19 @@
 		{
 			"comment": "Cpasbien.me",
 			"id": "R0015",
-			"rule": "(?<=[\\W\\A])www.Cpasbien.(?:me|pe|com)(?=\\W|$)",
+			"rule": "(?<=\\W)www.Cpasbien.(?:me|pe|com)(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
 					"[] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM"
+				],
+				[
+					"[www.Cpasbien.com] Dark.Shadows.2012.TRUEFRENCH.DVDRip.XviD-DesTroY",
+					"[] Dark.Shadows.2012.TRUEFRENCH.DVDRip.XviD-DesTroY"
+				],
+				[
+					"[www.Cpasbien.me] Arrow.S02E11.FASTSUB.VOSTFR.HDTV.XviD-MiND",
+					"[] Arrow.S02E11.FASTSUB.VOSTFR.HDTV.XviD-MiND"
 				]
 			]
 		},
@@ -520,7 +528,13 @@
 		},
 		{
 			"id": "R0108",
-			"rule": "(?<=\\W)PSYPHER(?=\\W|$)"
+			"rule": "(?<=\\W)PSYPHER(?=\\W|$)",
+			"tests": [
+				[
+					"Ascension 2014 S01 Complete Season 1 720p HDTV AAC x264-PSYPHER",
+					"Ascension 2014 S01 Complete Season 1 720p HDTV AAC x264-"
+				]
+			]
 		},
 		{
 			"id": "R0109",
@@ -1844,7 +1858,97 @@
 					"Inception (2010) BluRay 720p 950MB "
 				]
 			]
+		},
+		{
+			"id": "R0272",
+			"rule": "(?<=\\W)MiND(?=\\W|$)",
+			"tests": [
+				[
+					"Elementary.S01E07.FRENCH.LD.DVDRip.XviD-MiND",
+					"Elementary.S01E07.FRENCH.LD.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0273",
+			"rule": "(?<=\\W)W4F(?=\\W|$)",
+			"tests": [
+				[
+					"MythBusters.S15E01.The.Simpsons.Special.REPACK.HDTV.x264-W4F",
+					"MythBusters.S15E01.The.Simpsons.Special.REPACK.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0274",
+			"rule": "(?<=\\W)DHD(?=\\W|$)",
+			"tests": [
+				[
+					"Ascension.Part.1.720p.HDTV.x264-DHD[ettv]",
+					"Ascension.Part.1.720p.HDTV.x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0275",
+			"rule": "(?<=\\W)WNN(?=\\W|$)",
+			"tests": [
+				[
+					"The.Agony.of.New.Years.Eve.PDTV.x264-WNN",
+					"The.Agony.of.New.Years.Eve.PDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0276",
+			"rule": "(?<=\\W)GloTV(?=\\W|$)",
+			"tests": [
+				[
+					"Dating.Naked.S01E02.HDTV.x264-OMiCRON- [GloTV]",
+					"Dating.Naked.S01E02.HDTV.x264-OMiCRON- []"
+				]
+			]
+		},
+		{
+			"id": "R0277",
+			"rule": "(?<=\\W)OMiCRON(?=\\W|$)",
+			"tests": [
+				[
+					"Dating.Naked.S01E02.HDTV.x264-OMiCRON- [GloTV]",
+					"Dating.Naked.S01E02.HDTV.x264-- [GloTV]"
+				]
+			]
+		},
+		{
+			"id": "R0278",
+			"rule": "(?<=\\W)axiytuns(?=\\W|$)",
+			"tests": [
+				[
+					"Dating.Naked.S01E04.Chuck.and.Camille.MP4 - axiytuns",
+					"Dating.Naked.S01E04.Chuck.and.Camille.MP4 - "
+				]
+			]
+		},
+		{
+			"id": "R0279",
+			"rule": "(?<=\\W)TASTETV(?=\\W|$)",
+			"tests": [
+				[
+					"QI.S12E14.UNCUT.HDTV.x264-TASTETV",
+					"QI.S12E14.UNCUT.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0280",
+			"rule": "(?<=\\W)NODLABS(?=\\W|$)",
+			"tests": [
+				[
+					"A.Merry.Friggin.Christmas.2014.1080p.BluRay.x264-NODLABS[rarbg]",
+					"A.Merry.Friggin.Christmas.2014.1080p.BluRay.x264-[rarbg]"
+				]
+			]
 		}
 	],
-	"version": "201501100"
+	"version": "201501130"
 }
