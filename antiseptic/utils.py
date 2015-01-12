@@ -14,6 +14,8 @@ LOG = logging.getLogger(__name__)
 HOME = os.environ.get('HOME')
 DEFAULT_CONFIG_DIR = os.path.join(HOME, '.config')
 DEFAULT_DATA_DIR = os.path.join(HOME, '.local', 'share')
+XDG_CONFIG_DIR = os.environ.get('XDG_CONFIG_DIR') or DEFAULT_CONFIG_DIR
+XDG_DATA_DIR = os.environ.get('XDG_DATA_HOME') or DEFAULT_DATA_DIR
 DEFAULT_CONFIG = {
     'disabled_rules': [],
     'update_server': 'https://naglis.github.io/antiseptic/',
@@ -104,20 +106,6 @@ def get_new_rules(update_server):
         return json.loads(data)
 
 
-def get_config_dir():
-    if os.environ.get('XDG_CONFIG_DIR'):
-        return os.environ.get('XDG_CONFIG_DIR')
-    else:
-        return DEFAULT_CONFIG_DIR
-
-
-def get_data_dir():
-    if os.environ.get('XDG_DATA_HOME'):
-        return os.environ.get('XDG_DATA_HOME')
-    else:
-        return DEFAULT_DATA_DIR
-
-
 def make_dirs(path):
     try:
         os.makedirs(path, exist_ok=True)
@@ -152,7 +140,7 @@ def prompt(question, choices, default, case_sensitive=False, color=True):
 
 
 def get_config():
-    config_dir = os.path.join(get_config_dir(), 'antiseptic')
+    config_dir = os.path.join(XDG_CONFIG_DIR, 'antiseptic')
     if not os.path.isdir(config_dir):
         LOG.debug('Creating config dir: %s' % config_dir)
         make_dirs(config_dir)
@@ -166,7 +154,7 @@ def get_config():
             config.update(custom_config)
 
     if not config.get('rules_filename'):
-        data_dir = os.path.join(get_data_dir(), 'antiseptic')
+        data_dir = os.path.join(XDG_DATA_DIR, 'antiseptic')
         if not os.path.isdir(data_dir):
             LOG.debug('Creating data dir: %s' % data_dir)
             make_dirs(data_dir)
