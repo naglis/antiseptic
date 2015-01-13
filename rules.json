@@ -494,7 +494,13 @@
 		},
 		{
 			"id": "R0101",
-			"rule": "(?<=\\W)AYMO(?=\\W|$)"
+			"rule": "(?<=\\W)AYMO(?=\\W|$)",
+			"tests": [
+				[
+					"The.East.2013.FRENCH.DVDRip.x264-AYMO",
+					"The.East.2013.FRENCH.DVDRip.x264-"
+				]
+			]
 		},
 		{
 			"id": "R0102",
@@ -753,29 +759,80 @@
 		},
 		{
 			"id": "R0153",
-			"rule": "(?P<pre>\\W)(?P<year>(?:19|20)\\d{2})(?P<post>\\W|$)",
-			"sub": " (\\g<year>)",
+			"rule": "(?<!\\(|\\d)(?P<year>(?:19|20)\\d{2})(?!\\)|\\d|:)",
+			"sub": "(\\g<year>)",
+			"tests": [
+				[
+					"Gamer (2009)",
+					"Gamer (2009)"
+				],
+				[
+					"THX 1138",
+					"THX 1138"
+				],
+				[
+					"1408",
+					"1408"
+				],
+				[
+					"2001: A Space Odyssey",
+					"2001: A Space Odyssey"
+				]
+			],
 			"weight": 99
 		},
 		{
+			"comment": "Remove empty square brackets",
 			"id": "R0154",
 			"rule": "\\[\\s*\\]",
+			"tests": [
+				[
+					"Some title []",
+					"Some title "
+				],
+				[
+					"Some title [  ]",
+					"Some title "
+				]
+			],
 			"weight": 99
 		},
 		{
+			"comment": "Remove empty parentheses",
 			"id": "R0155",
 			"rule": "\\(\\s*\\)",
+			"tests": [
+				[
+					"Some title ()",
+					"Some title "
+				],
+				[
+					"Some title (  )",
+					"Some title "
+				]
+			],
 			"weight": 99
 		},
 		{
+			"comment": "Remove empty angle brackets",
 			"id": "R0156",
 			"rule": "\\{\\s*\\}",
+			"tests": [
+				[
+					"Some title {}",
+					"Some title "
+				],
+				[
+					"Some title {  }",
+					"Some title "
+				]
+			],
 			"weight": 99
 		},
 		{
-			"comment": "Strip trailing whitespace, dashes, dots and underscores",
+			"comment": "Strip trailing dashes, dots and underscores",
 			"id": "R0157",
-			"rule": "[\\s\\-\\._]+$",
+			"rule": "[\\-\\._]+$",
 			"weight": 100
 		},
 		{
@@ -785,8 +842,9 @@
 			"weight": 100
 		},
 		{
+			"comment": "Strip trailing whitespace",
 			"id": "R0159",
-			"rule": "\\s*$",
+			"rule": "\\s+$",
 			"weight": 100
 		},
 		{
@@ -1948,7 +2006,216 @@
 					"A.Merry.Friggin.Christmas.2014.1080p.BluRay.x264-[rarbg]"
 				]
 			]
+		},
+		{
+			"id": "R0281",
+			"rule": "(?<=\\W)(?:Une.|Hive.)?CM8(?=\\W|$)",
+			"tests": [
+				[
+					"Kill.the.Irishman.2011.DVDRip.AC3.XviD-CM8",
+					"Kill.the.Irishman.2011.DVDRip.AC3.XviD-"
+				],
+				[
+					"[ www.TorrentDay.com ] - Housos.S01.DVDRip+Extras.XviD.Une-CM8",
+					"[ www.TorrentDay.com ] - Housos.S01.DVDRip+Extras.XviD."
+				],
+				[
+					"Robocop.2014.Uncropped.720p.HD-TS.X264.AC3.HQ.Hive-CM8",
+					"Robocop.2014.Uncropped.720p.HD-TS.X264.AC3.HQ."
+				]
+			]
+		},
+		{
+			"id": "R0282",
+			"rule": "(?<=\\W)SDTiN(?=\\W|$)",
+			"tests": [
+				[
+					"The.Cosmonaut.2013.DVDRip.XviD-SDTiN",
+					"The.Cosmonaut.2013.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0283",
+			"rule": "(?<=\\W)HMiDiMADRiDI(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] The.Conjuring.2013.FRENCH.DVDRip.XviD-HMiDiMADRiDI",
+					"[www.OMGTORRENT.com] The.Conjuring.2013.FRENCH.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0284",
+			"rule": "(?<=\\W)RELiC(?=\\W|$)",
+			"tests": [
+				[
+					"The.Family.2013.FRENCH.BDRip.XviD-RELiC",
+					"The.Family.2013.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0285",
+			"rule": "(?<=\\W)JABAL(?=\\W|$)",
+			"tests": [
+				[
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-JABAL",
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-"
+				]
+			]
+		},
+		{
+			"id": "R0286",
+			"rule": "(?<=\\W)JABAL(?=\\W|$)",
+			"tests": [
+				[
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-JABAL",
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-"
+				]
+			]
+		},
+		{
+			"id": "R0287",
+			"rule": "(?<=\\W)LYS(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Pi\u00e9g\u00e9.2014.FRENCH.DVDRIP.XVid-LYS",
+					"[www.Cpasbien.pe] Pi\u00e9g\u00e9.2014.FRENCH.DVDRIP.XVid-"
+				]
+			]
+		},
+		{
+			"id": "R0288",
+			"rule": "(?<=\\W)DVDFR(?=\\W|$)",
+			"tests": [
+				[
+					"The.Book.Of.Eli.FRENCH.DVDRip.XViD-DVDFR",
+					"The.Book.Of.Eli.FRENCH.DVDRip.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0289",
+			"rule": "(?<=\\W)FIRETOWN(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] Edge.of.Tomorrow.2014.FRENCH.BDRip.XviD-FIRETOWN",
+					"[www.OMGTORRENT.com] Edge.of.Tomorrow.2014.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0290",
+			"rule": "(?<=\\W)AFTP(?=\\W|$)",
+			"tests": [
+				[
+					"No.Limite.Do.Amanha.DUAL.2014.BDRip.XviD-AFTP",
+					"No.Limite.Do.Amanha.DUAL.2014.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"comment": "FwD",
+			"id": "R0291",
+			"rule": "(?<=\\W)F[Ww]D(?=\\W|$)",
+			"tests": [
+				[
+					"Cars 2 2011 FRENCH BRRiP XviD-FwD",
+					"Cars 2 2011 FRENCH BRRiP XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0292",
+			"rule": "(?<=\\W)IMAGiNE(?=\\W|$)",
+			"tests": [
+				[
+					"Rio.2011.DVDRiP.XViD.AC3-IMAGiNE",
+					"Rio.2011.DVDRiP.XViD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0293",
+			"rule": "(?<=\\W)HQCLUB(?=\\W|$)",
+			"tests": [
+				[
+					"Ischeznuvshaya.2014.DUAL.BDRip.XviD.AC3.-HQCLUB",
+					"Ischeznuvshaya.2014.DUAL.BDRip.XviD.AC3.-"
+				]
+			]
+		},
+		{
+			"id": "R0294",
+			"rule": "(?<=\\W)QCP(?=\\W|$)",
+			"tests": [
+				[
+					"The.Frozen.Ground.2013.FRENCH.DVDRip.XviD-QCP",
+					"The.Frozen.Ground.2013.FRENCH.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0295",
+			"rule": "(?<=\\W)RedBlade(?=\\W|$)",
+			"tests": [
+				[
+					"The.Dance.Of.Reality.2013.LIMITED.DVDRip.x264-RedBlade[rarbg]",
+					"The.Dance.Of.Reality.2013.LIMITED.DVDRip.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0296",
+			"rule": "(?<=\\W)mSD(?=\\W|$)",
+			"tests": [
+				[
+					"Kano.2014.480p.BluRay.x264-mSD",
+					"Kano.2014.480p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0297",
+			"rule": "(?<=\\W)WiKi(?=\\W|$)",
+			"tests": [
+				[
+					"Kung.Fu.Jungle.2014.720p.BluRay.x264-WiKi",
+					"Kung.Fu.Jungle.2014.720p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0298",
+			"rule": "(?<=\\W)SeeHD(?=\\W|$)",
+			"tests": [
+				[
+					"Kung Fu Jungle 2014 1080p WEB-DL x264 AAC-SeeHD",
+					"Kung Fu Jungle 2014 1080p WEB-DL x264 AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0299",
+			"rule": "(?<=\\W)SReeJoN(?=\\W|$)",
+			"tests": [
+				[
+					"Kung Fu Jungle (2014) BluRay 720p 700MB Ganool [SReeJoN]",
+					"Kung Fu Jungle (2014) BluRay 720p 700MB Ganool []"
+				]
+			]
+		},
+		{
+			"id": "R0300",
+			"rule": "(?<=\\W)ReHD(?=\\W|$)",
+			"tests": [
+				[
+					"Kung Fu Jungle 2014 720p WEB-DL x264 AAC-ReHD [MovietaM]",
+					"Kung Fu Jungle 2014 720p WEB-DL x264 AAC- [MovietaM]"
+				]
+			]
 		}
 	],
-	"version": "201501130"
+	"version": "201501131"
 }
