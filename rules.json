@@ -71,7 +71,7 @@
 		{
 			"comment": "Cpasbien.me",
 			"id": "R0015",
-			"rule": "(?<=\\W)www.Cpasbien.(?:me|pe|com)(?=\\W|$)",
+			"rule": "(?<=\\W)www.Cpasbien.(?:me|pe|com|pw)(?=\\W|$)",
 			"tests": [
 				[
 					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
@@ -84,6 +84,10 @@
 				[
 					"[www.Cpasbien.me] Arrow.S02E11.FASTSUB.VOSTFR.HDTV.XviD-MiND",
 					"[] Arrow.S02E11.FASTSUB.VOSTFR.HDTV.XviD-MiND"
+				],
+				[
+					"[ www.Cpasbien.pw ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-RiGOLO",
+					"[  ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-RiGOLO"
 				]
 			]
 		},
@@ -352,7 +356,13 @@
 		},
 		{
 			"id": "R0073",
-			"rule": "(?<=\\W)IMMERSE(?=\\W|$)"
+			"rule": "(?<=\\W)IMMERSE(?=\\W|$)",
+			"tests": [
+				[
+					"The.Simpsons.S26E10.720p.HDTV.x264-IMMERSE",
+					"The.Simpsons.S26E10.720p.HDTV.x264-"
+				]
+			]
 		},
 		{
 			"id": "R0074",
@@ -2215,7 +2225,312 @@
 					"Kung Fu Jungle 2014 720p WEB-DL x264 AAC- [MovietaM]"
 				]
 			]
+		},
+		{
+			"id": "R0301",
+			"rule": "(?<=\\W)RAV3N(?=\\W|$)",
+			"tests": [
+				[
+					"Horrible Bosses 2 (2014) HDRip HC XViD AC3-RAV3N",
+					"Horrible Bosses 2 (2014) HDRip HC XViD AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0302",
+			"rule": "(?<=\\W)RiGOLO(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.Cpasbien.pw ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-RiGOLO",
+					"[ www.Cpasbien.pw ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0303",
+			"rule": "(?<=\\W)VOSTFR(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB.VOSTFR.480p.HDRIP.XVID.AC3-NIKOo",
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB..480p.HDRIP.XVID.AC3-NIKOo"
+				]
+			]
+		},
+		{
+			"id": "R0304",
+			"rule": "(?<=\\W)NIKOo(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB.VOSTFR.480p.HDRIP.XVID.AC3-NIKOo",
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB.VOSTFR.480p.HDRIP.XVID.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0305",
+			"rule": "(?<=\\W)F4ST(?=\\W|$)",
+			"tests": [
+				[
+					"Game.Of.Thrones.S04E09.FASTSUB.VOSTFR.HDTV.XviD-F4ST",
+					"Game.Of.Thrones.S04E09.FASTSUB.VOSTFR.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0306",
+			"rule": "(?<=\\W)ADDiCTiON(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland.S04E00.FASTSUB.VOSTFR.HDTV.XviD-ADDiCTiON",
+					"Homeland.S04E00.FASTSUB.VOSTFR.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0307",
+			"rule": "(?<=\\W)Xtrem(?=\\W|$)",
+			"tests": [
+				[
+					"Breaking.Bad.S05E05.VOSTFR.HDTV.XviD-Xtrem",
+					"Breaking.Bad.S05E05.VOSTFR.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0308",
+			"rule": "(?<=\\W)2HD(?=\\W|$)",
+			"tests": [
+				[
+					"Breaking Bad S05E15 HDTV x264-2HD[ettv]",
+					"Breaking Bad S05E15 HDTV x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0309",
+			"rule": "(?<=\\W)EVOLVE(?=\\W|$)",
+			"tests": [
+				[
+					"House.of.Cards.2013.S01E03.HDTV.x264-EVOLVE",
+					"House.of.Cards.2013.S01E03.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0310",
+			"rule": "(?<=\\W)ASAP(?=\\W|$)",
+			"tests": [
+				[
+					"New.Girl.S04E12.HDTV.x264-ASAP",
+					"New.Girl.S04E12.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0311",
+			"rule": "(?<=\\W)DIMENSION(?=\\W|$)",
+			"tests": [
+				[
+					"Gotham.S01E11.720p.HDTV.X264-DIMENSION",
+					"Gotham.S01E11.720p.HDTV.X264-"
+				]
+			]
+		},
+		{
+			"comment": "DiRFiX",
+			"id": "R0312",
+			"rule": "(?<=\\W)D[Ii]RF[Ii]X(?=\\W|$)",
+			"tests": [
+				[
+					"House.of.Cards.2013.S02E13.DIRFIX.WEBRip.x264-2HD",
+					"House.of.Cards.2013.S02E13..WEBRip.x264-2HD"
+				],
+				[
+					"The.New.Normal.S01E09.Unplugged.DiRFiX.720p.WEB-DL.DD5.1.H.264-BS",
+					"The.New.Normal.S01E09.Unplugged..720p.WEB-DL.DD5.1.H.264-BS"
+				]
+			]
+		},
+		{
+			"id": "R0313",
+			"rule": "(?<=\\W)SAINTGKS(?=\\W|$)",
+			"tests": [
+				[
+					"Horrible Bosses 2 2014 HDRip SAINTGKS",
+					"Horrible Bosses 2 2014 HDRip "
+				]
+			]
+		},
+		{
+			"id": "R0314",
+			"rule": "(?<=\\W)CPG(?=\\W|$)",
+			"tests": [
+				[
+					"The Judge (2014) HDRip x264 AC3-CPG",
+					"The Judge (2014) HDRip x264 AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0315",
+			"rule": "(?<=\\W)ECI(?=\\W|$)",
+			"tests": [
+				[
+					"Supernatural.S10E07.Girls.Girls.Girls.1080p.WEB-DL.DD5.1.H.264-ECI[rarbg]",
+					"Supernatural.S10E07.Girls.Girls.Girls.1080p.WEB-DL.DD5.1.H.264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0316",
+			"rule": "(?<=\\W)GloDLS(?=\\W|$)",
+			"tests": [
+				[
+					"Revenge.S04E12.720p.HDTV.X264-DIMENSION [GloDLS]",
+					"Revenge.S04E12.720p.HDTV.X264-DIMENSION []"
+				]
+			]
+		},
+		{
+			"id": "R0317",
+			"rule": "(?<=\\W)AFG(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.torrenting.com ] - Brickleberry.S03E04.HDTV.XviD-AFG",
+					"[ www.torrenting.com ] - Brickleberry.S03E04.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0318",
+			"rule": "(?<=\\W)WLR(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.torrenting.com ] - Brickleberry.S03E04.WEB-DL.x264-WLR",
+					"[ www.torrenting.com ] - Brickleberry.S03E04.WEB-DL.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0319",
+			"rule": "(?<=\\W)HEVC(?=\\W|$)",
+			"tests": [
+				[
+					"The Imitation Game (2014) DVDScr X265 HEVC - (Movieteam2000) - 399MB",
+					"The Imitation Game (2014) DVDScr X265  - (Movieteam2000) - 399MB"
+				]
+			]
+		},
+		{
+			"id": "R0320",
+			"rule": "(?<=\\W)SmartGuy(?=\\W|$)",
+			"tests": [
+				[
+					"The Hobbit The Battle Of The Five Armies (2014) DVDScr x264 AAC SmartGuy",
+					"The Hobbit The Battle Of The Five Armies (2014) DVDScr x264 AAC "
+				]
+			]
+		},
+		{
+			"id": "R0321",
+			"rule": "(?<=\\W)Team.DDH~RG(?=\\W|$)",
+			"tests": [
+				[
+					"Tevar (2015) Hindi 950MB 720p SAP DVDScrRip x264 ESubs Team DDH~RG",
+					"Tevar (2015) Hindi 950MB 720p SAP DVDScrRip x264 ESubs "
+				]
+			]
+		},
+		{
+			"id": "R0322",
+			"rule": "(?<=\\W)GWC(?=\\W|$)",
+			"tests": [
+				[
+					"Orange is the New Black S02 Season 2 Complete WEBRip 480p x264 AAC E-Subs [GWC]",
+					"Orange is the New Black S02 Season 2 Complete WEBRip 480p x264 AAC E-Subs []"
+				]
+			]
+		},
+		{
+			"id": "R0323",
+			"rule": "(?<=\\W)AVISHOW(?=\\W|$)",
+			"tests": [
+				[
+					"Orange.Is.The.New.Black.S02E04.FRENCH.LD.WEBRip.XviD-AVISHOW",
+					"Orange.Is.The.New.Black.S02E04.FRENCH.LD.WEBRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0324",
+			"rule": "(?<=\\W)CROiSSANT(?=\\W|$)",
+			"tests": [
+				[
+					"Orange.Is.The.New.Black.S02E05.FRENCH.LD.WEBRip.x264-CROiSSANT",
+					"Orange.Is.The.New.Black.S02E05.FRENCH.LD.WEBRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0325",
+			"rule": "(?<=\\W)LORD(?=\\W|$)",
+			"tests": [
+				[
+					"Da Vincis Demons S01E08 FRENCH HDTV XviD-LORD",
+					"Da Vincis Demons S01E08 FRENCH HDTV XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0326",
+			"rule": "(?<=\\W)FASTSUB(?=\\W|$)",
+			"tests": [
+				[
+					"Game.Of.Thrones.S04E06.FASTSUB.VOSTFR.HDTV.XviD-F4ST",
+					"Game.Of.Thrones.S04E06..VOSTFR.HDTV.XviD-F4ST"
+				]
+			]
+		},
+		{
+			"id": "R0327",
+			"rule": "(?<=\\W)HELLYWOOD(?=\\W|$)",
+			"tests": [
+				[
+					"Ischeznuvshaya.2014.DUAL.BDRip.720p.-HELLYWOOD",
+					"Ischeznuvshaya.2014.DUAL.BDRip.720p.-"
+				]
+			]
+		},
+		{
+			"id": "R0328",
+			"rule": "(?<=\\W)KIKS(?=\\W|$)",
+			"tests": [
+				[
+					"Automata (2014) 720p BluRay - [KIKS]",
+					"Automata (2014) 720p BluRay - []"
+				]
+			]
+		},
+		{
+			"id": "R0329",
+			"rule": "(?<=\\W)GeekRG(?=\\W|$)",
+			"tests": [
+				[
+					"Lets Be Cops (2014) 1080p 5.1ch BluRay RIP - [GeekRG]",
+					"Lets Be Cops (2014) 1080p 5.1ch BluRay RIP - []"
+				]
+			]
+		},
+		{
+			"id": "R0330",
+			"rule": "(?<=\\W)SANTi(?=\\W|$)",
+			"tests": [
+				[
+					"The.Hobbit.An.Unexpected.Journey.EXTENDED.2012.BRRip.XviD.AC3-SANTi",
+					"The.Hobbit.An.Unexpected.Journey.EXTENDED.2012.BRRip.XviD.AC3-"
+				]
+			]
 		}
 	],
-	"version": "201501131"
+	"version": "201501132"
 }
