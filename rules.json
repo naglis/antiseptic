@@ -209,7 +209,17 @@
 		},
 		{
 			"id": "R0038",
-			"rule": "(?<=\\W)ShAaNiG\\.com(?=\\W|$)"
+			"rule": "(?<=\\W)ShAaNiG(?:\\.com)?(?=\\W|$)",
+			"tests": [
+				[
+					"The.Walking.Dead.S04.720p.BluRay.x264-ShAaNiG",
+					"The.Walking.Dead.S04.720p.BluRay.x264-"
+				],
+				[
+					"The.Burbs.1989.720p.BluRay.800MB.ShAaNiG.com",
+					"The.Burbs.1989.720p.BluRay.800MB."
+				]
+			]
 		},
 		{
 			"id": "R0039",
@@ -233,7 +243,13 @@
 		},
 		{
 			"id": "R0044",
-			"rule": "(?<=\\W)anoXmous(?=\\W|$)"
+			"rule": "(?<=\\W)anoXmous(?=\\W|$)",
+			"tests": [
+				[
+					"The.Prestige.2006.720p.Bluray.x264.anoXmous",
+					"The.Prestige.2006.720p.Bluray.x264."
+				]
+			]
 		},
 		{
 			"id": "R0045",
@@ -352,7 +368,13 @@
 		},
 		{
 			"id": "R0072",
-			"rule": "(?<=\\W)FUM(?=\\W|$)"
+			"rule": "(?<=\\W)FUM(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland S04E01-E02 WEB-DL x264-FUM[ettv]",
+					"Homeland S04E01-E02 WEB-DL x264-[ettv]"
+				]
+			]
 		},
 		{
 			"id": "R0073",
@@ -406,7 +428,13 @@
 		},
 		{
 			"id": "R0082",
-			"rule": "(?<=\\W)FQM(?=\\W|$)"
+			"rule": "(?<=\\W)FQM(?=\\W|$)",
+			"tests": [
+				[
+					"Game.of.Thrones.S01E02.The.Kingsroad.HDTV.XviD-FQM",
+					"Game.of.Thrones.S01E02.The.Kingsroad.HDTV.XviD-"
+				]
+			]
 		},
 		{
 			"id": "R0083",
@@ -2530,7 +2558,211 @@
 					"The.Hobbit.An.Unexpected.Journey.EXTENDED.2012.BRRip.XviD.AC3-"
 				]
 			]
+		},
+		{
+			"id": "R0331",
+			"rule": "(?<=\\W)MiXED(?=\\W|$)",
+			"tests": [
+				[
+					"Breaking.Bad.S05.HDTV.XviD-MiXED",
+					"Breaking.Bad.S05.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0332",
+			"rule": "(?<=\\W)DexzAery(?=\\W|$)",
+			"tests": [
+				[
+					"Orange Is The New Black Season 1 Complete 480p HDTV x264 [Multi-Sub] [DexzAery]",
+					"Orange Is The New Black Season 1 Complete 480p HDTV x264 [Multi-Sub] []"
+				]
+			]
+		},
+		{
+			"id": "R0333",
+			"rule": "(?<=\\W)Sticky83(?=\\W|$)",
+			"tests": [
+				[
+					"The.Simpsons.S01-S25.480p.WEB-DL.HDTV.x264-Sticky83",
+					"The.Simpsons.S01-S25.480p.WEB-DL.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0334",
+			"rule": "(?<=\\W)ChameE(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland Season 3 Complete - ChameE",
+					"Homeland Season 3 Complete - "
+				]
+			]
+		},
+		{
+			"id": "R0335",
+			"rule": "(?<=\\W)CEE(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland - Season 3 Complete (HDTV) x264-CEE",
+					"Homeland - Season 3 Complete (HDTV) x264-"
+				]
+			]
+		},
+		{
+			"id": "R0336",
+			"rule": "(?<=\\W)VectoR(?=\\W|$)",
+			"tests": [
+				[
+					"The Walking Dead S04 Season 4 Complete HDTV x264 [E-Subs] [VectoR & DexzAery]",
+					"The Walking Dead S04 Season 4 Complete HDTV x264 [E-Subs] [ & DexzAery]"
+				]
+			]
+		},
+		{
+			"id": "R0337",
+			"rule": "(?<=\\W)G2G(?:.fm)?(?=\\W|$)",
+			"tests": [
+				[
+					"Marvel's Agent Carter S01E01 1080p HDTV + Subtitles [G2G]",
+					"Marvel's Agent Carter S01E01 1080p HDTV + Subtitles []"
+				],
+				[
+					"The Gambler (2014) DVDScr [G2G.fm]",
+					"The Gambler (2014) DVDScr []"
+				]
+			]
+		},
+		{
+			"id": "R0338",
+			"rule": "(?<=\\W)BST(?=\\W|$)",
+			"tests": [
+				[
+					"American.Sniper.2014.MD.iTALiAN.DVDSCR.X264-BST",
+					"American.Sniper.2014.MD.iTALiAN.DVDSCR.X264-"
+				]
+			]
+		},
+		{
+			"id": "R0339",
+			"rule": "(?<=\\W)GLY(?=\\W|$)",
+			"tests": [
+				[
+					"St.Vincent.2014.HDRip.XViD.AC3-GLY",
+					"St.Vincent.2014.HDRip.XViD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0340",
+			"rule": "(?<=\\W)STINKBOMB(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.Torrentday.com ] - Interstellar.2014.HDCAM.XviD-AC3-STINKBOMB",
+					"[ www.Torrentday.com ] - Interstellar.2014.HDCAM.XviD-AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0341",
+			"rule": "(?<=\\W)VAiN(?=\\W|$)",
+			"tests": [
+				[
+					"Godzilla.2014.720p.WEBRiP.XviD-VAiN",
+					"Godzilla.2014.720p.WEBRiP.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0342",
+			"rule": "(?<=\\W)BLiNK(?=\\W|$)",
+			"tests": [
+				[
+					"The.Hunchback.Of.Notre.Dame.II.2002.720p.BluRay.x264-BLiNK [PublicHD]",
+					"The.Hunchback.Of.Notre.Dame.II.2002.720p.BluRay.x264- [PublicHD]"
+				]
+			]
+		},
+		{
+			"id": "R0343",
+			"rule": "(?<=\\W)GCJM(?=\\W|$)",
+			"tests": [
+				[
+					"Brazil - 1985.1080p.Criterion.Bluray.x264-GCJM",
+					"Brazil - 1985.1080p.Criterion.Bluray.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0344",
+			"rule": "(?<=\\W)CiNEMATiC(?=\\W|$)",
+			"tests": [
+				[
+					"Rivers.Edge.1986.1080p.BluRay.AVC.DTS-HD.MA.2.0-CiNEMATiC",
+					"Rivers.Edge.1986.1080p.BluRay.AVC.DTS-HD.MA.2.0-"
+				]
+			]
+		},
+		{
+			"id": "R0345",
+			"rule": "(?<=\\W)GKNByNW(?=\\W|$)",
+			"tests": [
+				[
+					"Maleficent.2014.720p.BluRay.DTS.x264-GKNByNW",
+					"Maleficent.2014.720p.BluRay.DTS.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0346",
+			"rule": "(?<=\\W)RoB(?=\\W|$)",
+			"tests": [
+				[
+					"AMERICAN SNIPER [2014]DVDScr[H264 MP4][RoB]",
+					"AMERICAN SNIPER [2014]DVDScr[H264 MP4][]"
+				]
+			]
+		},
+		{
+			"id": "R0347",
+			"rule": "(?<=\\W)ArRoWs(?=\\W|$)",
+			"tests": [
+				[
+					"About.Time.2013.TRUEFRENCH.DVDRIP.XviD-ArRoWs",
+					"About.Time.2013.TRUEFRENCH.DVDRIP.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0348",
+			"rule": "(?<=\\W)ELiTE(?=\\W|$)",
+			"tests": [
+				[
+					"Rio.2011.PLDUB.3D.1080p.BDRip.XviD.AC3-ELiTE",
+					"Rio.2011.PLDUB.3D.1080p.BDRip.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0349",
+			"rule": "(?<=\\W)TMB(?=\\W|$)",
+			"tests": [
+				[
+					"Taken.2.2012.TRUEFRENCH.BRRip.XviD-TMB",
+					"Taken.2.2012.TRUEFRENCH.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0350",
+			"rule": "(?<=\\W)ARTEFAC(?=\\W|$)",
+			"tests": [
+				[
+					"Kev.Adams.Voila.Voila.2014.FRENCH.DVDRiP.XviD-ARTEFAC",
+					"Kev.Adams.Voila.Voila.2014.FRENCH.DVDRiP.XviD-"
+				]
+			]
 		}
 	],
-	"version": "201501132"
+	"version": "201501133"
 }
