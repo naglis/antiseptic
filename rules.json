@@ -2762,7 +2762,107 @@
 					"Kev.Adams.Voila.Voila.2014.FRENCH.DVDRiP.XviD-"
 				]
 			]
+		},
+		{
+			"id": "R0351",
+			"rule": "(?<=\\W)LOKI(?=\\W|$)",
+			"tests": [
+				[
+					"A Most Violent Year (2014) DvDscr-Rip AAC x264 - LOKI",
+					"A Most Violent Year (2014) DvDscr-Rip AAC x264 - "
+				]
+			]
+		},
+		{
+			"id": "R0352",
+			"rule": "(?<=\\W)FASM(?=\\W|$)",
+			"tests": [
+				[
+					"The.Hobbit.An.Unexpected.Journey.2012.Extended.720p.BluRay.QEBSxi.AAC20.MP4-FASM",
+					"The.Hobbit.An.Unexpected.Journey.2012.Extended.720p.BluRay.QEBSxi.AAC20.MP4-"
+				]
+			]
+		},
+		{
+			"id": "R0353",
+			"rule": "(?<=\\W)MikeGR(?=\\W|$)",
+			"tests": [
+				[
+					"Ted.2012.UNRATED.1080p.BluRay.x264-MikeGR-GR SUBS",
+					"Ted.2012.UNRATED.1080p.BluRay.x264--GR SUBS"
+				]
+			]
+		},
+		{
+			"id": "R0354",
+			"rule": "(?<=\\W)LTT(?=\\W|$)",
+			"tests": [
+				[
+					"PS.I.Love.You.[2007.French].DVDRip.DivX-LTT",
+					"PS.I.Love.You.[2007.French].DVDRip.DivX-"
+				]
+			]
+		},
+		{
+			"id": "R0355",
+			"rule": "(?<=\\W)KRaLiMaRKo(?=\\W|$)",
+			"tests": [
+				[
+					"Resident Evil 1-5 (2002-2012) 1080p BluRay Remux - KRaLiMaRKo",
+					"Resident Evil 1-5 (2002-2012) 1080p BluRay Remux - "
+				]
+			]
+		},
+		{
+			"id": "R0356",
+			"rule": "(?<=\\W)SaNRiM(?=\\W|$)",
+			"tests": [
+				[
+					"Wanted (2008) 1080p BRrip Dual Audio {Hindi 2Ch-English 6Ch}~SaNRiM~",
+					"Wanted (2008) 1080p BRrip Dual Audio {Hindi 2Ch-English 6Ch}~~"
+				]
+			]
+		},
+		{
+			"id": "R0357",
+			"rule": "(?<=\\W)ROVERS(?=\\W|$)",
+			"tests": [
+				[
+					"A.Coffee.in.Berlin.2012.LIMITED.BDRip.x264-ROVERS[rarbg]",
+					"A.Coffee.in.Berlin.2012.LIMITED.BDRip.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0358",
+			"rule": "(?<=\\W)CARG(?=\\W|$)",
+			"tests": [
+				[
+					"The Good Wife Season 4 Complete 720p HD [CARG]",
+					"The Good Wife Season 4 Complete 720p HD []"
+				]
+			]
+		},
+		{
+			"id": "R0359",
+			"rule": "(?<=\\W)NAHOM(?=\\W|$)",
+			"tests": [
+				[
+					"The Zero Theorem 2013 720p BluRay Sub Ita Eng Rus x265-NAHOM",
+					"The Zero Theorem 2013 720p BluRay Sub Ita Eng Rus x265-"
+				]
+			]
+		},
+		{
+			"id": "R0360",
+			"rule": "(?<=\\W)xRed(?=\\W|$)",
+			"tests": [
+				[
+					"Shameless.US.S05E01.720p.HDTV.QAAC.x264-xRed",
+					"Shameless.US.S05E01.720p.HDTV.QAAC.x264-"
+				]
+			]
 		}
 	],
-	"version": "201501133"
+	"version": "201501170"
 }
