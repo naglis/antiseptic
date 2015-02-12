@@ -1,0 +1,3119 @@
+{
+	"rules": [
+		{
+			"comment": "LiMiTED",
+			"id": "R0001",
+			"rule": "(?<=\\W)L[Ii]M[Ii]TED(?=\\W|$)"
+		},
+		{
+			"id": "R0002",
+			"rule": "(?<=\\W)RETAIL(?=\\W|$)"
+		},
+		{
+			"id": "R0003",
+			"rule": "(?<=\\W)PROPER(?=\\W|$)"
+		},
+		{
+			"comment": "WEBRip",
+			"id": "R0004",
+			"rule": "(?<=\\W)WEB(?:\\-|\\s)?[Rr][Ii][Pp](?=\\W|$)"
+		},
+		{
+			"id": "R0005",
+			"rule": "(?<=\\W)W[Ee][Bb]\\-?D[Ll](?=\\W|$)"
+		},
+		{
+			"comment": "NO-RAR",
+			"id": "R0006",
+			"rule": "(?<=\\W)NO\\-RAR(?=\\W|$)"
+		},
+		{
+			"id": "R0007",
+			"rule": "(?<=\\W)FRENCH(?=\\W|$)"
+		},
+		{
+			"id": "R0008",
+			"rule": "(?<=\\W)READNFO(?=\\W|$)",
+			"tests": [
+				[
+					"Interstellar 2014 HDCAM NEW SOURCE READNFO XVID AC3 ACAB",
+					"Interstellar 2014 HDCAM NEW SOURCE  XVID AC3 ACAB"
+				]
+			]
+		},
+		{
+			"comment": "[Eng] or (Eng) or {Eng}",
+			"id": "R0009",
+			"rule": "[\\[\\(\\{][Ee][Nn][Gg][\\}\\)\\]]"
+		},
+		{
+			"comment": "torrentday.com",
+			"id": "R0010",
+			"rule": "(?<=\\W)\\[\\s*www[\\s\\.]torrentday[\\s\\.]com\\s*\\](?=\\W|$)"
+		},
+		{
+			"id": "R0011",
+			"rule": "(?<=\\W)SweSub(?=\\W|$)"
+		},
+		{
+			"id": "R0012",
+			"rule": "(?<=\\W)2CD(?=\\W|$)"
+		},
+		{
+			"comment": "[Unrated edition]",
+			"id": "R0013",
+			"rule": "[\\[\\(]Unrated.[Ee]dition[\\]\\)]"
+		},
+		{
+			"id": "R0014",
+			"rule": "(?<=\\W)EXTENDED.[Aa][Nn][Dd].UNRATED(?=\\W|$)"
+		},
+		{
+			"comment": "Cpasbien.me",
+			"id": "R0015",
+			"rule": "(?<=\\W)www.Cpasbien.(?:me|pe|com|pw)(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
+					"[] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM"
+				],
+				[
+					"[www.Cpasbien.com] Dark.Shadows.2012.TRUEFRENCH.DVDRip.XviD-DesTroY",
+					"[] Dark.Shadows.2012.TRUEFRENCH.DVDRip.XviD-DesTroY"
+				],
+				[
+					"[www.Cpasbien.me] Arrow.S02E11.FASTSUB.VOSTFR.HDTV.XviD-MiND",
+					"[] Arrow.S02E11.FASTSUB.VOSTFR.HDTV.XviD-MiND"
+				],
+				[
+					"[ www.Cpasbien.pw ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-RiGOLO",
+					"[  ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-RiGOLO"
+				]
+			]
+		},
+		{
+			"comment": "(The) Complete Season (No.)",
+			"id": "R0016",
+			"rule": "(?:[Tt]he.)?[Cc]omplete.(?P<season>[Ss]eason.\\d+)",
+			"sub": "\\g<season>"
+		},
+		{
+			"comment": "(The) Complete Season (No.)",
+			"id": "R0017",
+			"rule": "(?P<season>[Ss]eason).(?P<season_no>\\d+).[Cc]omplete",
+			"sub": "\\g<season> \\g<season_no>"
+		},
+		{
+			"id": "R0018",
+			"rule": "(?<=\\W)BS5(?=\\W|$)"
+		},
+		{
+			"id": "R0019",
+			"rule": "(?<=\\W)HAGGiS(?=\\W|$)"
+		},
+		{
+			"id": "R0020",
+			"rule": "(?<=\\W)ETRG(?=\\W|$)"
+		},
+		{
+			"id": "R0021",
+			"rule": "(?<=\\W)SaM(?=\\W|$)",
+			"tests": [
+				[
+					"The.Judge.2014.HDRip.XviD-SaM[ETRG]",
+					"The.Judge.2014.HDRip.XviD-[ETRG]"
+				]
+			]
+		},
+		{
+			"id": "R0022",
+			"rule": "(?<=\\W)DoNE(?=\\W|$)"
+		},
+		{
+			"id": "R0023",
+			"rule": "(?<=\\W)CoWRY(?=\\W|$)"
+		},
+		{
+			"id": "R0024",
+			"rule": "(?<=\\W)ExtraTorrentRG(?=\\W|$)"
+		},
+		{
+			"id": "R0025",
+			"rule": "(?<=\\W)ExtraTorrentRG(?=\\W|$)"
+		},
+		{
+			"id": "R0026",
+			"rule": "(?<=\\W)FXG(?=\\W|$)"
+		},
+		{
+			"id": "R0027",
+			"rule": "(?<=\\W)EVO(?=\\W|$)",
+			"tests": [
+				[
+					"Age.of.Ice.2014.HDRip.XviD.AC3-EVO",
+					"Age.of.Ice.2014.HDRip.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0028",
+			"rule": "(?<=\\W)EPiSODE(?=\\W|$)"
+		},
+		{
+			"id": "R0029",
+			"rule": "(?<=\\W)MAXSPEED(?=\\W|$)",
+			"tests": [
+				[
+					"The Maze Runner (2014) DVDRip XviD-MAXSPEED",
+					"The Maze Runner (2014) DVDRip XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0030",
+			"rule": "(?<=\\W)HORiZON(?=\\W|$)",
+			"tests": [
+				[
+					"Goodbye.to.Language.[Adieu.au.Langage].2014.BRRip.x264.HORiZON-ArtSubs",
+					"Goodbye.to.Language.[Adieu.au.Langage].2014.BRRip.x264.-ArtSubs"
+				]
+			]
+		},
+		{
+			"id": "R0031",
+			"rule": "(?<=\\W)PLAYNOW(?=\\W|$)"
+		},
+		{
+			"id": "R0032",
+			"rule": "(?<=\\W)MiLLENiUM(?=\\W|$)"
+		},
+		{
+			"id": "R0033",
+			"rule": "(?<=\\W)(?:RARBG|rarbg)(?=\\W|$)"
+		},
+		{
+			"id": "R0034",
+			"rule": "(?<=\\W)FiCO(?=\\W|$)"
+		},
+		{
+			"id": "R0035",
+			"rule": "(?<=\\W)YIFY(?=\\W|$)"
+		},
+		{
+			"id": "R0036",
+			"rule": "(?<=\\W)aXXo(?=\\W|$)"
+		},
+		{
+			"id": "R0037",
+			"rule": "(?<=\\W)[Ss]c[oO]rp(?=\\W|$)"
+		},
+		{
+			"id": "R0038",
+			"rule": "(?<=\\W)ShAaNiG(?:\\.com)?(?=\\W|$)",
+			"tests": [
+				[
+					"The.Walking.Dead.S04.720p.BluRay.x264-ShAaNiG",
+					"The.Walking.Dead.S04.720p.BluRay.x264-"
+				],
+				[
+					"The.Burbs.1989.720p.BluRay.800MB.ShAaNiG.com",
+					"The.Burbs.1989.720p.BluRay.800MB."
+				]
+			]
+		},
+		{
+			"id": "R0039",
+			"rule": "(?<=\\W)SiRiUs.sHaRe(?=\\W|$)"
+		},
+		{
+			"id": "R0040",
+			"rule": "(?<=\\W)WunSeeDee(?=\\W|$)"
+		},
+		{
+			"id": "R0041",
+			"rule": "(?<=\\W)[J|j]uggs(?=\\W|$)"
+		},
+		{
+			"id": "R0042",
+			"rule": "(?<=\\W)S4A(?=\\W|$)"
+		},
+		{
+			"id": "R0043",
+			"rule": "(?<=\\W)Herakler(?=\\W|$)"
+		},
+		{
+			"id": "R0044",
+			"rule": "(?<=\\W)anoXmous(?=\\W|$)",
+			"tests": [
+				[
+					"The.Prestige.2006.720p.Bluray.x264.anoXmous",
+					"The.Prestige.2006.720p.Bluray.x264."
+				]
+			]
+		},
+		{
+			"id": "R0045",
+			"rule": "(?<=\\W)McTav(?=\\W|$)"
+		},
+		{
+			"id": "R0046",
+			"rule": "(?<=\\W)StyLishSaLH(?=\\W|$)"
+		},
+		{
+			"id": "R0047",
+			"rule": "(?<=\\W)greenbud1969(?=\\W|$)"
+		},
+		{
+			"id": "R0048",
+			"rule": "(?<=\\W)BOKUTOX(?=\\W|$)"
+		},
+		{
+			"id": "R0049",
+			"rule": "(?<=\\W)pimprg(?=\\W|$)"
+		},
+		{
+			"id": "R0050",
+			"rule": "(?<=\\W)sujaidr(?=\\W|$)"
+		},
+		{
+			"id": "R0051",
+			"rule": "(?<=\\W)WAF(?=\\W|$)"
+		},
+		{
+			"id": "R0052",
+			"rule": "(?<=\\W)BTSFilms(?=\\W|$)"
+		},
+		{
+			"id": "R0053",
+			"rule": "(?<=\\W)[Ff]apcave(?=\\W|$)"
+		},
+		{
+			"id": "R0054",
+			"rule": "(?<=\\W)Gopo(?=\\W|$)"
+		},
+		{
+			"id": "R0055",
+			"rule": "(?<=\\W)Ozlem(?=\\W|$)"
+		},
+		{
+			"id": "R0056",
+			"rule": "(?<=\\W)mucker(?=\\W|$)"
+		},
+		{
+			"id": "R0057",
+			"rule": "(?<=\\W)iNTERNAL\\-REV(?=\\W|$)"
+		},
+		{
+			"id": "R0058",
+			"rule": "(?<=\\W)\\-?HELLRAZ0R(?=\\W|$)"
+		},
+		{
+			"id": "R0059",
+			"rule": "(?<=\\W)StyLish.Release(?=\\W|$)"
+		},
+		{
+			"comment": "MMKV",
+			"id": "R0060",
+			"rule": "(?<=\\W)MMKV(?=\\W|$)"
+		},
+		{
+			"id": "R0061",
+			"rule": "(?<=\\W)CARPEDIEM(?=\\W|$)"
+		},
+		{
+			"id": "R0062",
+			"rule": "(?<=\\W)PRiDEHD(?=\\W|$)"
+		},
+		{
+			"id": "R0063",
+			"rule": "(?<=\\W)DesTroY(?=\\W|$)"
+		},
+		{
+			"id": "R0064",
+			"rule": "(?<=\\W)FoV(?=\\W|$)"
+		},
+		{
+			"id": "R0065",
+			"rule": "(?<=\\W)ettv(?=\\W|$)"
+		},
+		{
+			"id": "R0066",
+			"rule": "(?<=\\W)eztv(?=\\W|$)"
+		},
+		{
+			"id": "R0067",
+			"rule": "(?<=\\W)KILLERS(?=\\W|$)"
+		},
+		{
+			"id": "R0068",
+			"rule": "(?<=\\W)LOL(?=\\W|$)"
+		},
+		{
+			"id": "R0069",
+			"rule": "(?<=\\W)JYK(?=\\W|$)"
+		},
+		{
+			"id": "R0070",
+			"rule": "(?<=\\W)Pimp4003(?=\\W|$)",
+			"tests": [
+				[
+					"The Hobbit The Battle Of The Five Armies 2014 1080p HDTS x264 Pimp4003",
+					"The Hobbit The Battle Of The Five Armies 2014 1080p HDTS x264 "
+				]
+			]
+		},
+		{
+			"id": "R0071",
+			"rule": "(?<=\\W)MovietaM(?=\\W|$)"
+		},
+		{
+			"id": "R0072",
+			"rule": "(?<=\\W)FUM(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland S04E01-E02 WEB-DL x264-FUM[ettv]",
+					"Homeland S04E01-E02 WEB-DL x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0073",
+			"rule": "(?<=\\W)IMMERSE(?=\\W|$)",
+			"tests": [
+				[
+					"The.Simpsons.S26E10.720p.HDTV.x264-IMMERSE",
+					"The.Simpsons.S26E10.720p.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0074",
+			"rule": "(?<=\\W)HLS(?=\\W|$)",
+			"tests": [
+				[
+					"The.Brown.Bunny.UNRATED.LiMiTED.DVDRiP.XViD-HLS",
+					"The.Brown.Bunny.UNRATED.LiMiTED.DVDRiP.XViD-"
+				]
+			]
+		},
+		{
+			"comment": "Silver RG",
+			"id": "R0075",
+			"rule": "(?<=\\W)Silver\\s?RG(?=\\W|$)"
+		},
+		{
+			"comment": "Common with Silver RG releases",
+			"id": "R0076",
+			"rule": "(?<=\\W)MRShanku(?=\\W|$)"
+		},
+		{
+			"id": "R0077",
+			"rule": "(?<=\\W)Morsan(?=\\W|$)"
+		},
+		{
+			"id": "R0078",
+			"rule": "(?<=\\W)Zeberzee(?=\\W|$)"
+		},
+		{
+			"id": "R0079",
+			"rule": "(?<=\\W)SecretMyth(?=\\W|$)"
+		},
+		{
+			"id": "R0080",
+			"rule": "(?<=\\W)Kingdom[\\s\\-]Release(?=\\W|$)"
+		},
+		{
+			"id": "R0081",
+			"rule": "(?<=\\W)HC(?=\\W|$)"
+		},
+		{
+			"id": "R0082",
+			"rule": "(?<=\\W)FQM(?=\\W|$)",
+			"tests": [
+				[
+					"Game.of.Thrones.S01E02.The.Kingsroad.HDTV.XviD-FQM",
+					"Game.of.Thrones.S01E02.The.Kingsroad.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0083",
+			"rule": "(?<=\\W)McTav(?=\\W|$)"
+		},
+		{
+			"id": "R0084",
+			"rule": "(?<=\\W)BoRiS(?=\\W|$)"
+		},
+		{
+			"id": "R0085",
+			"rule": "(?<=\\W)iMBT(?=\\W|$)"
+		},
+		{
+			"id": "R0086",
+			"rule": "(?<=\\W)FxM(?=\\W|$)",
+			"tests": [
+				[
+					"Harry.Potter.And.The.Half.Blood.Prince.2009.DvDRip-FxM",
+					"Harry.Potter.And.The.Half.Blood.Prince.2009.DvDRip-"
+				]
+			]
+		},
+		{
+			"id": "R0087",
+			"rule": "(?<=\\W)LiNE(?=\\W|$)"
+		},
+		{
+			"id": "R0088",
+			"rule": "(?<=\\W)DEViSE(?=\\W|$)"
+		},
+		{
+			"id": "R0089",
+			"rule": "(?<=\\W)KAMERA(?=\\W|$)"
+		},
+		{
+			"id": "R0090",
+			"rule": "(?<=\\W)LW(?=\\W|$)"
+		},
+		{
+			"id": "R0091",
+			"rule": "(?<=\\W)iAPULA(?=\\W|$)"
+		},
+		{
+			"id": "R0092",
+			"rule": "(?<=\\W)NeDiVx(?=\\W|$)",
+			"tests": [
+				[
+					"We.Bought.a.Zoo.2011.DVDRip.XviD-NeDiVx",
+					"We.Bought.a.Zoo.2011.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0093",
+			"rule": "(?<=\\W)(?:BeStDivX|Bestdivx)(?=\\W|$)",
+			"tests": [
+				[
+					"Klimt (2006)DVDRip Bestdivx",
+					"Klimt (2006)DVDRip "
+				],
+				[
+					"Get.the.Gringo.2012.DVDRip.XviD-BeStDivX",
+					"Get.the.Gringo.2012.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0094",
+			"rule": "(?<=\\W)NOiR(?=\\W|$)"
+		},
+		{
+			"id": "R0095",
+			"rule": "(?<=\\W)JUMANJi(?=\\W|$)"
+		},
+		{
+			"id": "R0096",
+			"rule": "(?<=\\W)ViSiON(?=\\W|$)"
+		},
+		{
+			"id": "R0097",
+			"rule": "(?<=\\W)KLAXXON(?=\\W|$)"
+		},
+		{
+			"id": "R0098",
+			"rule": "(?<=\\W)1337x(?=\\W|$)"
+		},
+		{
+			"id": "R0099",
+			"rule": "(?<=\\W)TiNO(?=\\W|$)"
+		},
+		{
+			"id": "R0100",
+			"rule": "(?<=\\W)SHiFT(?=\\W|$)"
+		},
+		{
+			"id": "R0101",
+			"rule": "(?<=\\W)AYMO(?=\\W|$)",
+			"tests": [
+				[
+					"The.East.2013.FRENCH.DVDRip.x264-AYMO",
+					"The.East.2013.FRENCH.DVDRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0102",
+			"rule": "(?<=\\W)JMT(?=\\W|$)"
+		},
+		{
+			"id": "R0103",
+			"rule": "(?<=\\W)Hon3y(?=\\W|$)"
+		},
+		{
+			"id": "R0104",
+			"rule": "(?<=\\W)iNViNCiBLE(?=\\W|$)"
+		},
+		{
+			"id": "R0105",
+			"rule": "(?<=\\W)PREM(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-PREM",
+					"[www.Cpasbien.pe] Fort.Bliss.2014.FRENCH.DVDRIP.x264.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0106",
+			"rule": "(?<=\\W)AT0MiC(?=\\W|$)"
+		},
+		{
+			"id": "R0107",
+			"rule": "(?<=\\W)VLiS(?=\\W|$)"
+		},
+		{
+			"id": "R0108",
+			"rule": "(?<=\\W)PSYPHER(?=\\W|$)",
+			"tests": [
+				[
+					"Ascension 2014 S01 Complete Season 1 720p HDTV AAC x264-PSYPHER",
+					"Ascension 2014 S01 Complete Season 1 720p HDTV AAC x264-"
+				]
+			]
+		},
+		{
+			"id": "R0109",
+			"rule": "(?<=\\-)Noir$"
+		},
+		{
+			"id": "R0110",
+			"rule": "(?<=\\W)480p(?=\\W|$)"
+		},
+		{
+			"id": "R0111",
+			"rule": "(?<=\\W)720p(?=\\W|$)"
+		},
+		{
+			"id": "R0112",
+			"rule": "(?<=\\W)1080p(?=\\W|$)"
+		},
+		{
+			"id": "R0113",
+			"rule": "(?<=\\W)Blu[Rr]ay(?=\\W|$)"
+		},
+		{
+			"id": "R0114",
+			"rule": "(?<=\\W)[Bb][DdRr][Rr]i[Pp](?=\\W|$)"
+		},
+		{
+			"id": "R0115",
+			"rule": "(?<=\\W)[Hh][Dd][Rr]i[Pp](?=\\W|$)"
+		},
+		{
+			"id": "R0116",
+			"rule": "(?<=\\W)CAM(?:[Rr]i[Pp])?(?=\\W|$)"
+		},
+		{
+			"id": "R0117",
+			"rule": "(?<=\\W)D[Vv]D\\-?[Rr]i[Pp](?=\\W|$)"
+		},
+		{
+			"comment": "TELESYNC",
+			"id": "R0118",
+			"rule": "(?<=\\W)(?:TS|TELESYNC|PDVD|HDTS)(?=\\W|$)",
+			"tests": [
+				[
+					"Interstellar 2014 1080p HDTS x264 Pimp4003",
+					"Interstellar 2014 1080p  x264 Pimp4003"
+				],
+				[
+					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.MrSeeN-SiMPLE",
+					"Exodus.Gods.And.Kings.2014..XViD.MrSeeN-SiMPLE"
+				]
+			]
+		},
+		{
+			"id": "R0119",
+			"rule": "(?<=\\W)AAC(?=\\W|$)"
+		},
+		{
+			"id": "R0120",
+			"rule": "(?<=\\W)FLAC(?=\\W|$)"
+		},
+		{
+			"id": "R0121",
+			"rule": "(?<=\\W)AC3(?=\\W|$)"
+		},
+		{
+			"comment": "H264, x264",
+			"id": "R0122",
+			"rule": "(?<=\\W|_)[HhXx]264(?=\\W|_|$)"
+		},
+		{
+			"id": "R0123",
+			"rule": "(?<=\\W)DivX(?=\\W|$)"
+		},
+		{
+			"id": "R0124",
+			"rule": "(?<=\\W)MKV(?=\\W|$)"
+		},
+		{
+			"id": "R0125",
+			"rule": "(?<=\\W)MP3(?=\\W)"
+		},
+		{
+			"id": "R0126",
+			"rule": "(?<=\\W)MP4(?=\\W)"
+		},
+		{
+			"comment": "XviD",
+			"id": "R0127",
+			"rule": "(?<=\\W)[Xx][Vv]i[Dd](?=\\W|$)"
+		},
+		{
+			"id": "R0128",
+			"rule": "(?<=\\W)\\d{2,4}\\s*(?:kbps|KBPS)(?=\\W)"
+		},
+		{
+			"comment": "Frames per second",
+			"id": "R0129",
+			"rule": "(?<=\\W)\\d{2}(?:\\.\\d{1,4})?\\s*[Ff][Pp][Ss](?=\\W)"
+		},
+		{
+			"id": "R0130",
+			"rule": "(?<=\\W)\\d{3,4}[Mm][Bb](?=\\W|$)"
+		},
+		{
+			"comment": "TELECINE",
+			"id": "R0131",
+			"rule": "(?<=\\W)(?:TC|TELECINE)(?=\\W|$)"
+		},
+		{
+			"comment": "Workprint",
+			"id": "R0132",
+			"rule": "(?<=\\W)(?:WP|WORKPR[Ii]NT|WorkPrint)(?=\\W|$)"
+		},
+		{
+			"id": "R0133",
+			"rule": "(?<=\\W)SUBBED(?=\\W|$)"
+		},
+		{
+			"comment": "Common with HORiZON releases",
+			"id": "R0134",
+			"rule": "(?<=\\W)ArtSubs(?=\\W|$)"
+		},
+		{
+			"comment": "Dimensions, eg. 640x480",
+			"id": "R0135",
+			"rule": "(?<=\\W)\\d{3,4}[Xx]\\d{3,4}(?=\\W|$)"
+		},
+		{
+			"comment": "HDTV",
+			"id": "R0136",
+			"rule": "(?<=[\\W_])HDTV(?:[Rr][Ii][Pp])?(?=\\W|$|_)"
+		},
+		{
+			"comment": "MultiSub",
+			"id": "R0137",
+			"rule": "(?i)(?<=\\W)multisubs?(?=\\W|$)"
+		},
+		{
+			"id": "R0138",
+			"rule": "(?<=\\W)(?:RePack|Repack|RePacK|REPACK|repack)(?=\\W|$)"
+		},
+		{
+			"id": "R0139",
+			"rule": "(?<=\\W)R5(?=\\W|$)"
+		},
+		{
+			"id": "R0140",
+			"rule": "(?<=\\W)(?:DVDSCR|DVDScr)(?=\\W|$)"
+		},
+		{
+			"comment": "DVDRip",
+			"id": "R0141",
+			"rule": "(?<=\\W)[Dd][Vv][Dd]\\-?[Rr]i[Pp](?=\\W|$)"
+		},
+		{
+			"id": "R0142",
+			"rule": "(?<=\\W)AAC5\\.1(?=\\W|$)"
+		},
+		{
+			"comment": "CD Rip",
+			"id": "R0143",
+			"rule": "(?<=\\W)CD.[Rr][Ii][Pp](?=\\W|$)"
+		},
+		{
+			"id": "R0144",
+			"rule": "(?<=\\W)V0(?=\\W|$)"
+		},
+		{
+			"id": "R0145",
+			"rule": "(?<=\\W)WEB(?=\\W|$)"
+		},
+		{
+			"id": "R0146",
+			"rule": "(?<=\\W)NTSC(?=\\W|$)"
+		},
+		{
+			"id": "R0147",
+			"rule": "(?<=\\W)EXTENDED(?=\\W|$)",
+			"weight": 1
+		},
+		{
+			"id": "R0148",
+			"rule": "(?<=\\W)UNRATED(?=\\W|$)",
+			"weight": 1
+		},
+		{
+			"id": "R0149",
+			"rule": "[\\[\\(\\{]\\s*[@\\-\\#]\\s*[\\}\\)\\]]",
+			"weight": 1
+		},
+		{
+			"comment": "Dots between words",
+			"id": "R0150",
+			"rule": "(?<=[\\w\\}\\]\\)])\\.(?=[\\w\\{\\[\\(])",
+			"sub": " ",
+			"tests": [
+				[
+					"The.Hangover.[2009].DVDSCR.[ENG]-MAXSPEED",
+					"The Hangover [2009] DVDSCR [ENG]-MAXSPEED"
+				]
+			],
+			"weight": 1
+		},
+		{
+			"comment": "Underscores between words",
+			"id": "R0151",
+			"rule": "(?<=\\w)_(?=\\w)",
+			"sub": " ",
+			"weight": 1
+		},
+		{
+			"id": "R0152",
+			"rule": "\\.{2,}",
+			"sub": ".",
+			"weight": 98
+		},
+		{
+			"id": "R0153",
+			"rule": "(?<!\\(|\\d)(?P<year>(?:19|20)\\d{2})(?!\\)|\\d|:)",
+			"sub": "(\\g<year>)",
+			"tests": [
+				[
+					"Gamer (2009)",
+					"Gamer (2009)"
+				],
+				[
+					"THX 1138",
+					"THX 1138"
+				],
+				[
+					"1408",
+					"1408"
+				],
+				[
+					"2001: A Space Odyssey",
+					"2001: A Space Odyssey"
+				]
+			],
+			"weight": 99
+		},
+		{
+			"comment": "Remove empty square brackets",
+			"id": "R0154",
+			"rule": "\\[\\s*\\]",
+			"tests": [
+				[
+					"Some title []",
+					"Some title "
+				],
+				[
+					"Some title [  ]",
+					"Some title "
+				]
+			],
+			"weight": 99
+		},
+		{
+			"comment": "Remove empty parentheses",
+			"id": "R0155",
+			"rule": "\\(\\s*\\)",
+			"tests": [
+				[
+					"Some title ()",
+					"Some title "
+				],
+				[
+					"Some title (  )",
+					"Some title "
+				]
+			],
+			"weight": 99
+		},
+		{
+			"comment": "Remove empty angle brackets",
+			"id": "R0156",
+			"rule": "\\{\\s*\\}",
+			"tests": [
+				[
+					"Some title {}",
+					"Some title "
+				],
+				[
+					"Some title {  }",
+					"Some title "
+				]
+			],
+			"weight": 99
+		},
+		{
+			"comment": "Strip trailing dashes, dots, underscores and squiggles",
+			"id": "R0157",
+			"rule": "[\\-\\._\\~]+(?P<space>\\s*)$",
+			"sub": "\\g<space>",
+			"tests": [
+				[
+					"Hector and the Search for Happiness (2014) -  ",
+					"Hector and the Search for Happiness (2014)   "
+				]
+			],
+			"weight": 99
+		},
+		{
+			"id": "R0158",
+			"rule": "\\s{2,}",
+			"sub": " ",
+			"weight": 100
+		},
+		{
+			"comment": "Strip trailing whitespace",
+			"id": "R0159",
+			"rule": "\\s+$",
+			"weight": 100
+		},
+		{
+			"comment": "Strip leading whitespace, dashes, dots and underscores",
+			"id": "R0160",
+			"rule": "^[\\s\\-\\._]+",
+			"tests": [
+				[
+					" Some title",
+					"Some title"
+				],
+				[
+					"-Some title",
+					"Some title"
+				],
+				[
+					"_Some title",
+					"Some title"
+				],
+				[
+					"_- Some title",
+					"Some title"
+				]
+			],
+			"weight": 100
+		},
+		{
+			"id": "R0161",
+			"rule": "(?<=\\W)Ehhhh(?=\\W|$)"
+		},
+		{
+			"id": "R0162",
+			"rule": "(?<=\\W)Iii(?=\\W|$)",
+			"sub": "III",
+			"tests": [
+				[
+					"Rocky Iii",
+					"Rocky III"
+				]
+			]
+		},
+		{
+			"id": "R0163",
+			"rule": "(?<=\\W)Ii(?=\\W|$)",
+			"sub": "II",
+			"tests": [
+				[
+					"Rocky Ii",
+					"Rocky II"
+				]
+			]
+		},
+		{
+			"id": "R0164",
+			"rule": "(?<=\\W)VoMiT(?=\\W|$)"
+		},
+		{
+			"id": "R0165",
+			"rule": "(?<=\\W)SUBMERGE(?=\\W|$)",
+			"tests": [
+				[
+					"Collapse.LIMITED.DVDRip.XviD-SUBMERGE",
+					"Collapse.LIMITED.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0166",
+			"rule": "(?<=\\W)AMIABLE(?=\\W|$)"
+		},
+		{
+			"id": "R0167",
+			"rule": "(?<=\\W)PublicHD(?=\\W|$)"
+		},
+		{
+			"id": "R0168",
+			"rule": "(?<=\\W)WEBiOS(?=\\W|$)"
+		},
+		{
+			"id": "R0169",
+			"rule": "(?<=\\W)FZERO(?=\\W|$)"
+		},
+		{
+			"comment": "BrG",
+			"id": "R0170",
+			"rule": "(?<=\\W)B[Rr]G(?=\\W|$)"
+		},
+		{
+			"comment": "VH-PROD",
+			"id": "R0171",
+			"rule": "(?<=\\W)VH[\\-\\s]PROD(?=\\W|$)"
+		},
+		{
+			"id": "R0172",
+			"rule": "(?<=\\W)PreVail(?=\\W|$)"
+		},
+		{
+			"id": "R0173",
+			"rule": "(?<=\\W)FLAiTE(?=\\W|$)"
+		},
+		{
+			"comment": "XanaX",
+			"id": "R0174",
+			"rule": "(?<=\\W)(?:XanaX|XANAX|xaNax)(?=\\W|$)"
+		},
+		{
+			"id": "R0175",
+			"rule": "(?<=\\W)ALLiANCE(?=\\W|$)"
+		},
+		{
+			"id": "R0176",
+			"rule": "(?<=\\W)ViTE(?=\\W|$)"
+		},
+		{
+			"id": "R0177",
+			"rule": "(?<=\\W)PUKKA(?=\\W|$)"
+		},
+		{
+			"id": "R0178",
+			"rule": "(?<=\\W)SAPHiRE(?=\\W|$)"
+		},
+		{
+			"id": "R0179",
+			"rule": "(?<=\\W)NEPTUNE(?=\\W|$)"
+		},
+		{
+			"id": "R0180",
+			"rule": "(?<=\\W)D0PE(?=\\W|$)"
+		},
+		{
+			"id": "R0181",
+			"rule": "(?<=\\W)DiAMOND(?=\\W|$)"
+		},
+		{
+			"id": "R0182",
+			"rule": "(?<=\\W)LMG(?=\\W|$)"
+		},
+		{
+			"id": "R0183",
+			"rule": "(?<=\\W)DvF(?=\\W|$)",
+			"tests": [
+				[
+					"Jack.Strong.2014.DVDRiP.x264-DvF[rarbg]",
+					"Jack.Strong.2014.DVDRiP.x264-[rarbg]"
+				],
+				[
+					"House of DVF S01E08 Show Day Showdown WEB-DL x264",
+					"House of DVF S01E08 Show Day Showdown WEB-DL x264"
+				]
+			]
+		},
+		{
+			"id": "R0184",
+			"rule": "(?<=\\W)DMT(?=\\W|$)",
+			"tests": [
+				[
+					"22 Jump Street (2014) BRRip (xvid) NL Subs. DMT",
+					"22 Jump Street (2014) BRRip (xvid) NL Subs. "
+				]
+			]
+		},
+		{
+			"id": "R0185",
+			"rule": "(?<=\\W)LPD(?=\\W|$)",
+			"tests": [
+				[
+					"Ida.2013.LiMiTED.BDRip.x264-LPD[rarbg]",
+					"Ida.2013.LiMiTED.BDRip.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0186",
+			"rule": "(?<=\\W)iKA(?=\\W|$)",
+			"tests": [
+				[
+					"Rec.2007.READNFO.DVDRiP.XViD-iKA.[Hardcoded.English.Subtitles]",
+					"Rec.2007.READNFO.DVDRiP.XViD-.[Hardcoded.English.Subtitles]"
+				]
+			]
+		},
+		{
+			"id": "R0187",
+			"rule": "(?<=\\W)HNR(?=\\W|$)",
+			"tests": [
+				[
+					"Comedy.Central.Roast.Of.William.Shatner.2006.DVDRip.XviD-HNR",
+					"Comedy.Central.Roast.Of.William.Shatner.2006.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0188",
+			"rule": "(?<=\\W)SiNK(?=\\W|$)",
+			"tests": [
+				[
+					"God.Grew.Tired.Of.Us.2006.LiMiTED.DVDRip.XviD-SiNK",
+					"God.Grew.Tired.Of.Us.2006.LiMiTED.DVDRip.XviD-"
+				],
+				[
+					"[ www.Speed.cd ]-Lab.Rats.2012.S03E01.Sink.or.Swim.720p.HDTV.x264-W4F",
+					"[ www.Speed.cd ]-Lab.Rats.2012.S03E01.Sink.or.Swim.720p.HDTV.x264-W4F"
+				]
+			]
+		},
+		{
+			"id": "R0189",
+			"rule": "(?<=\\W)NTi(?=\\W|$)",
+			"tests": [
+				[
+					"[NTi]_Basic.Instinct.2.TS.XviD-OBSESSiON",
+					"[]_Basic.Instinct.2.TS.XviD-OBSESSiON"
+				]
+			]
+		},
+		{
+			"id": "R0190",
+			"rule": "(?<=\\W)WPi(?=\\W|$)",
+			"tests": [
+				[
+					"The.Departed.2006.1080p.BluRay.x264-WPi",
+					"The.Departed.2006.1080p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0191",
+			"rule": "(?<=\\W)OBSESSiON(?=\\W|$)",
+			"tests": [
+				[
+					"Cloverfield.TS.XViD-OBSESSiON",
+					"Cloverfield.TS.XViD-"
+				],
+				[
+					"Red.Obsession.2013.BDRip.x264-PFa[rarbg]",
+					"Red.Obsession.2013.BDRip.x264-PFa[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0192",
+			"rule": "(?<=\\W)LRC(?=\\W|$)",
+			"tests": [
+				[
+					"Rumor.Has.It.2005.DVDRip.xVID-LRC",
+					"Rumor.Has.It.2005.DVDRip.xVID-"
+				]
+			]
+		},
+		{
+			"id": "R0193",
+			"rule": "(?<=\\W)JBW(?=\\W|$)",
+			"tests": [
+				[
+					"07 - Fargo (1996)-JBW",
+					"07 - Fargo (1996)-"
+				]
+			]
+		},
+		{
+			"comment": "DOMiNO",
+			"id": "R0194",
+			"rule": "(?<=\\W)(?:DOMiNO|=DoMiNo=|-=DoMiNo=-)(?=\\W|$)",
+			"tests": [
+				[
+					"Blood.And.Bone.2009.DVDRip.XviD-DOMiNO",
+					"Blood.And.Bone.2009.DVDRip.XviD-"
+				],
+				[
+					"Tor.2.2013.WEB-DL-AVC[-=DoMiNo=-].mkv",
+					"Tor.2.2013.WEB-DL-AVC[].mkv"
+				],
+				[
+					"Domino-720p MP4 AAC x264 BRRip 2005-CC",
+					"Domino-720p MP4 AAC x264 BRRip 2005-CC"
+				]
+			]
+		},
+		{
+			"id": "R0195",
+			"rule": "(?<=\\W)COCAIN(?=\\W|$)",
+			"tests": [
+				[
+					"The.Campaign.EXTENDED.DVDRip.XviD-COCAIN",
+					"The.Campaign.EXTENDED.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0196",
+			"rule": "(?<=\\W)QuidaM(?=\\W|$)",
+			"tests": [
+				[
+					"Conversations.With.God.2006.DVDRiP.XViD.QuidaM",
+					"Conversations.With.God.2006.DVDRiP.XViD."
+				]
+			]
+		},
+		{
+			"id": "R0197",
+			"rule": "(?<=\\W)QiM(?=\\W|$)",
+			"tests": [
+				[
+					"Takedown.2000.iNTERNAL.DVDRip.XviD-QiM",
+					"Takedown.2000.iNTERNAL.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0198",
+			"rule": "(?<=\\W)iMMORTALs(?=\\W|$)",
+			"tests": [
+				[
+					"Murderball.2005.LiMiTED.DVDRip.XviD-iMMORTALs",
+					"Murderball.2005.LiMiTED.DVDRip.XviD-"
+				],
+				[
+					"Immortals (2011) DVDRip XviD-MAXSPEED",
+					"Immortals (2011) DVDRip XviD-MAXSPEED"
+				]
+			]
+		},
+		{
+			"id": "R0199",
+			"rule": "(?<=\\W)ESPiSE(?=\\W|$)",
+			"tests": [
+				[
+					"500.Days.of.Summer.PROPER.BDRip.XviD-ESPiSE",
+					"500.Days.of.Summer.PROPER.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0200",
+			"rule": "(?<=\\W)Rets(?=\\W|$)",
+			"tests": [
+				[
+					"The Terminal dvd rip[eng]XviD.Rets",
+					"The Terminal dvd rip[eng]XviD."
+				]
+			]
+		},
+		{
+			"id": "R0201",
+			"rule": "(?<=\\W)PFa(?=\\W|$)",
+			"tests": [
+				[
+					"Canopy.2013.720p.BluRay.x264-PFa[rarbg]",
+					"Canopy.2013.720p.BluRay.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0202",
+			"rule": "(?<=\\W)UNiVERSAL(?=\\W|$)",
+			"tests": [
+				[
+					"Honeymoon.with.Mom.REPACK.R5.xVID-UNiVERSAL",
+					"Honeymoon.with.Mom.REPACK.R5.xVID-"
+				],
+				[
+					"Universal.Soldier-The.Return.1999.720p.BDRip.XviD-RARBG",
+					"Universal.Soldier-The.Return.1999.720p.BDRip.XviD-RARBG"
+				]
+			]
+		},
+		{
+			"id": "R0203",
+			"rule": "(?<=\\W)AXIAL(?=\\W|$)",
+			"tests": [
+				[
+					"Soylent.Green.1973.WS.DVDRip.XviD-AXIAL",
+					"Soylent.Green.1973.WS.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0204",
+			"rule": "(?<=\\W)AFO(?=\\W|$)",
+			"tests": [
+				[
+					"Becoming.Jane.2007.REPACK.DVDRip.XviD-AFO",
+					"Becoming.Jane.2007.REPACK.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0205",
+			"rule": "(?<=\\W)aAF(?=\\W|$)",
+			"tests": [
+				[
+					"The.Daily.Show.2014.11.18.Benedict.Cumberbatch.HDTV.x264-aAF",
+					"The.Daily.Show.2014.11.18.Benedict.Cumberbatch.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"comment": "USABIT",
+			"id": "R0206",
+			"rule": "(?i)(?<=\\W)(?:www\\.)?USABIT(?:\\.com)?(?=\\W|$)",
+			"tests": [
+				[
+					"The.Prestige.2006.DvDrip.Eng-aXXo.(www.USABIT.com)",
+					"The.Prestige.2006.DvDrip.Eng-aXXo.()"
+				],
+				[
+					"8MM 2 (2005).DVDRip.[UsaBit.com]",
+					"8MM 2 (2005).DVDRip.[]"
+				],
+				[
+					"[ www.UsaBit.com ] - 3 Days To Kill (2014) HDCAM 500MB Ganool",
+					"[  ] - 3 Days To Kill (2014) HDCAM 500MB Ganool"
+				],
+				[
+					"The.Seeker.The.Dark.Is.Rising.TS.XViD-20th.USABiT",
+					"The.Seeker.The.Dark.Is.Rising.TS.XViD-20th."
+				]
+			]
+		},
+		{
+			"id": "R0207",
+			"rule": "(?<=\\W)RLYEH(?=\\W|$)",
+			"tests": [
+				[
+					"Hoop.Dreams.1994.Criterion.Xvid.DVDRip-RLYEH",
+					"Hoop.Dreams.1994.Criterion.Xvid.DVDRip-"
+				]
+			]
+		},
+		{
+			"id": "R0208",
+			"rule": "(?<=\\W)WBZ(?=\\W|$)",
+			"tests": [
+				[
+					"American Pie Reunion 2012 TS XVID V3 - WBZ",
+					"American Pie Reunion 2012 TS XVID V3 - "
+				]
+			]
+		},
+		{
+			"id": "R0209",
+			"rule": "(?<=\\W)NYDIC(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.Torrenting.com ] - The.Avengers.2012.DVDRip.XviD-NYDIC",
+					"[ www.Torrenting.com ] - The.Avengers.2012.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0210",
+			"rule": "(?<=\\W)DutchReleaseTeam(?=\\W|$)",
+			"tests": [
+				[
+					"Lord Of The Rings - The Return of the King (2003) 720p BRRip NL-ENG subs DutchReleaseTeam",
+					"Lord Of The Rings - The Return of the King (2003) 720p BRRip NL-ENG subs "
+				]
+			]
+		},
+		{
+			"id": "R0211",
+			"rule": "(?<=\\W)H34LTH(?=\\W|$)",
+			"tests": [
+				[
+					"Whiplash.2014.HDRiP.XViD.AC3-H34LTH",
+					"Whiplash.2014.HDRiP.XViD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0212",
+			"rule": "(?<=\\W)BAWLS(?=\\W|$)",
+			"tests": [
+				[
+					"Desperate.Housewives.S08.FRENCH.HDTV.XViD.BAWLS-EPZ",
+					"Desperate.Housewives.S08.FRENCH.HDTV.XViD.-EPZ"
+				]
+			]
+		},
+		{
+			"id": "R0213",
+			"rule": "(?<=\\W)BATV(?=\\W|$)",
+			"tests": [
+				[
+					"Family.Guy.S13E07.INTERNAL.HDTV.x264-BATV[ettv]",
+					"Family.Guy.S13E07.INTERNAL.HDTV.x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0214",
+			"rule": "(?<=\\W)DeeJayAhmed(?=\\W|$)",
+			"tests": [
+				[
+					"Modern.Family.S01.Season.1.720p.5.1Ch.BluRay.ReEnc-DeeJayAhmed",
+					"Modern.Family.S01.Season.1.720p.5.1Ch.BluRay.ReEnc-"
+				]
+			]
+		},
+		{
+			"id": "R0215",
+			"rule": "(?<=\\W)iFT(?=\\W|$)",
+			"tests": [
+				[
+					"What.We.Do.in.the.Shadows.2014.LIMITED.720p.BRRip.x264.AC3-iFT",
+					"What.We.Do.in.the.Shadows.2014.LIMITED.720p.BRRip.x264.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0216",
+			"rule": "(?<=\\W)HighCode(?=\\W|$)",
+			"tests": [
+				[
+					"Kelly's Heroes 1970 x264 BDRip 720p DTS multisub-HighCode",
+					"Kelly's Heroes 1970 x264 BDRip 720p DTS multisub-"
+				]
+			]
+		},
+		{
+			"id": "R0217",
+			"rule": "(?<=\\W)TiTAN(?=\\W|$)",
+			"tests": [
+				[
+					"Time Lapse 2014 HDRIP x264 AC3 TiTAN",
+					"Time Lapse 2014 HDRIP x264 AC3 "
+				]
+			]
+		},
+		{
+			"id": "R0218",
+			"rule": "(?<=\\W)LEGi0N(?=\\W|$)",
+			"tests": [
+				[
+					"Time.Lapse.2014.720p.WEBRip.AC3.x264-LEGi0N",
+					"Time.Lapse.2014.720p.WEBRip.AC3.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0219",
+			"rule": "(?<=\\W)MIRCrew(?=\\W|$)",
+			"tests": [
+				[
+					"Paura - Fear (1996).ita.eng.sub.ita.eng.MIRCrew",
+					"Paura - Fear (1996).ita.eng.sub.ita.eng."
+				]
+			]
+		},
+		{
+			"id": "R0220",
+			"rule": "(?<=\\W)MAJESTiC(?=\\W|$)",
+			"tests": [
+				[
+					"The.Drop.2014.720p.BRRIP.H264.AAC-MAJESTiC",
+					"The.Drop.2014.720p.BRRIP.H264.AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0221",
+			"rule": "(?<=\\W)SPARKS(?=\\W|$)",
+			"tests": [
+				[
+					"The.Drop.2014.BDRip.x264-SPARKS",
+					"The.Drop.2014.BDRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0222",
+			"rule": "(?<=\\W)LiBERTY(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Soda.Un.Trop.Long.Week-end.2014.FRENCH.HDTV.x264-LiBERTY",
+					"[www.Cpasbien.pe] Soda.Un.Trop.Long.Week-end.2014.FRENCH.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"comment": "Team M2TV",
+			"id": "R0223",
+			"rule": "(?<=\\W)Team.M2TV(?=\\W|$)",
+			"tests": [
+				[
+					"Ugly (2014) - 1CD - DVDSCR-Rip - Hindi - x264 - AAC - Mafiaking - Team M2TV",
+					"Ugly (2014) - 1CD - DVDSCR-Rip - Hindi - x264 - AAC - Mafiaking - "
+				]
+			]
+		},
+		{
+			"comment": "Team TellyTNT",
+			"id": "R0224",
+			"rule": "(?<=\\W)Team.TellyTNT(?=\\W|$)",
+			"tests": [
+				[
+					"PK(2014) 1 CD xvid PDVD RIP-MP3-Team TellyTNT Exclusive",
+					"PK(2014) 1 CD xvid PDVD RIP-MP3- Exclusive"
+				]
+			]
+		},
+		{
+			"id": "R0225",
+			"rule": "(?<=\\W)Harshad(?=\\W|$)",
+			"tests": [
+				[
+					"Avatar 3D BRRip Anaglyph 720p.Dual Audio [Eng-Hindi]~Harshad",
+					"Avatar 3D BRRip Anaglyph 720p.Dual Audio [Eng-Hindi]~"
+				]
+			]
+		},
+		{
+			"id": "R0226",
+			"rule": "(?<=\\W)MrSeeN(?=\\W|$)",
+			"tests": [
+				[
+					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.MrSeeN-SiMPLE",
+					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.-SiMPLE"
+				]
+			]
+		},
+		{
+			"id": "R0227",
+			"rule": "(?<=\\W)SiMPLE(?=\\W|$)",
+			"tests": [
+				[
+					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.MrSeeN-SiMPLE",
+					"Exodus.Gods.And.Kings.2014.TELESYNC.XViD.MrSeeN-"
+				]
+			]
+		},
+		{
+			"id": "R0228",
+			"rule": "(?<=\\W)BLiTZCRiEG(?=\\W|$)",
+			"tests": [
+				[
+					"Transformers.Age.of.Extinction.2014.V2.HDTS.H264.AAC.2.CH-BLiTZCRiEG",
+					"Transformers.Age.of.Extinction.2014.V2.HDTS.H264.AAC.2.CH-"
+				]
+			]
+		},
+		{
+			"id": "R0229",
+			"rule": "(?<=\\W)ACAB(?=\\W|$)",
+			"tests": [
+				[
+					"Interstellar 2014 HDCAM NEW SOURCE READNFO XVID AC3 ACAB",
+					"Interstellar 2014 HDCAM NEW SOURCE READNFO XVID AC3 "
+				]
+			]
+		},
+		{
+			"id": "R0230",
+			"rule": "(?<=\\W)BL4CKP34RL(?=\\W|$)",
+			"tests": [
+				[
+					"The Fault In Our Stars 2014 CAM READNFO XViD-BL4CKP34RL",
+					"The Fault In Our Stars 2014 CAM READNFO XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0231",
+			"rule": "(?<=\\W)SSDD(?=\\W|$)",
+			"tests": [
+				[
+					"Thor The Dark World V2 2013 CAM AAC x264-SSDD",
+					"Thor The Dark World V2 2013 CAM AAC x264-"
+				]
+			]
+		},
+		{
+			"id": "R0232",
+			"rule": "(?<=\\W)UNiTY(?=\\W|$)",
+			"tests": [
+				[
+					"Back.In.The.Day.2014.WEBRip.XviD-UNiTY",
+					"Back.In.The.Day.2014.WEBRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0233",
+			"rule": "(?<=\\W)FiRE(?=\\W|$)",
+			"tests": [
+				[
+					"Back.In.The.Day.2014.HDRiP.XViD-FiRE",
+					"Back.In.The.Day.2014.HDRiP.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0234",
+			"rule": "(?<=\\W)INFERNO(?=\\W|$)",
+			"tests": [
+				[
+					"Back In The Day 2014 HDRip XviD-INFERNO",
+					"Back In The Day 2014 HDRip XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0235",
+			"rule": "(?<=\\W)IGUANA(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.UsaBit.com ] - Into.The.Woods.2012.DVDRip.XviD-IGUANA",
+					"[ www.UsaBit.com ] - Into.The.Woods.2012.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0236",
+			"rule": "(?<=\\W)GLUPS(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Into.The.Storm.2014.FRENCH.BDRip.XviD-GLUPS",
+					"[www.Cpasbien.pe] Into.The.Storm.2014.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0237",
+			"rule": "(?<=\\W)T4P3(?=\\W|$)",
+			"tests": [
+				[
+					"Lucy.2014.iTALiAN.AC3.BRRip.XviD-T4P3",
+					"Lucy.2014.iTALiAN.AC3.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0238",
+			"rule": "(?<=\\W)BLUWORLD(?=\\W|$)",
+			"tests": [
+				[
+					"Lo.Hobbit.Un.Viaggio.Inaspettato.2012.iTALiAN.BRRip.XviD.BLUWORLD",
+					"Lo.Hobbit.Un.Viaggio.Inaspettato.2012.iTALiAN.BRRip.XviD."
+				]
+			]
+		},
+		{
+			"id": "R0239",
+			"rule": "(?<=\\W)BmA(?=\\W|$)",
+			"tests": [
+				[
+					"12.Anni.Schiavo.2013.iTALiAN.MD.BDRip.XviD-BmA",
+					"12.Anni.Schiavo.2013.iTALiAN.MD.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"comment": "TrTd Team",
+			"id": "R0240",
+			"rule": "(?<=\\W)TrTd.TeaM(?=\\W|$)",
+			"tests": [
+				[
+					"L.Amore.Bugiardo-Gone.Girl.2014.1080p.FullHD.iTALiAN.AC3.Dual.x264-TrTd_TeaM",
+					"L.Amore.Bugiardo-Gone.Girl.2014.1080p.FullHD.iTALiAN.AC3.Dual.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0241",
+			"rule": "(?<=\\W)UTT(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] The.Fault.in.Our.Stars.2014.FRENCH.BDRip.XviD-UTT",
+					"[www.Cpasbien.pe] The.Fault.in.Our.Stars.2014.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0242",
+			"rule": "(?<=\\W)EARPi(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] The.Fault.in.Our.Stars.2014.FRENCH.1080p.BluRay.x264-EARPi",
+					"[www.Cpasbien.pe] The.Fault.in.Our.Stars.2014.FRENCH.1080p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0243",
+			"rule": "(?<=\\W)FLiCKSiCK(?=\\W|$)",
+			"tests": [
+				[
+					"The Fault in Our Stars 2014 EXTENDED BluRay 1080p x264 DD5.1 FLiCKSiCK",
+					"The Fault in Our Stars 2014 EXTENDED BluRay 1080p x264 DD5.1 "
+				]
+			]
+		},
+		{
+			"id": "R0244",
+			"rule": "(?<=\\W)tomcat12(?=\\W|$)",
+			"tests": [
+				[
+					"The.Equalizer.2014.720p.BRRip.AC3.x264-tomcat12[ETRG]",
+					"The.Equalizer.2014.720p.BRRip.AC3.x264-[ETRG]"
+				]
+			]
+		},
+		{
+			"id": "R0245",
+			"rule": "(?<=\\W)Fastbet99(?=\\W|$)",
+			"tests": [
+				[
+					"The.Equalizer.2014.720p.BRRip.x264-Fastbet99",
+					"The.Equalizer.2014.720p.BRRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0246",
+			"rule": "(?<=\\W)314r(?=\\W|$)",
+			"tests": [
+				[
+					"Edge.of.Tomorrow.2014.SWESUB.720p.webdl.ac3.x264-314r",
+					"Edge.of.Tomorrow.2014.SWESUB.720p.webdl.ac3.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0247",
+			"rule": "(?<=\\W)ZIKAS(?=\\W|$)",
+			"tests": [
+				[
+					"X-Men.Days.of.Future.Past.2014.1080p.WEB-DL.x264.AC3-ZIKAS",
+					"X-Men.Days.of.Future.Past.2014.1080p.WEB-DL.x264.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0248",
+			"rule": "(?<=\\W)CALLIXTUS(?=\\W|$)",
+			"tests": [
+				[
+					"Elf 2003 BRRip 720p x264 AAC [English_Latino] CALLIXTUS",
+					"Elf 2003 BRRip 720p x264 AAC [English_Latino] "
+				]
+			]
+		},
+		{
+			"id": "R0249",
+			"rule": "(?<=\\W)SiNNERS(?=\\W|$)",
+			"tests": [
+				[
+					"Lolita 1962 720p BluRay x264-SiNNERS",
+					"Lolita 1962 720p BluRay x264-"
+				]
+			]
+		},
+		{
+			"id": "R0250",
+			"rule": "(?<=\\W)EbP(?=\\W|$)",
+			"tests": [
+				[
+					"Imaginaerum.2012.1080p.BluRay.DTS.x264-EbP",
+					"Imaginaerum.2012.1080p.BluRay.DTS.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0251",
+			"rule": "(?<=\\W)CrEwSaDe(?=\\W|$)",
+			"tests": [
+				[
+					"The.Equalizer.2014.DvDRIp.Xvid.Ac3.CrEwSaDe",
+					"The.Equalizer.2014.DvDRIp.Xvid.Ac3."
+				]
+			]
+		},
+		{
+			"id": "R0252",
+			"rule": "(?<=\\W)FWOLF(?=\\W|$)",
+			"tests": [
+				[
+					"The Equalizer 2014 BDRip XviD AC3-FWOLF",
+					"The Equalizer 2014 BDRip XviD AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0253",
+			"rule": "(?<=\\W)PsiX(?=\\W|$)",
+			"tests": [
+				[
+					"Revenge.of.the.Green.Dragons.2014.BRRip.XviD-PsiX",
+					"Revenge.of.the.Green.Dragons.2014.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0254",
+			"rule": "(?<=\\W)AQOS(?=\\W|$)",
+			"tests": [
+				[
+					"Revenge of the Green Dragons 2014 DVDRiP XViD-AQOS",
+					"Revenge of the Green Dragons 2014 DVDRiP XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0255",
+			"rule": "(?<=\\W)RiVER(?=\\W|$)",
+			"tests": [
+				[
+					"Downton.Abbey.S05.Christmas.Special.HDTV.x264-RiVER[ettv]",
+					"Downton.Abbey.S05.Christmas.Special.HDTV.x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0256",
+			"rule": "(?<=\\W)TLA(?=\\W|$)",
+			"tests": [
+				[
+					"Downton.Abbey.S05.Christmas.Special.720p.HDTV.x264-TLA",
+					"Downton.Abbey.S05.Christmas.Special.720p.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0257",
+			"rule": "(?<=\\W)AUTHORiTY(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Shameless.US.S04E02.FRENCH.LD.HDTV.x264-AUTHORiTY",
+					"[www.Cpasbien.pe] Shameless.US.S04E02.FRENCH.LD.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0258",
+			"rule": "(?<=\\W)CaCoLaC(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] Shameless.US.S04E05.FRENCH.HDTV.x264-CaCoLaC",
+					"[www.OMGTORRENT.com] Shameless.US.S04E05.FRENCH.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0259",
+			"rule": "(?<=\\W)www.OMGTORRENT.com(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] Shameless.US.S04E05.FRENCH.HDTV.x264-CaCoLaC",
+					"[] Shameless.US.S04E05.FRENCH.HDTV.x264-CaCoLaC"
+				]
+			]
+		},
+		{
+			"id": "R0260",
+			"rule": "(?<=\\W)RNT(?=\\W|$)",
+			"tests": [
+				[
+					"The.Last.Ship.S01E08.FRENCH.HDTV.XviD-RNT",
+					"The.Last.Ship.S01E08.FRENCH.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0261",
+			"rule": "(?<=\\W)MkvCage(?:\\.com)?(?=\\W|$)",
+			"tests": [
+				[
+					"Teenage.Mutant.Ninja.Turtles.2014.720p.BRRip.850MB.MkvCage.com",
+					"Teenage.Mutant.Ninja.Turtles.2014.720p.BRRip.850MB."
+				]
+			]
+		},
+		{
+			"id": "R0262",
+			"rule": "(?<=\\W)FooKaS(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.CAM.V2.x264-FooKaS",
+					"Frozen.2013.CAM.V2.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0263",
+			"rule": "(?<=\\W)AVeNGeRZ(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen 2013 Cam x.264 - AVeNGeRZ",
+					"Frozen 2013 Cam x.264 - "
+				]
+			]
+		},
+		{
+			"id": "R0264",
+			"rule": "(?<=\\W)PRiSTiNE(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.BRRip.720p.x264.AAC-PRiSTiNE",
+					"Frozen.2013.BRRip.720p.x264.AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0265",
+			"rule": "(?<=\\W)SWAXXON(?=\\W|$)",
+			"tests": [
+				[
+					"Bad.Country.2014.SweSub.DVDRip.x264-SWAXXON",
+					"Bad.Country.2014.SweSub.DVDRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0266",
+			"rule": "(?<=\\W)VYTO(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.WEBRip.480p.x264.AAC-VYTO",
+					"Frozen.2013.WEBRip.480p.x264.AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0267",
+			"rule": "(?<=\\W)ViZNU(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.DVDSCR.x264.AAC.-.ViZNU.[P2PDL]",
+					"Frozen.2013.DVDSCR.x264.AAC.-..[P2PDL]"
+				]
+			]
+		},
+		{
+			"id": "R0268",
+			"rule": "(?<=\\W)P2PDL(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.DVDSCR.x264.AAC.-.ViZNU.[P2PDL]",
+					"Frozen.2013.DVDSCR.x264.AAC.-.ViZNU.[]"
+				]
+			]
+		},
+		{
+			"id": "R0269",
+			"rule": "(?<=\\W)LiBERTAZ(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen.2013.SweSub.DVDSCR.x264-LiBERTAZ",
+					"Frozen.2013.SweSub.DVDSCR.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0270",
+			"rule": "(?<=\\W)SiNDK8(?=\\W|$)",
+			"tests": [
+				[
+					"Frozen 2013 DVDSCR x264 AAC - SiNDK8",
+					"Frozen 2013 DVDSCR x264 AAC - "
+				]
+			]
+		},
+		{
+			"id": "R0271",
+			"rule": "(?<=\\W)Ganool(?=\\W|$)",
+			"tests": [
+				[
+					"Inception (2010) BluRay 720p 950MB Ganool",
+					"Inception (2010) BluRay 720p 950MB "
+				]
+			]
+		},
+		{
+			"id": "R0272",
+			"rule": "(?<=\\W)MiND(?=\\W|$)",
+			"tests": [
+				[
+					"Elementary.S01E07.FRENCH.LD.DVDRip.XviD-MiND",
+					"Elementary.S01E07.FRENCH.LD.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0273",
+			"rule": "(?<=\\W)W4F(?=\\W|$)",
+			"tests": [
+				[
+					"MythBusters.S15E01.The.Simpsons.Special.REPACK.HDTV.x264-W4F",
+					"MythBusters.S15E01.The.Simpsons.Special.REPACK.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0274",
+			"rule": "(?<=\\W)DHD(?=\\W|$)",
+			"tests": [
+				[
+					"Ascension.Part.1.720p.HDTV.x264-DHD[ettv]",
+					"Ascension.Part.1.720p.HDTV.x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0275",
+			"rule": "(?<=\\W)WNN(?=\\W|$)",
+			"tests": [
+				[
+					"The.Agony.of.New.Years.Eve.PDTV.x264-WNN",
+					"The.Agony.of.New.Years.Eve.PDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0276",
+			"rule": "(?<=\\W)GloTV(?=\\W|$)",
+			"tests": [
+				[
+					"Dating.Naked.S01E02.HDTV.x264-OMiCRON- [GloTV]",
+					"Dating.Naked.S01E02.HDTV.x264-OMiCRON- []"
+				]
+			]
+		},
+		{
+			"id": "R0277",
+			"rule": "(?<=\\W)OMiCRON(?=\\W|$)",
+			"tests": [
+				[
+					"Dating.Naked.S01E02.HDTV.x264-OMiCRON- [GloTV]",
+					"Dating.Naked.S01E02.HDTV.x264-- [GloTV]"
+				]
+			]
+		},
+		{
+			"id": "R0278",
+			"rule": "(?<=\\W)axiytuns(?=\\W|$)",
+			"tests": [
+				[
+					"Dating.Naked.S01E04.Chuck.and.Camille.MP4 - axiytuns",
+					"Dating.Naked.S01E04.Chuck.and.Camille.MP4 - "
+				]
+			]
+		},
+		{
+			"id": "R0279",
+			"rule": "(?<=\\W)TASTETV(?=\\W|$)",
+			"tests": [
+				[
+					"QI.S12E14.UNCUT.HDTV.x264-TASTETV",
+					"QI.S12E14.UNCUT.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0280",
+			"rule": "(?<=\\W)NODLABS(?=\\W|$)",
+			"tests": [
+				[
+					"A.Merry.Friggin.Christmas.2014.1080p.BluRay.x264-NODLABS[rarbg]",
+					"A.Merry.Friggin.Christmas.2014.1080p.BluRay.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0281",
+			"rule": "(?<=\\W)(?:Une.|Hive.)?CM8(?=\\W|$)",
+			"tests": [
+				[
+					"Kill.the.Irishman.2011.DVDRip.AC3.XviD-CM8",
+					"Kill.the.Irishman.2011.DVDRip.AC3.XviD-"
+				],
+				[
+					"[ www.TorrentDay.com ] - Housos.S01.DVDRip+Extras.XviD.Une-CM8",
+					"[ www.TorrentDay.com ] - Housos.S01.DVDRip+Extras.XviD."
+				],
+				[
+					"Robocop.2014.Uncropped.720p.HD-TS.X264.AC3.HQ.Hive-CM8",
+					"Robocop.2014.Uncropped.720p.HD-TS.X264.AC3.HQ."
+				]
+			]
+		},
+		{
+			"id": "R0282",
+			"rule": "(?<=\\W)SDTiN(?=\\W|$)",
+			"tests": [
+				[
+					"The.Cosmonaut.2013.DVDRip.XviD-SDTiN",
+					"The.Cosmonaut.2013.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0283",
+			"rule": "(?<=\\W)HMiDiMADRiDI(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] The.Conjuring.2013.FRENCH.DVDRip.XviD-HMiDiMADRiDI",
+					"[www.OMGTORRENT.com] The.Conjuring.2013.FRENCH.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0284",
+			"rule": "(?<=\\W)RELiC(?=\\W|$)",
+			"tests": [
+				[
+					"The.Family.2013.FRENCH.BDRip.XviD-RELiC",
+					"The.Family.2013.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0285",
+			"rule": "(?<=\\W)JABAL(?=\\W|$)",
+			"tests": [
+				[
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-JABAL",
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-"
+				]
+			]
+		},
+		{
+			"id": "R0286",
+			"rule": "(?<=\\W)JABAL(?=\\W|$)",
+			"tests": [
+				[
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-JABAL",
+					"The.Best.Man.Holiday.2013.FRENCH.DVDRip.XVid-"
+				]
+			]
+		},
+		{
+			"id": "R0287",
+			"rule": "(?<=\\W)LYS(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] Pi\u00e9g\u00e9.2014.FRENCH.DVDRIP.XVid-LYS",
+					"[www.Cpasbien.pe] Pi\u00e9g\u00e9.2014.FRENCH.DVDRIP.XVid-"
+				]
+			]
+		},
+		{
+			"id": "R0288",
+			"rule": "(?<=\\W)DVDFR(?=\\W|$)",
+			"tests": [
+				[
+					"The.Book.Of.Eli.FRENCH.DVDRip.XViD-DVDFR",
+					"The.Book.Of.Eli.FRENCH.DVDRip.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0289",
+			"rule": "(?<=\\W)FIRETOWN(?=\\W|$)",
+			"tests": [
+				[
+					"[www.OMGTORRENT.com] Edge.of.Tomorrow.2014.FRENCH.BDRip.XviD-FIRETOWN",
+					"[www.OMGTORRENT.com] Edge.of.Tomorrow.2014.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0290",
+			"rule": "(?<=\\W)AFTP(?=\\W|$)",
+			"tests": [
+				[
+					"No.Limite.Do.Amanha.DUAL.2014.BDRip.XviD-AFTP",
+					"No.Limite.Do.Amanha.DUAL.2014.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"comment": "FwD",
+			"id": "R0291",
+			"rule": "(?<=\\W)F[Ww]D(?=\\W|$)",
+			"tests": [
+				[
+					"Cars 2 2011 FRENCH BRRiP XviD-FwD",
+					"Cars 2 2011 FRENCH BRRiP XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0292",
+			"rule": "(?<=\\W)IMAGiNE(?=\\W|$)",
+			"tests": [
+				[
+					"Rio.2011.DVDRiP.XViD.AC3-IMAGiNE",
+					"Rio.2011.DVDRiP.XViD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0293",
+			"rule": "(?<=\\W)HQCLUB(?=\\W|$)",
+			"tests": [
+				[
+					"Ischeznuvshaya.2014.DUAL.BDRip.XviD.AC3.-HQCLUB",
+					"Ischeznuvshaya.2014.DUAL.BDRip.XviD.AC3.-"
+				]
+			]
+		},
+		{
+			"id": "R0294",
+			"rule": "(?<=\\W)QCP(?=\\W|$)",
+			"tests": [
+				[
+					"The.Frozen.Ground.2013.FRENCH.DVDRip.XviD-QCP",
+					"The.Frozen.Ground.2013.FRENCH.DVDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0295",
+			"rule": "(?<=\\W)RedBlade(?=\\W|$)",
+			"tests": [
+				[
+					"The.Dance.Of.Reality.2013.LIMITED.DVDRip.x264-RedBlade[rarbg]",
+					"The.Dance.Of.Reality.2013.LIMITED.DVDRip.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0296",
+			"rule": "(?<=\\W)mSD(?=\\W|$)",
+			"tests": [
+				[
+					"Kano.2014.480p.BluRay.x264-mSD",
+					"Kano.2014.480p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0297",
+			"rule": "(?<=\\W)WiKi(?=\\W|$)",
+			"tests": [
+				[
+					"Kung.Fu.Jungle.2014.720p.BluRay.x264-WiKi",
+					"Kung.Fu.Jungle.2014.720p.BluRay.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0298",
+			"rule": "(?<=\\W)SeeHD(?=\\W|$)",
+			"tests": [
+				[
+					"Kung Fu Jungle 2014 1080p WEB-DL x264 AAC-SeeHD",
+					"Kung Fu Jungle 2014 1080p WEB-DL x264 AAC-"
+				]
+			]
+		},
+		{
+			"id": "R0299",
+			"rule": "(?<=\\W)SReeJoN(?=\\W|$)",
+			"tests": [
+				[
+					"Kung Fu Jungle (2014) BluRay 720p 700MB Ganool [SReeJoN]",
+					"Kung Fu Jungle (2014) BluRay 720p 700MB Ganool []"
+				]
+			]
+		},
+		{
+			"id": "R0300",
+			"rule": "(?<=\\W)ReHD(?=\\W|$)",
+			"tests": [
+				[
+					"Kung Fu Jungle 2014 720p WEB-DL x264 AAC-ReHD [MovietaM]",
+					"Kung Fu Jungle 2014 720p WEB-DL x264 AAC- [MovietaM]"
+				]
+			]
+		},
+		{
+			"id": "R0301",
+			"rule": "(?<=\\W)RAV3N(?=\\W|$)",
+			"tests": [
+				[
+					"Horrible Bosses 2 (2014) HDRip HC XViD AC3-RAV3N",
+					"Horrible Bosses 2 (2014) HDRip HC XViD AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0302",
+			"rule": "(?<=\\W)RiGOLO(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.Cpasbien.pw ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-RiGOLO",
+					"[ www.Cpasbien.pw ] Asterix.Le.Domaine.des.Dieux.FRENCH.HDTS.MD.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0303",
+			"rule": "(?<=\\W)VOSTFR(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB.VOSTFR.480p.HDRIP.XVID.AC3-NIKOo",
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB..480p.HDRIP.XVID.AC3-NIKOo"
+				]
+			]
+		},
+		{
+			"id": "R0304",
+			"rule": "(?<=\\W)NIKOo(?=\\W|$)",
+			"tests": [
+				[
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB.VOSTFR.480p.HDRIP.XVID.AC3-NIKOo",
+					"[www.Cpasbien.pe] The.Judge.2014.HC.FANSUB.VOSTFR.480p.HDRIP.XVID.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0305",
+			"rule": "(?<=\\W)F4ST(?=\\W|$)",
+			"tests": [
+				[
+					"Game.Of.Thrones.S04E09.FASTSUB.VOSTFR.HDTV.XviD-F4ST",
+					"Game.Of.Thrones.S04E09.FASTSUB.VOSTFR.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0306",
+			"rule": "(?<=\\W)ADDiCTiON(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland.S04E00.FASTSUB.VOSTFR.HDTV.XviD-ADDiCTiON",
+					"Homeland.S04E00.FASTSUB.VOSTFR.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0307",
+			"rule": "(?<=\\W)Xtrem(?=\\W|$)",
+			"tests": [
+				[
+					"Breaking.Bad.S05E05.VOSTFR.HDTV.XviD-Xtrem",
+					"Breaking.Bad.S05E05.VOSTFR.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0308",
+			"rule": "(?<=\\W)2HD(?=\\W|$)",
+			"tests": [
+				[
+					"Breaking Bad S05E15 HDTV x264-2HD[ettv]",
+					"Breaking Bad S05E15 HDTV x264-[ettv]"
+				]
+			]
+		},
+		{
+			"id": "R0309",
+			"rule": "(?<=\\W)EVOLVE(?=\\W|$)",
+			"tests": [
+				[
+					"House.of.Cards.2013.S01E03.HDTV.x264-EVOLVE",
+					"House.of.Cards.2013.S01E03.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0310",
+			"rule": "(?<=\\W)ASAP(?=\\W|$)",
+			"tests": [
+				[
+					"New.Girl.S04E12.HDTV.x264-ASAP",
+					"New.Girl.S04E12.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0311",
+			"rule": "(?<=\\W)DIMENSION(?=\\W|$)",
+			"tests": [
+				[
+					"Gotham.S01E11.720p.HDTV.X264-DIMENSION",
+					"Gotham.S01E11.720p.HDTV.X264-"
+				]
+			]
+		},
+		{
+			"comment": "DiRFiX",
+			"id": "R0312",
+			"rule": "(?<=\\W)D[Ii]RF[Ii]X(?=\\W|$)",
+			"tests": [
+				[
+					"House.of.Cards.2013.S02E13.DIRFIX.WEBRip.x264-2HD",
+					"House.of.Cards.2013.S02E13..WEBRip.x264-2HD"
+				],
+				[
+					"The.New.Normal.S01E09.Unplugged.DiRFiX.720p.WEB-DL.DD5.1.H.264-BS",
+					"The.New.Normal.S01E09.Unplugged..720p.WEB-DL.DD5.1.H.264-BS"
+				]
+			]
+		},
+		{
+			"id": "R0313",
+			"rule": "(?<=\\W)SAINTGKS(?=\\W|$)",
+			"tests": [
+				[
+					"Horrible Bosses 2 2014 HDRip SAINTGKS",
+					"Horrible Bosses 2 2014 HDRip "
+				]
+			]
+		},
+		{
+			"id": "R0314",
+			"rule": "(?<=\\W)CPG(?=\\W|$)",
+			"tests": [
+				[
+					"The Judge (2014) HDRip x264 AC3-CPG",
+					"The Judge (2014) HDRip x264 AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0315",
+			"rule": "(?<=\\W)ECI(?=\\W|$)",
+			"tests": [
+				[
+					"Supernatural.S10E07.Girls.Girls.Girls.1080p.WEB-DL.DD5.1.H.264-ECI[rarbg]",
+					"Supernatural.S10E07.Girls.Girls.Girls.1080p.WEB-DL.DD5.1.H.264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0316",
+			"rule": "(?<=\\W)GloDLS(?=\\W|$)",
+			"tests": [
+				[
+					"Revenge.S04E12.720p.HDTV.X264-DIMENSION [GloDLS]",
+					"Revenge.S04E12.720p.HDTV.X264-DIMENSION []"
+				]
+			]
+		},
+		{
+			"id": "R0317",
+			"rule": "(?<=\\W)AFG(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.torrenting.com ] - Brickleberry.S03E04.HDTV.XviD-AFG",
+					"[ www.torrenting.com ] - Brickleberry.S03E04.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0318",
+			"rule": "(?<=\\W)WLR(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.torrenting.com ] - Brickleberry.S03E04.WEB-DL.x264-WLR",
+					"[ www.torrenting.com ] - Brickleberry.S03E04.WEB-DL.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0319",
+			"rule": "(?<=\\W)HEVC(?=\\W|$)",
+			"tests": [
+				[
+					"The Imitation Game (2014) DVDScr X265 HEVC - (Movieteam2000) - 399MB",
+					"The Imitation Game (2014) DVDScr X265  - (Movieteam2000) - 399MB"
+				]
+			]
+		},
+		{
+			"id": "R0320",
+			"rule": "(?<=\\W)SmartGuy(?=\\W|$)",
+			"tests": [
+				[
+					"The Hobbit The Battle Of The Five Armies (2014) DVDScr x264 AAC SmartGuy",
+					"The Hobbit The Battle Of The Five Armies (2014) DVDScr x264 AAC "
+				]
+			]
+		},
+		{
+			"id": "R0321",
+			"rule": "(?<=\\W)Team.DDH~RG(?=\\W|$)",
+			"tests": [
+				[
+					"Tevar (2015) Hindi 950MB 720p SAP DVDScrRip x264 ESubs Team DDH~RG",
+					"Tevar (2015) Hindi 950MB 720p SAP DVDScrRip x264 ESubs "
+				]
+			]
+		},
+		{
+			"id": "R0322",
+			"rule": "(?<=\\W)GWC(?=\\W|$)",
+			"tests": [
+				[
+					"Orange is the New Black S02 Season 2 Complete WEBRip 480p x264 AAC E-Subs [GWC]",
+					"Orange is the New Black S02 Season 2 Complete WEBRip 480p x264 AAC E-Subs []"
+				]
+			]
+		},
+		{
+			"id": "R0323",
+			"rule": "(?<=\\W)AVISHOW(?=\\W|$)",
+			"tests": [
+				[
+					"Orange.Is.The.New.Black.S02E04.FRENCH.LD.WEBRip.XviD-AVISHOW",
+					"Orange.Is.The.New.Black.S02E04.FRENCH.LD.WEBRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0324",
+			"rule": "(?<=\\W)CROiSSANT(?=\\W|$)",
+			"tests": [
+				[
+					"Orange.Is.The.New.Black.S02E05.FRENCH.LD.WEBRip.x264-CROiSSANT",
+					"Orange.Is.The.New.Black.S02E05.FRENCH.LD.WEBRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0325",
+			"rule": "(?<=\\W)LORD(?=\\W|$)",
+			"tests": [
+				[
+					"Da Vincis Demons S01E08 FRENCH HDTV XviD-LORD",
+					"Da Vincis Demons S01E08 FRENCH HDTV XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0326",
+			"rule": "(?<=\\W)FASTSUB(?=\\W|$)",
+			"tests": [
+				[
+					"Game.Of.Thrones.S04E06.FASTSUB.VOSTFR.HDTV.XviD-F4ST",
+					"Game.Of.Thrones.S04E06..VOSTFR.HDTV.XviD-F4ST"
+				]
+			]
+		},
+		{
+			"id": "R0327",
+			"rule": "(?<=\\W)HELLYWOOD(?=\\W|$)",
+			"tests": [
+				[
+					"Ischeznuvshaya.2014.DUAL.BDRip.720p.-HELLYWOOD",
+					"Ischeznuvshaya.2014.DUAL.BDRip.720p.-"
+				]
+			]
+		},
+		{
+			"id": "R0328",
+			"rule": "(?<=\\W)KIKS(?=\\W|$)",
+			"tests": [
+				[
+					"Automata (2014) 720p BluRay - [KIKS]",
+					"Automata (2014) 720p BluRay - []"
+				]
+			]
+		},
+		{
+			"id": "R0329",
+			"rule": "(?<=\\W)GeekRG(?=\\W|$)",
+			"tests": [
+				[
+					"Lets Be Cops (2014) 1080p 5.1ch BluRay RIP - [GeekRG]",
+					"Lets Be Cops (2014) 1080p 5.1ch BluRay RIP - []"
+				]
+			]
+		},
+		{
+			"id": "R0330",
+			"rule": "(?<=\\W)SANTi(?=\\W|$)",
+			"tests": [
+				[
+					"The.Hobbit.An.Unexpected.Journey.EXTENDED.2012.BRRip.XviD.AC3-SANTi",
+					"The.Hobbit.An.Unexpected.Journey.EXTENDED.2012.BRRip.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0331",
+			"rule": "(?<=\\W)MiXED(?=\\W|$)",
+			"tests": [
+				[
+					"Breaking.Bad.S05.HDTV.XviD-MiXED",
+					"Breaking.Bad.S05.HDTV.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0332",
+			"rule": "(?<=\\W)DexzAery(?=\\W|$)",
+			"tests": [
+				[
+					"Orange Is The New Black Season 1 Complete 480p HDTV x264 [Multi-Sub] [DexzAery]",
+					"Orange Is The New Black Season 1 Complete 480p HDTV x264 [Multi-Sub] []"
+				]
+			]
+		},
+		{
+			"id": "R0333",
+			"rule": "(?<=\\W)Sticky83(?=\\W|$)",
+			"tests": [
+				[
+					"The.Simpsons.S01-S25.480p.WEB-DL.HDTV.x264-Sticky83",
+					"The.Simpsons.S01-S25.480p.WEB-DL.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0334",
+			"rule": "(?<=\\W)ChameE(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland Season 3 Complete - ChameE",
+					"Homeland Season 3 Complete - "
+				]
+			]
+		},
+		{
+			"id": "R0335",
+			"rule": "(?<=\\W)CEE(?=\\W|$)",
+			"tests": [
+				[
+					"Homeland - Season 3 Complete (HDTV) x264-CEE",
+					"Homeland - Season 3 Complete (HDTV) x264-"
+				]
+			]
+		},
+		{
+			"id": "R0336",
+			"rule": "(?<=\\W)VectoR(?=\\W|$)",
+			"tests": [
+				[
+					"The Walking Dead S04 Season 4 Complete HDTV x264 [E-Subs] [VectoR & DexzAery]",
+					"The Walking Dead S04 Season 4 Complete HDTV x264 [E-Subs] [ & DexzAery]"
+				]
+			]
+		},
+		{
+			"id": "R0337",
+			"rule": "(?<=\\W)G2G(?:.fm)?(?=\\W|$)",
+			"tests": [
+				[
+					"Marvel's Agent Carter S01E01 1080p HDTV + Subtitles [G2G]",
+					"Marvel's Agent Carter S01E01 1080p HDTV + Subtitles []"
+				],
+				[
+					"The Gambler (2014) DVDScr [G2G.fm]",
+					"The Gambler (2014) DVDScr []"
+				]
+			]
+		},
+		{
+			"id": "R0338",
+			"rule": "(?<=\\W)BST(?=\\W|$)",
+			"tests": [
+				[
+					"American.Sniper.2014.MD.iTALiAN.DVDSCR.X264-BST",
+					"American.Sniper.2014.MD.iTALiAN.DVDSCR.X264-"
+				]
+			]
+		},
+		{
+			"id": "R0339",
+			"rule": "(?<=\\W)GLY(?=\\W|$)",
+			"tests": [
+				[
+					"St.Vincent.2014.HDRip.XViD.AC3-GLY",
+					"St.Vincent.2014.HDRip.XViD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0340",
+			"rule": "(?<=\\W)STINKBOMB(?=\\W|$)",
+			"tests": [
+				[
+					"[ www.Torrentday.com ] - Interstellar.2014.HDCAM.XviD-AC3-STINKBOMB",
+					"[ www.Torrentday.com ] - Interstellar.2014.HDCAM.XviD-AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0341",
+			"rule": "(?<=\\W)VAiN(?=\\W|$)",
+			"tests": [
+				[
+					"Godzilla.2014.720p.WEBRiP.XviD-VAiN",
+					"Godzilla.2014.720p.WEBRiP.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0342",
+			"rule": "(?<=\\W)BLiNK(?=\\W|$)",
+			"tests": [
+				[
+					"The.Hunchback.Of.Notre.Dame.II.2002.720p.BluRay.x264-BLiNK [PublicHD]",
+					"The.Hunchback.Of.Notre.Dame.II.2002.720p.BluRay.x264- [PublicHD]"
+				]
+			]
+		},
+		{
+			"id": "R0343",
+			"rule": "(?<=\\W)GCJM(?=\\W|$)",
+			"tests": [
+				[
+					"Brazil - 1985.1080p.Criterion.Bluray.x264-GCJM",
+					"Brazil - 1985.1080p.Criterion.Bluray.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0344",
+			"rule": "(?<=\\W)CiNEMATiC(?=\\W|$)",
+			"tests": [
+				[
+					"Rivers.Edge.1986.1080p.BluRay.AVC.DTS-HD.MA.2.0-CiNEMATiC",
+					"Rivers.Edge.1986.1080p.BluRay.AVC.DTS-HD.MA.2.0-"
+				]
+			]
+		},
+		{
+			"id": "R0345",
+			"rule": "(?<=\\W)GKNByNW(?=\\W|$)",
+			"tests": [
+				[
+					"Maleficent.2014.720p.BluRay.DTS.x264-GKNByNW",
+					"Maleficent.2014.720p.BluRay.DTS.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0346",
+			"rule": "(?<=\\W)RoB(?=\\W|$)",
+			"tests": [
+				[
+					"AMERICAN SNIPER [2014]DVDScr[H264 MP4][RoB]",
+					"AMERICAN SNIPER [2014]DVDScr[H264 MP4][]"
+				]
+			]
+		},
+		{
+			"id": "R0347",
+			"rule": "(?<=\\W)ArRoWs(?=\\W|$)",
+			"tests": [
+				[
+					"About.Time.2013.TRUEFRENCH.DVDRIP.XviD-ArRoWs",
+					"About.Time.2013.TRUEFRENCH.DVDRIP.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0348",
+			"rule": "(?<=\\W)ELiTE(?=\\W|$)",
+			"tests": [
+				[
+					"Rio.2011.PLDUB.3D.1080p.BDRip.XviD.AC3-ELiTE",
+					"Rio.2011.PLDUB.3D.1080p.BDRip.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0349",
+			"rule": "(?<=\\W)TMB(?=\\W|$)",
+			"tests": [
+				[
+					"Taken.2.2012.TRUEFRENCH.BRRip.XviD-TMB",
+					"Taken.2.2012.TRUEFRENCH.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0350",
+			"rule": "(?<=\\W)ARTEFAC(?=\\W|$)",
+			"tests": [
+				[
+					"Kev.Adams.Voila.Voila.2014.FRENCH.DVDRiP.XviD-ARTEFAC",
+					"Kev.Adams.Voila.Voila.2014.FRENCH.DVDRiP.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0351",
+			"rule": "(?<=\\W)LOKI(?=\\W|$)",
+			"tests": [
+				[
+					"A Most Violent Year (2014) DvDscr-Rip AAC x264 - LOKI",
+					"A Most Violent Year (2014) DvDscr-Rip AAC x264 - "
+				]
+			]
+		},
+		{
+			"id": "R0352",
+			"rule": "(?<=\\W)FASM(?=\\W|$)",
+			"tests": [
+				[
+					"The.Hobbit.An.Unexpected.Journey.2012.Extended.720p.BluRay.QEBSxi.AAC20.MP4-FASM",
+					"The.Hobbit.An.Unexpected.Journey.2012.Extended.720p.BluRay.QEBSxi.AAC20.MP4-"
+				]
+			]
+		},
+		{
+			"id": "R0353",
+			"rule": "(?<=\\W)MikeGR(?=\\W|$)",
+			"tests": [
+				[
+					"Ted.2012.UNRATED.1080p.BluRay.x264-MikeGR-GR SUBS",
+					"Ted.2012.UNRATED.1080p.BluRay.x264--GR SUBS"
+				]
+			]
+		},
+		{
+			"id": "R0354",
+			"rule": "(?<=\\W)LTT(?=\\W|$)",
+			"tests": [
+				[
+					"PS.I.Love.You.[2007.French].DVDRip.DivX-LTT",
+					"PS.I.Love.You.[2007.French].DVDRip.DivX-"
+				]
+			]
+		},
+		{
+			"id": "R0355",
+			"rule": "(?<=\\W)KRaLiMaRKo(?=\\W|$)",
+			"tests": [
+				[
+					"Resident Evil 1-5 (2002-2012) 1080p BluRay Remux - KRaLiMaRKo",
+					"Resident Evil 1-5 (2002-2012) 1080p BluRay Remux - "
+				]
+			]
+		},
+		{
+			"id": "R0356",
+			"rule": "(?<=\\W)SaNRiM(?=\\W|$)",
+			"tests": [
+				[
+					"Wanted (2008) 1080p BRrip Dual Audio {Hindi 2Ch-English 6Ch}~SaNRiM~",
+					"Wanted (2008) 1080p BRrip Dual Audio {Hindi 2Ch-English 6Ch}~~"
+				]
+			]
+		},
+		{
+			"id": "R0357",
+			"rule": "(?<=\\W)ROVERS(?=\\W|$)",
+			"tests": [
+				[
+					"A.Coffee.in.Berlin.2012.LIMITED.BDRip.x264-ROVERS[rarbg]",
+					"A.Coffee.in.Berlin.2012.LIMITED.BDRip.x264-[rarbg]"
+				]
+			]
+		},
+		{
+			"id": "R0358",
+			"rule": "(?<=\\W)CARG(?=\\W|$)",
+			"tests": [
+				[
+					"The Good Wife Season 4 Complete 720p HD [CARG]",
+					"The Good Wife Season 4 Complete 720p HD []"
+				]
+			]
+		},
+		{
+			"id": "R0359",
+			"rule": "(?<=\\W)NAHOM(?=\\W|$)",
+			"tests": [
+				[
+					"The Zero Theorem 2013 720p BluRay Sub Ita Eng Rus x265-NAHOM",
+					"The Zero Theorem 2013 720p BluRay Sub Ita Eng Rus x265-"
+				]
+			]
+		},
+		{
+			"id": "R0360",
+			"rule": "(?<=\\W)xRed(?=\\W|$)",
+			"tests": [
+				[
+					"Shameless.US.S05E01.720p.HDTV.QAAC.x264-xRed",
+					"Shameless.US.S05E01.720p.HDTV.QAAC.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0361",
+			"rule": "(?<=\\W)BAJSKORV(?=\\W|$)",
+			"tests": [
+				[
+					"Black.Jesus.S01E10.HDTV.x264-BAJSKORV",
+					"Black.Jesus.S01E10.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0362",
+			"rule": "(?<=\\W)SPRiNTER(?=\\W|$)",
+			"tests": [
+				[
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264.SPRiNTER.DUAL-BRENYS",
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264..DUAL-BRENYS"
+				]
+			]
+		},
+		{
+			"id": "R0363",
+			"rule": "(?<=\\W)BRENYS(?=\\W|$)",
+			"tests": [
+				[
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264.SPRiNTER.DUAL-BRENYS",
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264.SPRiNTER.DUAL-"
+				]
+			]
+		},
+		{
+			"id": "R0364",
+			"rule": "(?<=\\W)TeamPremium(?=\\W|$)",
+			"tests": [
+				[
+					"Big.Hero.6.2014.iTALiAN.MD.CAM.HD(TeamPremium)",
+					"Big.Hero.6.2014.iTALiAN.MD.CAM.HD()"
+				]
+			]
+		},
+		{
+			"id": "R0365",
+			"rule": "(?<=\\W)REsuRRecTioN(?=\\W|$)",
+			"tests": [
+				[
+					"The Maze Runner 2014 Cam x264 AAC REsuRRecTioN",
+					"The Maze Runner 2014 Cam x264 AAC "
+				]
+			]
+		},
+		{
+			"id": "R0366",
+			"rule": "(?<=\\W)REsuRRecTioN(?=\\W|$)",
+			"tests": [
+				[
+					"The Maze Runner 2014 Cam x264 AAC REsuRRecTioN",
+					"The Maze Runner 2014 Cam x264 AAC "
+				]
+			]
+		},
+		{
+			"id": "R0367",
+			"rule": "(?<=\\W)KinoFanas(?=\\W|$)",
+			"tests": [
+				[
+					"Despicable Me 2 (2013).LT-KinoFanas",
+					"Despicable Me 2 (2013).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0368",
+			"rule": "(?<=\\W)CNN(?:-RG)?(?=\\W|$)",
+			"tests": [
+				[
+					"Despicable Me 2 (2013).LT-CNN",
+					"Despicable Me 2 (2013).LT-"
+				],
+				[
+					"Despicable Me 2 (2013).LT-CNN-RG",
+					"Despicable Me 2 (2013).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0369",
+			"rule": "(?<=\\W)BTT-Team(?=\\W|$)",
+			"tests": [
+				[
+					"Chicken Little (2005).LT BTT-Team",
+					"Chicken Little (2005).LT "
+				]
+			]
+		},
+		{
+			"id": "R0370",
+			"rule": "(?<=\\W)HQLT(?=\\W|$)",
+			"tests": [
+				[
+					"Open Season 3 (2010).LT-HQLT",
+					"Open Season 3 (2010).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0371",
+			"rule": "(?<=\\W)TRL(?=\\W|$)",
+			"tests": [
+				[
+					"Surf's Up (2007).LT-TRL",
+					"Surf's Up (2007).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0372",
+			"rule": "(?<=\\W)BTG(?=\\W|$)",
+			"tests": [
+				[
+					"Toy Story-3 (2010).LT-BTG",
+					"Toy Story-3 (2010).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0373",
+			"rule": "(?<=\\W)576p(?=\\W|$)",
+			"tests": [
+				[
+					"Turbo (2013) 576p.-SS",
+					"Turbo (2013) .-SS"
+				]
+			]
+		},
+		{
+			"id": "R0374",
+			"rule": "(?<=\\W)LHV(?=\\W|$)",
+			"tests": [
+				[
+					"Happy.Endings.S01E01.DVDRip.XViD-LHV",
+					"Happy.Endings.S01E01.DVDRip.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0375",
+			"rule": "(?<=\\W)DLK(?=\\W|$)",
+			"tests": [
+				[
+					"Namo istorija_ Life as a House (2001 DVDrip LT) ~ DLK",
+					"Namo istorija_ Life as a House (2001 DVDrip LT) ~ "
+				]
+			]
+		},
+		{
+			"id": "R0376",
+			"rule": "(?<=\\W)ETT(?=\\W|$)",
+			"tests": [
+				[
+					"Marmaduke (2010) [ETT]",
+					"Marmaduke (2010) []"
+				]
+			]
+		},
+		{
+			"id": "R0377",
+			"rule": "(?<=\\W)AUTOPSiE(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.FRENCH.BRRiP.XviD.AC3-AUTOPSiE",
+					"Project.X.2012.FRENCH.BRRiP.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0378",
+			"rule": "(?<=\\W)REFiLL(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.EXTENDED.720p.BRRip.XviD.AC3-REFiLL",
+					"Project.X.2012.EXTENDED.720p.BRRip.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0379",
+			"rule": "(?<=\\W)JAMMO(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.EXTENDED.BRRIP-XVID-AC3-JAMMO",
+					"Project.X.2012.EXTENDED.BRRIP-XVID-AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0380",
+			"rule": "(?<=\\W)4PlayHD(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.Extended.BRRip.XviD-4PlayHD",
+					"Project.X.2012.Extended.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0381",
+			"rule": "(?<=\\W)MIKY(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.Extended.720p.BluRay.x264.MIKY",
+					"Project.X.2012.Extended.720p.BluRay.x264."
+				]
+			]
+		},
+		{
+			"id": "R0382",
+			"rule": "(?<=\\W)HQM(?=\\W|$)",
+			"tests": [
+				[
+					"Bad.Neighbours.2014.SweSub.BRRip.x264-HQM",
+					"Bad.Neighbours.2014.SweSub.BRRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0383",
+			"rule": "(?<=\\W)AViTECH(?=\\W|$)",
+			"tests": [
+				[
+					"Flying.Home.2014.FRENCH.BDRip.XviD-AViTECH",
+					"Flying.Home.2014.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0384",
+			"rule": "(?<=\\W)URBiN4HD(?=\\W|$)",
+			"tests": [
+				[
+					"Flying Home 2014 BDRip x264 AAC Castellano URBiN4HD",
+					"Flying Home 2014 BDRip x264 AAC Castellano "
+				]
+			]
+		}
+	],
+	"version": "201502120"
+}
