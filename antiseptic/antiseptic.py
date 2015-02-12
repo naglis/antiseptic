@@ -12,6 +12,7 @@ from .utils import (
     get_config,
     get_new_rules,
     list_dirs,
+    list_files,
     prompt,
 )
 
@@ -66,14 +67,14 @@ class Cleaner(object):
     def clean_title(self, title):
         applied_rules = []
         for rule in self.rules:
-            applied, after = Cleaner.apply_rule(rule, title)
+            applied, new_title = Cleaner.apply_rule(rule, title)
             if not applied:
                 continue
             applied_rules.append(rule['id'])
-            d = ''.join(diff(title, after))
+            d = ''.join(diff(title, new_title))
             LOG.debug('Applied rule: {rule_id:s}, diff:\n{diff:s}'.format(
                       rule_id=rule['id'], diff=d))
-            title = after
+            title = new_title
 
         return title, applied_rules
 
@@ -83,6 +84,26 @@ class Cleaner(object):
         if m:
             return True, re.sub(rule['rule'], rule.get('sub', ''), text)
         return False, text
+
+
+def setup_cleaner(config):
+    disabled = set(config.get('disabled_rules', []))
+    if disabled:
+        LOG.info('Disabled rules: %s' % (', '.join(disabled)))
+    rules_filename = config['rules_filename']
+
+    c = Cleaner(disabled=disabled)
+    try:
+        c.load_rules(rules_filename)
+    except OSError as e:
+        if e.errno == errno.ENOENT:
+            raise SystemExit('The rules file: %s does not exist. '
+                             'Run `antiseptic update` to update the rules.' %
+                             rules_filename)
+        else:
+            raise
+    else:
+        return c
 
 
 def rename_dir(path, cleaner, dry_run=False, default_choice='n', auto=False):
@@ -101,28 +122,71 @@ def rename_dir(path, cleaner, dry_run=False, default_choice='n', auto=False):
             LOG.info('Renamed successfully.')
 
     path = os.path.normpath(path)
-    base, before = os.path.split(path)
-    after, rules = cleaner.clean_title(before)
+    base, old_name = os.path.split(path)
+    new_name, rules = cleaner.clean_title(old_name)
 
-    if after == before:
+    if new_name == old_name:
         LOG.debug('Nothing to be done.')
         return
 
     LOG.info('Applied rules: %s' % ', '.join(rules))
-    print(''.join(diff(before, after)))
+    print(''.join(diff(old_name, new_name)))
 
     if dry_run:
         print()
         return
     elif auto:
-        rename(path, after)
+        rename(path, new_name)
         return
 
     choice = prompt('Apply', ['y', 'n', 'q'], default_choice)
     if choice == 'q':
         sys.exit(0)
     elif choice == 'y':
-        rename(path, after)
+        rename(path, new_name)
+    else:
+        return
+
+
+def wrap_file(path, cleaner, dry_run=False, default_choice='n', auto=False):
+
+    def wrap(path, dir_name):
+        base, fname = os.path.split(path)
+        new_dir_path = os.path.join(base, dir_name)
+        new_file_path = os.path.join(new_dir_path, fname)
+        try:
+            LOG.debug('Creating a new directory: {0:s}'.format(new_dir_path))
+            os.mkdir(new_dir_path)
+            LOG.debug('Moving: {path:s} to {new_file_path:s}'.format(
+                path=path, new_file_path=new_file_path))
+            os.rename(path, new_file_path)
+        except OSError as e:
+            LOG.exception(e)
+            return
+        else:
+            LOG.info('Wraped successfully.')
+
+    path = os.path.normpath(path)
+    base, old_name = os.path.split(path)
+    name, ext = os.path.splitext(old_name)
+    dir_name, rules = cleaner.clean_title(name)
+
+    LOG.info('Wrapping: {0:s}'.format(path))
+    LOG.info('Applied rules: {0:s}'.format(', '.join(rules)))
+    print('New directory name: {0:s}'.format(dir_name))
+
+    if dry_run:
+        print()
+        return
+    elif auto:
+        wrap(path, dir_name)
+        return
+
+    choice = prompt('Wrap', ['y', 'n', 'q'], default_choice)
+    if choice == 'q':
+        sys.exit(0)
+    elif choice == 'y':
+        wrap(path, dir_name)
     else:
         return
 
@@ -173,29 +237,34 @@ def do_rename(args, config):
         raise SystemExit(
             'Path "%s" does not exist or is not a directory' % args.path)
 
-    disabled = set(config.get('disabled_rules', []))
-    if disabled:
-        LOG.info('Disabled rules: %s' % (', '.join(disabled)))
-    rules_filename = config['rules_filename']
-
-    c = Cleaner(disabled=disabled)
-    try:
-        c.load_rules(rules_filename)
-    except OSError as e:
-        if e.errno == errno.ENOENT:
-            raise SystemExit('The rules file: %s does not exist. '
-                             'Run `antiseptic update` to update the rules.' %
-                             rules_filename)
-        else:
-            raise
+    cleaner = setup_cleaner(config)
 
     if args.directory:
         for dn in list_dirs(args.path):
-            rename_dir(dn, c, dry_run=args.dry_run,
+            rename_dir(dn, cleaner, dry_run=args.dry_run,
                        default_choice=args.choice, auto=args.auto)
     else:
-        rename_dir(args.path, c, dry_run=args.dry_run,
+        rename_dir(args.path, cleaner, dry_run=args.dry_run,
                    default_choice=args.choice, auto=args.auto)
+
+
+def do_wrap(args, config):
+    """Wrap an existing movie inside a directory with a clean name"""
+    if args.directory and not os.path.isdir(args.path):
+        raise SystemExit(
+            'Path "%s" does not exist or is not a directory' % args.path)
+    elif not args.directory and not os.path.isfile(args.path):
+        raise SystemExit(
+            'File "%s" does not exist or is not a file' % args.path)
+
+    cleaner = setup_cleaner(config)
+    if args.directory:
+        for fp in list_files(args.path):
+            wrap_file(fp, cleaner, dry_run=args.dry_run,
+                      default_choice=args.choice, auto=args.auto)
+    else:
+        wrap_file(args.path, cleaner, dry_run=args.dry_run,
+                  default_choice=args.choice, auto=args.auto)
 
 
 def main():
@@ -217,24 +286,35 @@ def main():
         const=0, help='suppress output except warnings and errors',)
     subparsers = p.add_subparsers()
 
-    rename_parser = subparsers.add_parser('rename', help='rename directories')
-    rename_parser.add_argument('path', metavar='PATH')
-    rename_parser.add_argument(
-        '-d', '--dir', action='store_true', dest='directory',
-        help='rename all directories inside PATH')
-    rename_parser.add_argument(
+    # common arguments for rename and wrap
+    common_parser = argparse.ArgumentParser(add_help=False)
+    common_parser.add_argument('path', metavar='PATH')
+    common_parser.add_argument(
         '-y', '--yes', action='store_const', const='y', default='n',
-        dest='choice', help='make \'yes\' the default choice when renaming')
-
+        dest='choice', help='make \'yes\' the default choice')
     # -n and -a can't be used together
-    mutex_group = rename_parser.add_mutually_exclusive_group()
+    mutex_group = common_parser.add_mutually_exclusive_group()
     mutex_group.add_argument(
         '-n', '--dry-run', action='store_true',
-        help='don\'t rename anything, just preview the results')
+        help='don\'t do anything, just preview the results')
     mutex_group.add_argument(
         '-a', '--auto', action='store_true',
         help='don\'t ask questions, rename everything automatically')
+
+    rename_parser = subparsers.add_parser('rename', help='rename directories',
+                                          parents=[common_parser])
+    rename_parser.add_argument(
+        '-d', '--dir', action='store_true', dest='directory',
+        help='rename all directories inside PATH')
     rename_parser.set_defaults(func=do_rename)
+
+    wrap_parser = subparsers.add_parser(
+        'wrap', help='wrap a movie file inside a directory with a clean name',
+        parents=[common_parser])
+    wrap_parser.add_argument(
+        '-d', '--dir', action='store_true', dest='directory',
+        help='wrap all files inside PATH')
+    wrap_parser.set_defaults(func=do_wrap)
 
     check_parser = subparsers.add_parser(
         'check', help='check for rule updates')

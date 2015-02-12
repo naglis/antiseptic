@@ -113,10 +113,21 @@ def make_dirs(path):
         raise SystemExit('Failed to create config dir: %s' % str(e))
 
 
-def list_dirs(dirname):
-    dp, dn, _ = next(os.walk(dirname))
+def list_dirs(path):
+    dp, dn, _ = next(os.walk(path))
     for n in dn:
         yield os.path.join(dp, n)
+
+
+def list_files(path):
+    media_extensions = {
+        '.avi', '.mkv', '.webm', '.ogv', '.mp4', '.wmv', '.mov', '.flv',
+        '.mpg', '.xvid', '.mpeg', '.rmvb'
+    }
+    dp, _, fn = next(os.walk(path))
+    for n in fn:
+        if os.path.splitext(n)[1] in media_extensions:
+            yield os.path.join(dp, n)
 
 
 def prompt(question, choices, default, case_sensitive=False, color=True):
