@@ -726,7 +726,7 @@
 		},
 		{
 			"id": "R0140",
-			"rule": "(?<=\\W)DVDSCR(?=\\W|$)"
+			"rule": "(?<=\\W)(?:DVDSCR|DVDScr)(?=\\W|$)"
 		},
 		{
 			"comment": "DVDRip",
@@ -868,10 +868,17 @@
 			"weight": 99
 		},
 		{
-			"comment": "Strip trailing dashes, dots and underscores",
+			"comment": "Strip trailing dashes, dots, underscores and squiggles",
 			"id": "R0157",
-			"rule": "[\\-\\._]+$",
-			"weight": 100
+			"rule": "[\\-\\._\\~]+(?P<space>\\s*)$",
+			"sub": "\\g<space>",
+			"tests": [
+				[
+					"Hector and the Search for Happiness (2014) -  ",
+					"Hector and the Search for Happiness (2014)   "
+				]
+			],
+			"weight": 99
 		},
 		{
 			"id": "R0158",
@@ -2862,7 +2869,251 @@
 					"Shameless.US.S05E01.720p.HDTV.QAAC.x264-"
 				]
 			]
+		},
+		{
+			"id": "R0361",
+			"rule": "(?<=\\W)BAJSKORV(?=\\W|$)",
+			"tests": [
+				[
+					"Black.Jesus.S01E10.HDTV.x264-BAJSKORV",
+					"Black.Jesus.S01E10.HDTV.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0362",
+			"rule": "(?<=\\W)SPRiNTER(?=\\W|$)",
+			"tests": [
+				[
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264.SPRiNTER.DUAL-BRENYS",
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264..DUAL-BRENYS"
+				]
+			]
+		},
+		{
+			"id": "R0363",
+			"rule": "(?<=\\W)BRENYS(?=\\W|$)",
+			"tests": [
+				[
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264.SPRiNTER.DUAL-BRENYS",
+					"No.Limite.do.Amanha.2014.3D.1080p.BluRay.Half-SBS.x264.SPRiNTER.DUAL-"
+				]
+			]
+		},
+		{
+			"id": "R0364",
+			"rule": "(?<=\\W)TeamPremium(?=\\W|$)",
+			"tests": [
+				[
+					"Big.Hero.6.2014.iTALiAN.MD.CAM.HD(TeamPremium)",
+					"Big.Hero.6.2014.iTALiAN.MD.CAM.HD()"
+				]
+			]
+		},
+		{
+			"id": "R0365",
+			"rule": "(?<=\\W)REsuRRecTioN(?=\\W|$)",
+			"tests": [
+				[
+					"The Maze Runner 2014 Cam x264 AAC REsuRRecTioN",
+					"The Maze Runner 2014 Cam x264 AAC "
+				]
+			]
+		},
+		{
+			"id": "R0366",
+			"rule": "(?<=\\W)REsuRRecTioN(?=\\W|$)",
+			"tests": [
+				[
+					"The Maze Runner 2014 Cam x264 AAC REsuRRecTioN",
+					"The Maze Runner 2014 Cam x264 AAC "
+				]
+			]
+		},
+		{
+			"id": "R0367",
+			"rule": "(?<=\\W)KinoFanas(?=\\W|$)",
+			"tests": [
+				[
+					"Despicable Me 2 (2013).LT-KinoFanas",
+					"Despicable Me 2 (2013).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0368",
+			"rule": "(?<=\\W)CNN(?:-RG)?(?=\\W|$)",
+			"tests": [
+				[
+					"Despicable Me 2 (2013).LT-CNN",
+					"Despicable Me 2 (2013).LT-"
+				],
+				[
+					"Despicable Me 2 (2013).LT-CNN-RG",
+					"Despicable Me 2 (2013).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0369",
+			"rule": "(?<=\\W)BTT-Team(?=\\W|$)",
+			"tests": [
+				[
+					"Chicken Little (2005).LT BTT-Team",
+					"Chicken Little (2005).LT "
+				]
+			]
+		},
+		{
+			"id": "R0370",
+			"rule": "(?<=\\W)HQLT(?=\\W|$)",
+			"tests": [
+				[
+					"Open Season 3 (2010).LT-HQLT",
+					"Open Season 3 (2010).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0371",
+			"rule": "(?<=\\W)TRL(?=\\W|$)",
+			"tests": [
+				[
+					"Surf's Up (2007).LT-TRL",
+					"Surf's Up (2007).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0372",
+			"rule": "(?<=\\W)BTG(?=\\W|$)",
+			"tests": [
+				[
+					"Toy Story-3 (2010).LT-BTG",
+					"Toy Story-3 (2010).LT-"
+				]
+			]
+		},
+		{
+			"id": "R0373",
+			"rule": "(?<=\\W)576p(?=\\W|$)",
+			"tests": [
+				[
+					"Turbo (2013) 576p.-SS",
+					"Turbo (2013) .-SS"
+				]
+			]
+		},
+		{
+			"id": "R0374",
+			"rule": "(?<=\\W)LHV(?=\\W|$)",
+			"tests": [
+				[
+					"Happy.Endings.S01E01.DVDRip.XViD-LHV",
+					"Happy.Endings.S01E01.DVDRip.XViD-"
+				]
+			]
+		},
+		{
+			"id": "R0375",
+			"rule": "(?<=\\W)DLK(?=\\W|$)",
+			"tests": [
+				[
+					"Namo istorija_ Life as a House (2001 DVDrip LT) ~ DLK",
+					"Namo istorija_ Life as a House (2001 DVDrip LT) ~ "
+				]
+			]
+		},
+		{
+			"id": "R0376",
+			"rule": "(?<=\\W)ETT(?=\\W|$)",
+			"tests": [
+				[
+					"Marmaduke (2010) [ETT]",
+					"Marmaduke (2010) []"
+				]
+			]
+		},
+		{
+			"id": "R0377",
+			"rule": "(?<=\\W)AUTOPSiE(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.FRENCH.BRRiP.XviD.AC3-AUTOPSiE",
+					"Project.X.2012.FRENCH.BRRiP.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0378",
+			"rule": "(?<=\\W)REFiLL(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.EXTENDED.720p.BRRip.XviD.AC3-REFiLL",
+					"Project.X.2012.EXTENDED.720p.BRRip.XviD.AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0379",
+			"rule": "(?<=\\W)JAMMO(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.EXTENDED.BRRIP-XVID-AC3-JAMMO",
+					"Project.X.2012.EXTENDED.BRRIP-XVID-AC3-"
+				]
+			]
+		},
+		{
+			"id": "R0380",
+			"rule": "(?<=\\W)4PlayHD(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.Extended.BRRip.XviD-4PlayHD",
+					"Project.X.2012.Extended.BRRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0381",
+			"rule": "(?<=\\W)MIKY(?=\\W|$)",
+			"tests": [
+				[
+					"Project.X.2012.Extended.720p.BluRay.x264.MIKY",
+					"Project.X.2012.Extended.720p.BluRay.x264."
+				]
+			]
+		},
+		{
+			"id": "R0382",
+			"rule": "(?<=\\W)HQM(?=\\W|$)",
+			"tests": [
+				[
+					"Bad.Neighbours.2014.SweSub.BRRip.x264-HQM",
+					"Bad.Neighbours.2014.SweSub.BRRip.x264-"
+				]
+			]
+		},
+		{
+			"id": "R0383",
+			"rule": "(?<=\\W)AViTECH(?=\\W|$)",
+			"tests": [
+				[
+					"Flying.Home.2014.FRENCH.BDRip.XviD-AViTECH",
+					"Flying.Home.2014.FRENCH.BDRip.XviD-"
+				]
+			]
+		},
+		{
+			"id": "R0384",
+			"rule": "(?<=\\W)URBiN4HD(?=\\W|$)",
+			"tests": [
+				[
+					"Flying Home 2014 BDRip x264 AAC Castellano URBiN4HD",
+					"Flying Home 2014 BDRip x264 AAC Castellano "
+				]
+			]
 		}
 	],
-	"version": "201501170"
+	"version": "201502121"
 }
