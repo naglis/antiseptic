@@ -3,18 +3,25 @@ import errno
 import json
 import logging
 import os
-import re
 import sys
+from collections import OrderedDict
 
+from .cleaner import RegexCleaner
 from .utils import (
     check_latest,
-    diff,
     get_config,
     get_new_rules,
+    green,
     list_dirs,
     list_files,
     prompt,
 )
+
+GUESSIT = True
+try:
+    from .cleaner import GuessitCleaner
+except ImportError:
+    GUESSIT = False
 
 __progname__ = 'antiseptic'
 __version__ = '0.1.2'
@@ -28,71 +35,15 @@ LOG_FILE_MESSAGE_FORMAT = '[%(asctime)s] %(levelname)-8s %(name)s %(message)s'
 DEFAULT_VERBOSE_LEVEL = 1
 
 
-class Cleaner(object):
+def setup_cleaners(args, config):
+    cleaners = {}
 
-    def __init__(self, disabled=None):
-        self.rules = []
-        if disabled is None:
-            disabled = set()
-        self.disabled = disabled
-
-    def load_rules(self, filename):
-        rule_ids = set()
-
-        with open(filename) as f:
-            data = json.load(f)
-
-            if 'rules' not in data:
-                raise SystemExit('No rules in the rule file')
-
-            rules = data.get('rules')
-
-            for rule in rules:
-                if 'id' not in rule:
-                    LOG.warning('Missing rule ID: %s' % rule)
-                    continue
-
-                if rule['id'] in self.disabled:
-                    continue
-
-                if rule['id'] in rule_ids:
-                    LOG.warning('Duplicate rule with ID: %s' % rule['id'])
-                    continue
-                else:
-                    self.rules.append(rule)
-                    rule_ids.add(rule['id'])
-
-        self.rules = sorted(self.rules, key=lambda x: x.get('weight', 0))
-
-    def clean_title(self, title):
-        applied_rules = []
-        for rule in self.rules:
-            applied, new_title = Cleaner.apply_rule(rule, title)
-            if not applied:
-                continue
-            applied_rules.append(rule['id'])
-            d = ''.join(diff(title, new_title))
-            LOG.debug('Applied rule: {rule_id:s}, diff:\n{diff:s}'.format(
-                      rule_id=rule['id'], diff=d))
-            title = new_title
-
-        return title, applied_rules
-
-    @staticmethod
-    def apply_rule(rule, text):
-        m = re.search(rule['rule'], text)
-        if m:
-            return True, re.sub(rule['rule'], rule.get('sub', ''), text)
-        return False, text
-
-
-def setup_cleaner(config):
     disabled = set(config.get('disabled_rules', []))
     if disabled:
         LOG.info('Disabled rules: %s' % (', '.join(disabled)))
     rules_filename = config['rules_filename']
 
-    c = Cleaner(disabled=disabled)
+    c = RegexCleaner(disabled=disabled)
     try:
         c.load_rules(rules_filename)
     except OSError as e:
@@ -103,52 +54,17 @@ def setup_cleaner(config):
         else:
             raise
     else:
-        return c
+        cleaners[1] = c
+
+    if GUESSIT:
+        priority = 0 if args.prefer_guessit else 10
+        cleaners[priority] = GuessitCleaner()
+
+    return [cleaners[k] for k in sorted(cleaners.keys())]
 
 
-def rename_dir(path, cleaner, dry_run=False, default_choice='n', auto=False):
-
-    def rename(path, new_name):
-        base, _ = os.path.split(path)
-        try:
-            new_path = os.path.join(base, new_name)
-            LOG.debug('Renaming: {path:s} to {new_path:s}'.format(
-                path=path, new_path=new_path))
-            os.rename(path, new_path)
-        except OSError as e:
-            LOG.exception(e)
-            return
-        else:
-            LOG.info('Renamed successfully.')
-
-    path = os.path.normpath(path)
-    base, old_name = os.path.split(path)
-    new_name, rules = cleaner.clean_title(old_name)
-
-    if new_name == old_name:
-        LOG.debug('Nothing to be done.')
-        return
-
-    LOG.info('Applied rules: %s' % ', '.join(rules))
-    print(''.join(diff(old_name, new_name)))
-
-    if dry_run:
-        print()
-        return
-    elif auto:
-        rename(path, new_name)
-        return
-
-    choice = prompt('Apply', ['y', 'n', 'q'], default_choice)
-    if choice == 'q':
-        sys.exit(0)
-    elif choice == 'y':
-        rename(path, new_name)
-    else:
-        return
-
-
-def wrap_file(path, cleaner, dry_run=False, default_choice='n', auto=False):
+def operate_helper(path, cleaners, action='rename', dry_run=False,
+                   default_choice='n', auto=False):
 
     def wrap(path, dir_name):
         base, fname = os.path.split(path)
@@ -166,27 +82,56 @@ def wrap_file(path, cleaner, dry_run=False, default_choice='n', auto=False):
         else:
             LOG.info('Wraped successfully.')
 
+    def rename(path, new_name):
+        base, _ = os.path.split(path)
+        try:
+            new_path = os.path.join(base, new_name)
+            LOG.debug('Renaming: {path:s} to {new_path:s}'.format(
+                path=path, new_path=new_path))
+            os.rename(path, new_path)
+        except OSError as e:
+            LOG.exception(e)
+            return
+        else:
+            LOG.info('Renamed successfully.')
+
+    if action == 'rename':
+        f = rename
+    else:
+        f = wrap
+
     path = os.path.normpath(path)
     base, old_name = os.path.split(path)
-    name, ext = os.path.splitext(old_name)
-    dir_name, rules = cleaner.clean_title(name)
+    if action == 'rename':
+        name = old_name
+    else:
+        name, _ = os.path.splitext(old_name)
 
-    LOG.info('Wrapping: {0:s}'.format(path))
-    LOG.info('Applied rules: {0:s}'.format(', '.join(rules)))
-    print('New directory name: {0:s}'.format(dir_name))
+    new_names = OrderedDict()
+    for c in cleaners:
+        new_names[c.name] = c.clean(name)
+
+    LOG.info('{0:s}: {1:s}'.format(
+        action == 'rename' and 'Renaming' or 'Wraping', path))
+    print('Old name: {0:s}'.format(old_name))
+    print(action == 'rename' and 'New names:' or 'Directory names:')
+    for i, (c, n) in enumerate(new_names.items(), start=1):
+        print('{0:d}) [{1:s}] {2:s}'.format(i, green(c), n))
 
     if dry_run:
         print()
         return
     elif auto:
-        wrap(path, dir_name)
+        f(path, new_names[list(new_names.keys())[0]])
         return
 
-    choice = prompt('Wrap', ['y', 'n', 'q'], default_choice)
+    choice_nums = list(map(str, range(1, len(new_names.keys()) + 1)))
+    choice = prompt(action == 'rename' and 'Rename' or 'Wrap',
+                    choice_nums + ['n', 'q'], default_choice)
     if choice == 'q':
         sys.exit(0)
-    elif choice == 'y':
-        wrap(path, dir_name)
+    elif choice in choice_nums:
+        f(path, new_names[list(new_names.keys())[int(choice) - 1]])
     else:
         return
 
@@ -237,15 +182,15 @@ def do_rename(args, config):
         raise SystemExit(
             'Path "%s" does not exist or is not a directory' % args.path)
 
-    cleaner = setup_cleaner(config)
+    cleaners = setup_cleaners(args, config)
 
     if args.directory:
         for dn in list_dirs(args.path):
-            rename_dir(dn, cleaner, dry_run=args.dry_run,
-                       default_choice=args.choice, auto=args.auto)
+            operate_helper(dn, cleaners, dry_run=args.dry_run,
+                           default_choice=args.choice, auto=args.auto)
     else:
-        rename_dir(args.path, cleaner, dry_run=args.dry_run,
-                   default_choice=args.choice, auto=args.auto)
+        operate_helper(args.path, cleaners, dry_run=args.dry_run,
+                       default_choice=args.choice, auto=args.auto)
 
 
 def do_wrap(args, config):
@@ -257,14 +202,15 @@ def do_wrap(args, config):
         raise SystemExit(
             'File "%s" does not exist or is not a file' % args.path)
 
-    cleaner = setup_cleaner(config)
+    cleaners = setup_cleaners(args, config)
     if args.directory:
         for fp in list_files(args.path):
-            wrap_file(fp, cleaner, dry_run=args.dry_run,
-                      default_choice=args.choice, auto=args.auto)
+            operate_helper(fp, cleaners, action='wrap', dry_run=args.dry_run,
+                           default_choice=args.choice, auto=args.auto)
     else:
-        wrap_file(args.path, cleaner, dry_run=args.dry_run,
-                  default_choice=args.choice, auto=args.auto)
+        operate_helper(args.path, cleaners, action='wrap',
+                       dry_run=args.dry_run, default_choice=args.choice,
+                       auto=args.auto)
 
 
 def main():
@@ -290,8 +236,11 @@ def main():
     common_parser = argparse.ArgumentParser(add_help=False)
     common_parser.add_argument('path', metavar='PATH')
     common_parser.add_argument(
-        '-y', '--yes', action='store_const', const='y', default='n',
-        dest='choice', help='make \'yes\' the default choice')
+        '-y', '--yes', action='store_const', const='1', default='n',
+        dest='choice', help='make the prefered cleaner the default choice')
+    common_parser.add_argument('-g', '--guessit', action='store_true',
+                               dest='prefer_guessit',
+                               help='prefer guessit renamer (if available)')
     # -n and -a can't be used together
     mutex_group = common_parser.add_mutually_exclusive_group()
     mutex_group.add_argument(

@@ -41,6 +41,8 @@ def wrap_text(text, prefix='\033[1m', postfix='\033[0m', file=sys.stdout,
     else:
         return '%s%s' % (text, endline)
 red = functools.partial(wrap_text, prefix='\033[91m', postfix='\033[0m')
+green = functools.partial(wrap_text, prefix='\033[92m', postfix='\033[0m')
+blue = functools.partial(wrap_text, prefix='\033[94m', postfix='\033[0m')
 bold = functools.partial(wrap_text, prefix='\033[1m', postfix='\033[0m')
 
 
@@ -133,7 +135,7 @@ def list_files(path):
 def prompt(question, choices, default, case_sensitive=False, color=True):
     c = copy.copy(choices)
     d = bold(default.upper())
-    c[c.index(default)] = color and red(d) or d
+    c[c.index(default)] = color and blue(d) or d
     print('%s [%s]? ' % (question, '/'.join(c)))
 
     while True:
