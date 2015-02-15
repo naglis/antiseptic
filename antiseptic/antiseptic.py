@@ -183,6 +183,8 @@ def do_rename(args, config):
             'Path "%s" does not exist or is not a directory' % args.path)
 
     cleaners = setup_cleaners(args, config)
+    if not cleaners:
+        raise SystemExit('Failed to initialize at least on cleaner, exiting.')
 
     if args.directory:
         for dn in list_dirs(args.path):
@@ -203,6 +205,9 @@ def do_wrap(args, config):
             'File "%s" does not exist or is not a file' % args.path)
 
     cleaners = setup_cleaners(args, config)
+    if not cleaners:
+        raise SystemExit('Failed to initialize at least on cleaner, exiting.')
+
     if args.directory:
         for fp in list_files(args.path):
             operate_helper(fp, cleaners, action='wrap', dry_run=args.dry_run,
