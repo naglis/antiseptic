@@ -3113,7 +3113,17 @@
 					"Flying Home 2014 BDRip x264 AAC Castellano "
 				]
 			]
+		},
+		{
+			"id": "R0385",
+			"rule": "(?<=\\W)CiNEFiLE(?=\\W|$)",
+			"tests": [
+				[
+					"Ida.2013.LiMiTED.720p.BluRay.x264-CiNEFiLE[rarbg]",
+					"Ida.2013.LiMiTED.720p.BluRay.x264-[rarbg]"
+				]
+			]
 		}
 	],
-	"version": "201502121"
+	"version": "201502192"
 }
